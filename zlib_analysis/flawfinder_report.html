@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf8">
+<title>Flawfinder Results</title>
+<meta name="author" content="David A. Wheeler">
+<meta name="keywords" lang="en" content="flawfinder results, security scan">
+</head>
+<body>
+<h1>Flawfinder Results</h1>
+Here are the security scan results from
+<a href="https://dwheeler.com/flawfinder">Flawfinder version 2.0.19</a>,
+(C) 2001-2019 <a href="https://dwheeler.com">David A. Wheeler</a>.
+Number of rules (primarily dangerous function names) in C/C++ ruleset: 222
+<p>
+Examining ./gzlog.c <br>
+Examining ./gzappend.c <br>
+Examining ./minigzip.c <br>
+Examining ./zlib.h <br>
+Examining ./enough.c <br>
+
+<h2>Final Results</h2>
+<ul>
+<li>./gzlog.c:586: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+    strcpy(dest, log-&gt;path);
+</pre>
+<li>./gzlog.c:878: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+    strcpy(log-&gt;id, LOGID);
+</pre>
+<li>./gzlog.c:888: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+    strcpy(log-&gt;path, path);
+</pre>
+<li>./minigzip.c:44: <b>  [4] </b> (format) <i> snprintf:
+  If format strings can be influenced by an attacker, they can be exploited,
+  and note that sprintf variations do not always \0-terminate (<a
+  href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>). Use a
+  constant for the format specification. </i>
+<pre>
+#  define snprintf _snprintf
+</pre>
+<li>./minigzip.c:44: <b>  [4] </b> (format) <i> _snprintf:
+  If format strings can be influenced by an attacker, they can be exploited,
+  and note that sprintf variations do not always \0-terminate (<a
+  href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>). Use a
+  constant for the format specification. </i>
+<pre>
+#  define snprintf _snprintf
+</pre>
+<li>./minigzip.c:477: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+    strcpy(outfile, file);
+</pre>
+<li>./minigzip.c:478: <b>  [4] </b> (buffer) <i> strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is
+  easily misused). </i>
+<pre>
+    strcat(outfile, GZ_SUFFIX);
+</pre>
+<li>./minigzip.c:517: <b>  [4] </b> (buffer) <i> strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (<a href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy easily
+  misused). </i>
+<pre>
+    strcpy(buf, file);
+</pre>
+<li>./minigzip.c:530: <b>  [4] </b> (buffer) <i> strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (<a
+  href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
+  Consider using strcat_s, strncat, strlcat, or snprintf (warning: strncat is
+  easily misused). </i>
+<pre>
+        strcat(infile, GZ_SUFFIX);
+</pre>
+</ul>
+<h2>Analysis Summary</h2>
+<p>
+Hits = 9
+<br>
+Lines analyzed = 4703 in approximately 0.12 seconds (38833 lines/second)
+<br>
+Physical Source Lines of Code (SLOC) = 1958
+<br>
+Hits@level = [0]  28 [1]  18 [2]  53 [3]   0 [4]   9 [5]   0 <br>
+Hits@level+ = [0+] 108 [1+]  80 [2+]  62 [3+]   9 [4+]   9 [5+]   0 <br>
+Hits/KSLOC@level+ = [0+] 55.1583 [1+] 40.858 [2+] 31.665 [3+] 4.59653 [4+] 4.59653 [5+]   0 <br>
+Minimum risk level = 3
+<br>
+Not every hit is necessarily a security vulnerability.
+You can inhibit a report by adding a comment in this form:
+// flawfinder: ignore
+Make *sure* it's a false positive!
+You can use the option --neverignore to show these.
+<br>
+There may be other security vulnerabilities; review your code!
+<br>
+See '<a href="https://dwheeler.com/secure-programs">Secure Programming HOWTO</a>'
+(<a href="https://dwheeler.com/secure-programs">https://dwheeler.com/secure-programs</a>) for more information.
+</body>
+</html>
