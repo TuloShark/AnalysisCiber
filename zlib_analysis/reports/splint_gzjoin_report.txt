@@ -1,0 +1,310 @@
+../gzjoin.c: (in function bail)
+../gzjoin.c:69:10: Argument to exit has implementation defined behavior: 1
+  The argument to exit should be 0, EXIT_SUCCESS or EXIT_FAILURE (Use -exitarg
+  to inhibit warning)
+../gzjoin.c:70:12: Unreachable code: return 0
+  This code will never be reached on any possible execution. (Use -unreachable
+  to inhibit warning)
+../gzjoin.c: (in function bclose)
+../gzjoin.c:91:13: Return value (type int) ignored: close(in->fd)
+  Result returned by function call is not used. If this is intended, can cast
+  result to (void) to eliminate message. (Use -retvalint to inhibit warning)
+../gzjoin.c:94:14: Implicitly temp storage in passed as only param: free (in)
+  Temp storage (associated with a formal parameter) is transferred to a
+  non-temporary reference. The storage may be released or new aliases created.
+  (Use -temptrans to inhibit warning)
+../gzjoin.c: (in function bopen)
+../gzjoin.c:106:16: Null storage returned as non-null: NULL
+  Function returns a possibly null pointer, but is not declared using
+  /*@null@*/ annotation of result.  If function may return NULL, add /*@null@*/
+  annotation to the return value declaration. (Use -nullret to inhibit warning)
+../gzjoin.c:108:35: Null storage passed as non-null param: open (..., 0)
+  A possibly null pointer is passed as a parameter corresponding to a formal
+  parameter with no /*@null@*/ annotation.  If NULL may be used for this
+  parameter, add a /*@null@*/ annotation to the function parameter declaration.
+  (Use -nullpass to inhibit warning)
+../gzjoin.c:110:16: Possibly null storage in->buf derivable from parameter
+                       bclose (in)
+  A possibly null pointer is reachable from a parameter or global variable that
+  is not declared using a /*@null@*/ annotation. (Use -nullstate to inhibit
+  warning)
+   ../gzjoin.c:107:15: Storage in->buf may become null
+../gzjoin.c:110:16: Passed storage *in contains 4 undefined fields:
+                       name, left, next, buf
+  Storage derivable from a parameter, return value or global is not defined.
+  Use /*@out@*/ to denote passed or returned storage which need not be defined.
+  (Use -compdef to inhibit warning)
+../gzjoin.c:111:16: Null storage returned as non-null: NULL
+../gzjoin.c:111:21: Fresh storage in not released before return
+  A memory leak has been detected. Storage allocated locally is not released
+  before the last reference to it is lost. (Use -mustfreefresh to inhibit
+  warning)
+   ../gzjoin.c:104:5: Fresh storage in created
+../gzjoin.c:114:5: Implicitly only storage in->next (type unsigned char *) not
+                      released before assignment: in->next = in->buf
+  A memory leak has been detected. Only-qualified storage is not released
+  before the last reference to it is lost. (Use -mustfreeonly to inhibit
+  warning)
+../gzjoin.c:115:5: Implicitly only storage in->name (type char *) not released
+                      before assignment: in->name = name
+../gzjoin.c:115:5: Implicitly temp storage name assigned to implicitly only:
+                      in->name = name
+../gzjoin.c:116:12: Storage in->buf reachable from return value is kept (should
+                       be implicitly only)
+  Storage derivable from a parameter does not match the alias kind expected for
+  the formal parameter. (Use -compmempass to inhibit warning)
+   ../gzjoin.c:114:5: Storage in->buf becomes kept
+../gzjoin.c: (in function bload)
+../gzjoin.c:129:5: Implicitly only storage in->next (type unsigned char *) not
+                      released before assignment: in->next = in->buf
+../gzjoin.c:131:54: Function read expects arg 3 to be size_t gets unsigned int:
+                       32768 - in->left
+  To allow arbitrary integral types to match any integral type, use
+  +matchanyintegral.
+../gzjoin.c:133:23: Storage in->buf reachable from parameter is kept (should be
+                       implicitly only)
+   ../gzjoin.c:129:5: Storage in->buf becomes kept
+../gzjoin.c:136:29: Storage in->buf reachable from parameter is kept (should be
+                       implicitly only)
+   ../gzjoin.c:129:5: Storage in->buf becomes kept
+../gzjoin.c: (in function bget4)
+../gzjoin.c:149:12: Test expression for conditional not boolean, type unsigned
+                       int: in->left
+  Test expression type is not boolean or int. (Use -predboolint to inhibit
+  warning)
+../gzjoin.c:149:56: Test expression for conditional not boolean, type unsigned
+                       int: in->left
+../gzjoin.c:149:67: Conditional clauses are not of same type:
+    (in->left--, *(in->next)++) (unsigned char), bail("unexpected end of file
+    on ", in->name) (int)
+  To make char and int types equivalent, use +charint.
+../gzjoin.c:150:29: Test expression for conditional not boolean, type unsigned
+                       int: in->left
+../gzjoin.c:150:73: Test expression for conditional not boolean, type unsigned
+                       int: in->left
+../gzjoin.c:150:84: Conditional clauses are not of same type:
+    (in->left--, *(in->next)++) (unsigned char), bail("unexpected end of file
+    on ", in->name) (int)
+../gzjoin.c:151:29: Test expression for conditional not boolean, type unsigned
+                       int: in->left
+../gzjoin.c:151:73: Test expression for conditional not boolean, type unsigned
+                       int: in->left
+../gzjoin.c:151:84: Conditional clauses are not of same type:
+    (in->left--, *(in->next)++) (unsigned char), bail("unexpected end of file
+    on ", in->name) (int)
+../gzjoin.c:152:29: Test expression for conditional not boolean, type unsigned
+                       int: in->left
+../gzjoin.c:152:73: Test expression for conditional not boolean, type unsigned
+                       int: in->left
+../gzjoin.c:152:84: Conditional clauses are not of same type:
+    (in->left--, *(in->next)++) (unsigned char), bail("unexpected end of file
+    on ", in->name) (int)
+../gzjoin.c: (in function bskip)
+../gzjoin.c:182:27: Function lseek expects arg 2 to be __off_t gets unsigned
+                       int: skip - 1
+  Types are incompatible. (Use -type to inhibit warning)
+../gzjoin.c:182:13: Return value (type __off_t) ignored: lseek(in->fd, sk...
+  Result returned by function call is not used. If this is intended, can cast
+  result to (void) to eliminate message. (Use -retvalother to inhibit warning)
+../gzjoin.c:184:17: Return value (type int) ignored: bail("unexpected...
+../gzjoin.c:189:23: Function lseek expects arg 2 to be __off_t gets unsigned
+                       int: skip - left
+../gzjoin.c:189:9: Return value (type __off_t) ignored: lseek(in->fd, sk...
+../gzjoin.c:194:5: Return value (type int) ignored: bload(in)
+../gzjoin.c:196:9: Return value (type int) ignored: bail("unexpected...
+../gzjoin.c: (in function gzhead)
+../gzjoin.c:209:10: Test expression for conditional not boolean, type unsigned
+                       int: in->left
+../gzjoin.c:209:54: Test expression for conditional not boolean, type unsigned
+                       int: in->left
+../gzjoin.c:209:65: Conditional clauses are not of same type:
+    (in->left--, *(in->next)++) (unsigned char), bail("unexpected end of file
+    on ", in->name) (int)
+../gzjoin.c:209:173: Test expression for conditional not boolean, type unsigned
+                        int: in->left
+../gzjoin.c:209:217: Test expression for conditional not boolean, type unsigned
+                        int: in->left
+../gzjoin.c:209:228: Conditional clauses are not of same type:
+    (in->left--, *(in->next)++) (unsigned char), bail("unexpected end of file
+    on ", in->name) (int)
+../gzjoin.c:209:336: Test expression for conditional not boolean, type unsigned
+                        int: in->left
+../gzjoin.c:209:380: Test expression for conditional not boolean, type unsigned
+                        int: in->left
+../gzjoin.c:209:391: Conditional clauses are not of same type:
+    (in->left--, *(in->next)++) (unsigned char), bail("unexpected end of file
+    on ", in->name) (int)
+../gzjoin.c:210:9: Return value (type int) ignored: bail(in->name, "...
+../gzjoin.c:213:14: Test expression for conditional not boolean, type unsigned
+                       int: in->left
+../gzjoin.c:213:58: Test expression for conditional not boolean, type unsigned
+                       int: in->left
+../gzjoin.c:213:69: Conditional clauses are not of same type:
+    (in->left--, *(in->next)++) (unsigned char), bail("unexpected end of file
+    on ", in->name) (int)
+../gzjoin.c:215:9: Return value (type int) ignored: bail("unknown re...
+../gzjoin.c:221:9: Test expression for if not boolean, type int: flags & 4
+../gzjoin.c:224:16: Test expression for conditional not boolean, type unsigned
+                       int: in->left
+../gzjoin.c:224:60: Test expression for conditional not boolean, type unsigned
+                       int: in->left
+../gzjoin.c:224:71: Conditional clauses are not of same type:
+    (in->left--, *(in->next)++) (unsigned char), bail("unexpected end of file
+    on ", in->name) (int)
+../gzjoin.c:225:28: Test expression for conditional not boolean, type unsigned
+                       int: in->left
+../gzjoin.c:225:72: Test expression for conditional not boolean, type unsigned
+                       int: in->left
+../gzjoin.c:225:83: Conditional clauses are not of same type:
+    (in->left--, *(in->next)++) (unsigned char), bail("unexpected end of file
+    on ", in->name) (int)
+../gzjoin.c:230:9: Test expression for if not boolean, type int: flags & 8
+../gzjoin.c:231:17: Test expression for conditional not boolean, type unsigned
+                       int: in->left
+../gzjoin.c:231:61: Test expression for conditional not boolean, type unsigned
+                       int: in->left
+../gzjoin.c:231:72: Conditional clauses are not of same type:
+    (in->left--, *(in->next)++) (unsigned char), bail("unexpected end of file
+    on ", in->name) (int)
+../gzjoin.c:235:9: Test expression for if not boolean, type int: flags & 16
+../gzjoin.c:236:17: Test expression for conditional not boolean, type unsigned
+                       int: in->left
+../gzjoin.c:236:61: Test expression for conditional not boolean, type unsigned
+                       int: in->left
+../gzjoin.c:236:72: Conditional clauses are not of same type:
+    (in->left--, *(in->next)++) (unsigned char), bail("unexpected end of file
+    on ", in->name) (int)
+../gzjoin.c:240:9: Test expression for if not boolean, type int: flags & 2
+../gzjoin.c: (in function put4)
+../gzjoin.c:247:10: Function putc expects arg 1 to be int gets unsigned long
+                       int: val & 0xff
+../gzjoin.c:247:5: Return value (type int) ignored: putc(val & 0xff,...
+../gzjoin.c:248:10: Function putc expects arg 1 to be int gets unsigned long
+                       int: (val >> 8) & 0xff
+../gzjoin.c:248:5: Return value (type int) ignored: putc((val >> 8) ...
+../gzjoin.c:249:10: Function putc expects arg 1 to be int gets unsigned long
+                       int: (val >> 16) & 0xff
+../gzjoin.c:249:5: Return value (type int) ignored: putc((val >> 16)...
+../gzjoin.c:250:10: Function putc expects arg 1 to be int gets unsigned long
+                       int: (val >> 24) & 0xff
+../gzjoin.c:250:5: Return value (type int) ignored: putc((val >> 24)...
+../gzjoin.c: (in function zpull)
+../gzjoin.c:257:9: Return value (type int) ignored: bload(in)
+../gzjoin.c:259:9: Return value (type int) ignored: bail("unexpected...
+../gzjoin.c:261:5: Implicitly only storage strm->next_in (type Bytef *) not
+                      released before assignment: strm->next_in = in->next
+../gzjoin.c:262:2: Storage in->next reachable from parameter is kept (should be
+                      implicitly only)
+   ../gzjoin.c:261:5: Storage in->next becomes kept
+../gzjoin.c: (in function gzinit)
+../gzjoin.c:267:5: Return value (type size_t) ignored: fwrite("\x1f\x8b...
+../gzjoin.c:268:22: Null storage passed as non-null param: crc32 (..., 0, ...)
+../gzjoin.c: (in function gzcopy)
+../gzjoin.c:294:9: Return value (type int) ignored: bail("could not ...
+../gzjoin.c:295:12: Possibly null storage in passed as non-null param:
+                       gzhead (in)
+   ../gzjoin.c:292:10: Storage in may become null
+../gzjoin.c:300:5: Assignment of int to alloc_func: strm.zalloc = 0
+../gzjoin.c:301:5: Assignment of int to free_func: strm.zfree = 0
+../gzjoin.c:305:25: Null storage strm.next_in derivable from parameter
+                       inflateInit2_ ((&strm), ...)
+   ../gzjoin.c:304:20: Storage strm.next_in becomes null
+../gzjoin.c:305:25: Null storage strm.zalloc derivable from parameter
+                       inflateInit2_ ((&strm), ...)
+   ../gzjoin.c:300:19: Storage strm.zalloc becomes null
+../gzjoin.c:305:25: Null storage strm.zfree derivable from parameter
+                       inflateInit2_ ((&strm), ...)
+   ../gzjoin.c:301:18: Storage strm.zfree becomes null
+../gzjoin.c:305:25: Null storage strm.opaque derivable from parameter
+                       inflateInit2_ ((&strm), ...)
+   ../gzjoin.c:302:19: Storage strm.opaque becomes null
+../gzjoin.c:305:25: Passed storage strm contains 9 undefined fields:
+                       total_in, next_out, avail_out, total_out, ...
+../gzjoin.c:307:9: Return value (type int) ignored: bail("out of mem...
+../gzjoin.c:313:5: Assignment of unsigned char to int: last = start[0] & 1
+../gzjoin.c:314:9: Operands of && are non-boolean (int): last && clr
+  The operand of a boolean operator is not a boolean. Use +ptrnegate to allow !
+  to be used on pointers. (Use -boolops to inhibit warning)
+../gzjoin.c:320:30: Function fwrite expects arg 3 to be size_t gets int:
+                       strm.next_in - start
+../gzjoin.c:320:13: Return value (type size_t) ignored: fwrite(start, 1,...
+../gzjoin.c:328:9: Implicitly only storage strm.next_out (type Bytef *) not
+                      released before assignment: strm.next_out = junk
+../gzjoin.c:329:23: Possibly null storage strm.next_out derivable from
+                       parameter inflate (&strm, ...)
+   ../gzjoin.c:328:25: Storage strm.next_out may become null
+../gzjoin.c:329:23: Passed storage strm contains 1 undefined field: next_out
+../gzjoin.c:332:13: Return value (type int) ignored: bail("out of mem...
+../gzjoin.c:333:14: Fall through case (no preceding break)
+  Execution falls through from the previous case (use /*@fallthrough@*/ to mark
+  fallthrough cases). (Use -casebreak to inhibit warning)
+../gzjoin.c:334:13: Return value (type int) ignored: bail("invalid co...
+../gzjoin.c:341:13: Test expression for if not boolean, type int:
+                       strm.data_type & 128
+../gzjoin.c:343:17: Test expression for if not boolean, type int: last
+../gzjoin.c:352:32: Right operand of >> may be negative (int): 0x100 >> pos
+  The right operand to a shift operator may be negative (behavior undefined).
+  (Use -shiftnegative to inhibit warning)
+../gzjoin.c:353:17: Assignment of Bytef to int: last = strm.next_in[-1] & pos
+../gzjoin.c:354:21: Operands of && are non-boolean (int): last && clr
+../gzjoin.c:361:38: Function fwrite expects arg 3 to be size_t gets int:
+                       strm.next_in - start
+../gzjoin.c:361:21: Return value (type size_t) ignored: fwrite(start, 1,...
+../gzjoin.c:366:17: Assignment of Bytef to int: last = strm.next_in[0] & 1
+../gzjoin.c:367:21: Operands of && are non-boolean (int): last && clr
+../gzjoin.c:371:5: Variable junk is kept in for body, but not kept if for loop
+                      body does not execute.
+  The state of a variable is different depending on which branch is taken. This
+  means no annotation can sensibly be applied to the storage. (Use -branchstate
+  to inhibit warning)
+   ../gzjoin.c:371:5: in for body:
+   ../gzjoin.c:328:9: Storage junk becomes kept
+   ../gzjoin.c:371:5: if for loop body does not execute:
+   ../gzjoin.c:299:5: Fresh storage junk created
+../gzjoin.c:379:22: Function fwrite expects arg 3 to be size_t gets int:
+                       in->next - start - 1
+../gzjoin.c:379:5: Return value (type size_t) ignored: fwrite(start, 1,...
+../gzjoin.c:380:5: Assignment of unsigned char to int: last = in->next[-1]
+../gzjoin.c:381:22: Operand of ! is non-boolean (int): !clr
+../gzjoin.c:383:9: Return value (type int) ignored: putc(last, out)
+../gzjoin.c:386:28: Right operand of >> may be negative (int): 0x100 >> pos
+../gzjoin.c:387:13: Test expression for if not boolean, type int: pos & 1
+../gzjoin.c:389:13: Return value (type int) ignored: putc(last, out)
+../gzjoin.c:391:17: Return value (type int) ignored: putc(0, out)
+../gzjoin.c:392:13: Return value (type size_t) ignored: fwrite("\0\0\xff...
+../gzjoin.c:398:17: Return value (type int) ignored: putc(last | 8, out)
+../gzjoin.c:400:18: Fall through case (no preceding break)
+../gzjoin.c:401:17: Return value (type int) ignored: putc(last | 0x20...
+../gzjoin.c:403:18: Fall through case (no preceding break)
+../gzjoin.c:404:17: Return value (type int) ignored: putc(last | 0x80...
+../gzjoin.c:405:17: Return value (type int) ignored: putc(0, out)
+../gzjoin.c:415:5: Return value (type int) ignored: inflateEnd(&strm)
+../gzjoin.c:420:10: Operand of ! is non-boolean (int): !clr
+../gzjoin.c:424:2: Fresh storage in not released before return
+   ../gzjoin.c:292:5: Fresh storage in created
+../gzjoin.c:424:2: Only storage strm.next_in (type Bytef *) derived from
+    variable declared in this scope is not released (memory leak)
+  A storage leak due to incomplete deallocation of a structure or deep pointer
+  is suspected. Unshared storage that is reachable from a reference that is
+  being deallocated has not yet been deallocated. Splint assumes when an object
+  is passed as an out only void pointer that the outer object will be
+  deallocated, but the inner objects will not. (Use -compdestroy to inhibit
+  warning)
+../gzjoin.c:424:2: Only storage strm.msg (type char *) derived from variable
+                      declared in this scope is not released (memory leak)
+../gzjoin.c:424:2: Only storage strm.state (type struct internal_state *)
+    derived from variable declared in this scope is not released (memory leak)
+../gzjoin.c:424:2: Only storage strm.zalloc (type alloc_func) derived from
+    variable declared in this scope is not released (memory leak)
+../gzjoin.c:424:2: Only storage strm.zfree (type free_func) derived from
+    variable declared in this scope is not released (memory leak)
+../gzjoin.c:424:2: Only storage strm.opaque (type voidpf) derived from variable
+                      declared in this scope is not released (memory leak)
+../gzjoin.c: (in function main)
+../gzjoin.c:437:9: Return value (type int) ignored: fputs("gzjoin us...
+../gzjoin.c:443:12: Passed storage &crc not completely defined:
+                       gzinit (&crc, ...)
+../gzjoin.c:443:18: Passed storage &tot not completely defined:
+                       gzinit (..., &tot, ...)
+../gzjoin.c:444:16: Test expression for while not boolean, type int: argc--
+

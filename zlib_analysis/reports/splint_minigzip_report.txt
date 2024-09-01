@@ -1,0 +1,145 @@
+../minigzip.c: (in function error)
+../minigzip.c:359:10: Argument to exit has implementation defined behavior: 1
+  The argument to exit should be 0, EXIT_SUCCESS or EXIT_FAILURE (Use -exitarg
+  to inhibit warning)
+../minigzip.c: (in function gz_compress)
+../minigzip.c:382:13: Test expression for if not boolean, type int: ferror(in)
+  Test expression type is not boolean or int. (Use -predboolint to inhibit
+  warning)
+../minigzip.c:384:18: Argument to exit has implementation defined behavior: 1
+../minigzip.c:388:73: Passed storage &err not completely defined:
+                         gzerror (..., &err)
+  Storage derivable from a parameter, return value or global is not defined.
+  Use /*@out@*/ to denote passed or returned storage which need not be defined.
+  (Use -compdef to inhibit warning)
+../minigzip.c:388:60: New fresh storage (type char *) passed as unqualified
+                         (not released): gzerror(out, &err)
+  A memory leak has been detected. Storage allocated locally is not released
+  before the last reference to it is lost. (Use -mustfreefresh to inhibit
+  warning)
+../minigzip.c:390:5: Return value (type int) ignored: fclose(in)
+  Result returned by function call is not used. If this is intended, can cast
+  result to (void) to eliminate message. (Use -retvalint to inhibit warning)
+../minigzip.c:391:34: Observer storage passed as unqualified param:
+                         error ("failed gzclose")
+  Observer storage is transferred to a non-observer reference. (Use
+  -observertrans to inhibit warning)
+   ../minigzip.c:391:34: Storage becomes observer
+../minigzip.c: (in function gz_uncompress)
+../minigzip.c:443:37: Function gzread expects arg 3 to be unsigned int gets
+                         size_t: sizeof((buf))
+  To allow arbitrary integral types to match any integral type, use
+  +matchanyintegral.
+../minigzip.c:443:26: Passed storage buf not completely defined (*buf is
+                         undefined): gzread (..., buf, ...)
+../minigzip.c:444:41: Passed storage &err not completely defined:
+                         gzerror (..., &err)
+../minigzip.c:444:29: New fresh storage (type char *) passed as unqualified
+                         (not released): gzerror(in, &err)
+../minigzip.c:447:33: Function fwrite expects arg 3 to be size_t gets unsigned
+                         int: (unsigned int)len
+../minigzip.c:448:19: Observer storage passed as unqualified param:
+                         error ("failed fwrite")
+   ../minigzip.c:448:19: Storage becomes observer
+../minigzip.c:451:9: Test expression for if not boolean, type int: fclose(out)
+../minigzip.c:451:28: Observer storage passed as unqualified param:
+                         error ("failed fclose")
+   ../minigzip.c:451:28: Storage becomes observer
+../minigzip.c:453:33: Observer storage passed as unqualified param:
+                         error ("failed gzclose")
+   ../minigzip.c:453:33: Storage becomes observer
+../minigzip.c: (in function file_compress)
+../minigzip.c:471:14: Argument to exit has implementation defined behavior: 1
+../minigzip.c:475:5: Return value (type int) ignored: snprintf(outfile...
+../minigzip.c:484:14: Argument to exit has implementation defined behavior: 1
+../minigzip.c:489:14: Argument to exit has implementation defined behavior: 1
+../minigzip.c:491:17: Dependent storage in passed as unqualified param:
+                         gz_compress (in, ...)
+  Dependent storage is transferred to a non-dependent reference. (Use
+  -dependenttrans to inhibit warning)
+   ../minigzip.c:481:5: Storage in becomes dependent
+../minigzip.c:493:5: Return value (type int) ignored: unlink(file)
+../minigzip.c:494:2: Fresh storage out not released before scope exit
+   ../minigzip.c:486:5: Fresh storage out created
+../minigzip.c: (in function file_uncompress)
+../minigzip.c:507:20: Variable len initialized to type size_t, expects unsigned
+                         int: strlen(file)
+../minigzip.c:511:14: Argument to exit has implementation defined behavior: 1
+../minigzip.c:515:5: Return value (type int) ignored: snprintf(buf, si...
+../minigzip.c:520:9: Operands of > have incompatible types (unsigned int,
+    arbitrary unsigned integral type): len > (sizeof((".gz")) - 1)
+  To ignore type qualifiers in type comparisons use +ignorequals.
+../minigzip.c:528:9: Return value (type int) ignored: snprintf(buf + l...
+../minigzip.c:536:14: Argument to exit has implementation defined behavior: 1
+../minigzip.c:541:14: Argument to exit has implementation defined behavior: 1
+../minigzip.c:544:23: Dependent storage out passed as unqualified param:
+                         gz_uncompress (..., out)
+   ../minigzip.c:538:5: Storage out becomes dependent
+../minigzip.c:546:5: Return value (type int) ignored: unlink(infile)
+../minigzip.c:547:2: Fresh storage in not released before scope exit
+   ../minigzip.c:533:5: Fresh storage in created
+../minigzip.c: (in function main)
+../minigzip.c:570:5: Return value (type int) ignored: snprintf(outmode...
+../minigzip.c:583:17: Possibly null storage bname passed as non-null param:
+                         strcmp (bname, ...)
+  A possibly null pointer is passed as a parameter corresponding to a formal
+  parameter with no /*@null@*/ annotation.  If NULL may be used for this
+  parameter, add a /*@null@*/ annotation to the function parameter declaration.
+  (Use -nullpass to inhibit warning)
+   ../minigzip.c:576:13: Storage bname may become null
+../minigzip.c:583:10: Operand of ! is non-boolean (int):
+                         !strcmp(bname, "gunzip")
+  The operand of a boolean operator is not a boolean. Use +ptrnegate to allow !
+  to be used on pointers. (Use -boolops to inhibit warning)
+../minigzip.c:585:15: Operand of ! is non-boolean (int): !strcmp(bname, "zcat")
+../minigzip.c:600:16: Operands of == have incompatible types (char, int):
+                         (*argv)[2] == 0
+  Types are incompatible. (Use -type to inhibit warning)
+../minigzip.c:607:9: Assignment of int to char: outmode[3] = 0
+../minigzip.c:611:13: Test expression for if not boolean, type int: uncompr
+../minigzip.c:613:37: Observer storage passed as unqualified param:
+                         error ("can't gzdopen stdin")
+   ../minigzip.c:613:37: Storage becomes observer
+../minigzip.c:614:27: Possibly null storage file passed as non-null param:
+                         gz_uncompress (file, ...)
+   ../minigzip.c:612:20: Storage file may become null
+../minigzip.c:617:37: Observer storage passed as unqualified param:
+                         error ("can't gzdopen stdout")
+   ../minigzip.c:617:37: Storage becomes observer
+../minigzip.c:618:32: Possibly null storage file passed as non-null param:
+                         gz_compress (..., file)
+   ../minigzip.c:616:20: Storage file may become null
+../minigzip.c:621:13: Test expression for if not boolean, type int: copyout
+../minigzip.c:625:17: Test expression for if not boolean, type int: uncompr
+../minigzip.c:626:21: Test expression for if not boolean, type int: copyout
+../minigzip.c:636:21: Test expression for if not boolean, type int: copyout
+../minigzip.c:643:49: Observer storage passed as unqualified param:
+                         error ("can't gzdopen stdout")
+   ../minigzip.c:643:49: Storage becomes observer
+../minigzip.c:645:37: Dependent storage in passed as unqualified param:
+                         gz_compress (in, ...)
+   ../minigzip.c:637:52: Storage in becomes dependent
+../minigzip.c:645:41: Possibly null storage file passed as non-null param:
+                         gz_compress (..., file)
+   ../minigzip.c:642:32: Storage file may become null
+../minigzip.c:652:22: Test expression for while not boolean, type int:
+                         argv++, --argc
+../minigzip.c:654:14: Fresh storage file not released before return
+   ../minigzip.c:642:25: Fresh storage file created
+../minigzip.c:342:6: Function exported but not used outside minigzip: error
+  A declaration is exported, but not used outside this module. Declaration can
+  use static qualifier. (Use -exportlocal to inhibit warning)
+   ../minigzip.c:356:10: Definition of error
+../minigzip.c:343:6: Function exported but not used outside minigzip:
+                        gz_compress
+   ../minigzip.c:367:9: Definition of gz_compress
+../minigzip.c:347:6: Function exported but not used outside minigzip:
+                        gz_uncompress
+   ../minigzip.c:435:11: Definition of gz_uncompress
+../minigzip.c:348:6: Function exported but not used outside minigzip:
+                        file_compress
+   ../minigzip.c:462:9: Definition of file_compress
+../minigzip.c:349:6: Function exported but not used outside minigzip:
+                        file_uncompress
+   ../minigzip.c:501:9: Definition of file_uncompress
+

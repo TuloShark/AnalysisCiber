@@ -1,0 +1,439 @@
+../gun.c: (in function in)
+../gun.c:103:43: Function read expects arg 3 to be size_t gets int: ret
+  To allow arbitrary integral types to match any integral type, use
+  +matchanyintegral.
+../gun.c: (in function out)
+../gun.c:136:9: Test expression for if not boolean, type int: me->check
+  Test expression type is not boolean or int. (Use -predboolint to inhibit
+  warning)
+../gun.c:145:48: Function write expects arg 3 to be size_t gets int: ret
+../gun.c: (in function lunpipe)
+../gun.c:226:14: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:226:74: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:226:5: Assignment of int to unsigned int: flags = (have ? 0 :
+    (have = in(indp, &next)), last = have ? (have--, (int)(*next++)) : -1)
+  To ignore signs in type comparisons use +ignoresigns
+../gun.c:229:9: Test expression for if not boolean, type unsigned int:
+                   flags & 0x60
+../gun.c:230:9: Implicitly only storage strm->msg (type char *) not released
+    before assignment: strm->msg = (char *)"unknown lzw flags set"
+  A memory leak has been detected. Only-qualified storage is not released
+  before the last reference to it is lost. (Use -mustfreeonly to inhibit
+  warning)
+../gun.c:230:9: Observer storage assigned to unqualified reference:
+                   strm->msg = (char *)"unknown lzw flags set"
+  Observer storage is transferred to a non-observer reference. (Use
+  -observertrans to inhibit warning)
+   ../gun.c:230:29: Storage becomes observer
+../gun.c:233:5: Assignment of unsigned int to int: max = flags & 0x1f
+../gun.c:235:9: Implicitly only storage strm->msg (type char *) not released
+    before assignment: strm->msg = (char *)"lzw bits out of range"
+../gun.c:235:9: Observer storage assigned to unqualified reference:
+                   strm->msg = (char *)"lzw bits out of range"
+   ../gun.c:235:29: Storage becomes observer
+../gun.c:245:11: Test expression for conditional not boolean, type unsigned
+                    int: flags
+../gun.c:245:5: Assignment of int to unsigned int: end = flags ? 256 : 255
+../gun.c:249:10: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:249:70: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:252:10: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:252:70: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:254:9: Test expression for if not boolean, type int: last & 1
+../gun.c:255:9: Implicitly only storage strm->msg (type char *) not released
+                   before assignment: strm->msg = (char *)"invalid lzw code"
+../gun.c:255:9: Observer storage assigned to unqualified reference:
+                   strm->msg = (char *)"invalid lzw code"
+   ../gun.c:255:29: Storage becomes observer
+../gun.c:260:5: Assignment of int to unsigned int: chunk = bits - 2
+../gun.c:269:147: Test expression for conditional not boolean, type unsigned
+                     int: have
+../gun.c:269:207: Test expression for conditional not boolean, type unsigned
+                     int: have
+../gun.c:277:13: Assignment of int to unsigned int: chunk = bits
+../gun.c:279:14: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:279:74: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:281:17: Operands of && are non-booleans (unsigned int, int):
+                    outcnt && out(&outd, outbuf, outcnt)
+  The operand of a boolean operator is not a boolean. Use +ptrnegate to allow !
+  to be used on pointers. (Use -boolops to inhibit warning)
+../gun.c:282:17: Implicitly only storage strm->next_in (type Bytef *) not
+                    released before assignment: strm->next_in = outbuf
+../gun.c:282:17: Unqualified storage outbuf assigned to implicitly only:
+                    strm->next_in = outbuf
+  Unqualified storage is transferred in an inconsistent way. (Use
+  -unqualifiedtrans to inhibit warning)
+../gun.c:283:29: Function returns with global outbuf referencing kept storage
+  A global variable does not satisfy its annotations when control is
+  transferred. (Use -globstate to inhibit warning)
+   ../gun.c:282:17: Storage outbuf becomes kept
+../gun.c:287:35: Right operand of << may be negative (int):
+                    (unsigned int)last << left
+  The right operand to a shift operator may be negative (behavior undefined).
+  (Use -shiftnegative to inhibit warning)
+../gun.c:291:18: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:291:78: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:293:39: Right operand of << may be negative (int):
+                    (unsigned int)last << left
+../gun.c:299:33: Right operand of >> may be negative (int):
+                    (unsigned int)last >> (8 - left)
+../gun.c:302:28: Right operand of && is non-boolean (unsigned int):
+                    code == 256 && flags
+../gun.c:303:147: Test expression for conditional not boolean, type unsigned
+                     int: have
+../gun.c:303:207: Test expression for conditional not boolean, type unsigned
+                     int: have
+../gun.c:322:17: Implicitly only storage strm->msg (type char *) not released
+                    before assignment: strm->msg = (char *)"invalid lzw code"
+../gun.c:322:17: Observer storage assigned to unqualified reference:
+                    strm->msg = (char *)"invalid lzw code"
+   ../gun.c:322:37: Storage becomes observer
+../gun.c:353:17: Test expression for if not boolean, type int:
+                    out(&outd, outbuf, outcnt)
+../gun.c:354:17: Implicitly only storage strm->next_in (type Bytef *) not
+                    released before assignment: strm->next_in = outbuf
+../gun.c:354:17: Unqualified storage outbuf assigned to implicitly only:
+                    strm->next_in = outbuf
+../gun.c:355:29: Function returns with global outbuf referencing kept storage
+   ../gun.c:354:17: Storage outbuf becomes kept
+../gun.c:369:2: Path with no return in function declared to return int
+  There is a path through a function declared to return a value on which there
+  is no return statement. This means the execution may fall through without
+  returning a meaningful result to the caller. (Use -noret to inhibit warning)
+../gun.c: (in function gunpipe)
+../gun.c:393:5: Unqualified storage inbuf assigned to implicitly only:
+                   ind.inbuf = inbuf
+../gun.c:399:5: Implicitly only storage strm->next_in (type Bytef *) not
+                   released before assignment: strm->next_in = 0
+../gun.c:402:14: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:402:74: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:406:57: Null storage next derivable from parameter in (..., &next)
+  A possibly null pointer is reachable from a parameter or global variable that
+  is not declared using a /*@null@*/ annotation. (Use -nullstate to inhibit
+  warning)
+   ../gun.c:387:29: Storage next becomes null
+../gun.c:406:29: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:406:89: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:407:13: Implicitly only storage strm->msg (type char *) not released
+    before assignment: strm->msg = (char *)"incorrect header check"
+../gun.c:407:13: Observer storage assigned to unqualified reference:
+                    strm->msg = (char *)"incorrect header check"
+   ../gun.c:407:33: Storage becomes observer
+../gun.c:408:19: Test expression for conditional not boolean, type int: first
+../gun.c:415:33: Null storage next passed as non-null param:
+                    lunpipe (..., next, ...)
+  A possibly null pointer is passed as a parameter corresponding to a formal
+  parameter with no /*@null@*/ annotation.  If NULL may be used for this
+  parameter, add a /*@null@*/ annotation to the function parameter declaration.
+  (Use -nullpass to inhibit warning)
+   ../gun.c:387:29: Storage next becomes null
+../gun.c:415:39: Passed storage *indp contains 2 undefined fields:
+                    infile, inbuf
+  Storage derivable from a parameter, return value or global is not defined.
+  Use /*@out@*/ to denote passed or returned storage which need not be defined.
+  (Use -compdef to inhibit warning)
+../gun.c:415:54: Null storage strm->next_in derivable from parameter lunpipe
+                    (..., strm)
+   ../gun.c:399:21: Storage strm->next_in becomes null
+../gun.c:421:42: Null storage next derivable from parameter in (..., &next)
+   ../gun.c:387:29: Storage next becomes null
+../gun.c:421:14: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:421:74: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:423:13: Implicitly only storage strm->msg (type char *) not released
+    before assignment: strm->msg = (char *)"unknown compression method"
+../gun.c:423:13: Observer storage assigned to unqualified reference:
+                    strm->msg = (char *)"unknown compression method"
+   ../gun.c:423:33: Storage becomes observer
+../gun.c:427:46: Null storage next derivable from parameter in (..., &next)
+   ../gun.c:387:29: Storage next becomes null
+../gun.c:427:18: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:427:78: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:427:9: Assignment of int to unsigned int: flags = (have ? 0 :
+    (have = in(indp, &next)), last = have ? (have--, (int)(*next++)) : -1)
+../gun.c:428:38: Null storage next derivable from parameter in (..., &next)
+   ../gun.c:387:29: Storage next becomes null
+../gun.c:428:10: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:428:70: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:429:38: Null storage next derivable from parameter in (..., &next)
+   ../gun.c:387:29: Storage next becomes null
+../gun.c:429:10: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:429:70: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:430:38: Null storage next derivable from parameter in (..., &next)
+   ../gun.c:387:29: Storage next becomes null
+../gun.c:430:10: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:430:70: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:431:38: Null storage next derivable from parameter in (..., &next)
+   ../gun.c:387:29: Storage next becomes null
+../gun.c:431:10: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:431:70: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:432:38: Null storage next derivable from parameter in (..., &next)
+   ../gun.c:387:29: Storage next becomes null
+../gun.c:432:10: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:432:70: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:433:38: Null storage next derivable from parameter in (..., &next)
+   ../gun.c:387:29: Storage next becomes null
+../gun.c:433:10: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:433:70: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:435:13: Test expression for if not boolean, type unsigned int:
+                    flags & 0xe0
+../gun.c:436:13: Implicitly only storage strm->msg (type char *) not released
+    before assignment: strm->msg = (char *)"unknown header flags set"
+../gun.c:436:13: Observer storage assigned to unqualified reference:
+                    strm->msg = (char *)"unknown header flags set"
+   ../gun.c:436:33: Storage becomes observer
+../gun.c:440:13: Test expression for if not boolean, type unsigned int:
+                    flags & 4
+../gun.c:441:48: Null storage next derivable from parameter in (..., &next)
+   ../gun.c:387:29: Storage next becomes null
+../gun.c:441:20: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:441:80: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:441:13: Assignment of int to unsigned int: len = (have ? 0 :
+    (have = in(indp, &next)), last = have ? (have--, (int)(*next++)) : -1)
+../gun.c:442:60: Null storage next derivable from parameter in (..., &next)
+   ../gun.c:387:29: Storage next becomes null
+../gun.c:442:32: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:442:92: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:447:50: Null storage next derivable from parameter in (..., &next)
+   ../gun.c:387:29: Storage next becomes null
+../gun.c:447:22: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:447:82: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:454:13: Test expression for if not boolean, type unsigned int:
+                    flags & 8
+../gun.c:455:49: Null storage next derivable from parameter in (..., &next)
+   ../gun.c:387:29: Storage next becomes null
+../gun.c:455:21: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:455:81: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:457:13: Test expression for if not boolean, type unsigned int:
+                    flags & 16
+../gun.c:458:49: Null storage next derivable from parameter in (..., &next)
+   ../gun.c:387:29: Storage next becomes null
+../gun.c:458:21: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:458:81: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:460:13: Test expression for if not boolean, type unsigned int:
+                    flags & 2
+../gun.c:461:42: Null storage next derivable from parameter in (..., &next)
+   ../gun.c:387:29: Storage next becomes null
+../gun.c:461:14: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:461:74: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:462:42: Null storage next derivable from parameter in (..., &next)
+   ../gun.c:387:29: Storage next becomes null
+../gun.c:462:14: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:462:74: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:469:30: Null storage passed as non-null param: crc32 (..., 0, ...)
+../gun.c:475:27: Null storage strm->next_in derivable from parameter
+                    inflateBack (strm, ...)
+   ../gun.c:473:25: Storage strm->next_in becomes null
+../gun.c:483:14: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:483:74: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:484:14: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:484:74: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:485:14: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:485:74: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:486:14: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:486:74: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:489:17: Implicitly only storage strm->msg (type char *) not released
+    before assignment: strm->msg = (char *)"incorrect data check"
+../gun.c:489:17: Observer storage assigned to unqualified reference:
+                    strm->msg = (char *)"incorrect data check"
+   ../gun.c:489:37: Storage becomes observer
+../gun.c:494:14: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:494:74: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:495:14: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:495:74: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:496:14: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:496:74: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:497:14: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:497:74: Test expression for conditional not boolean, type unsigned
+                    int: have
+../gun.c:500:17: Implicitly only storage strm->msg (type char *) not released
+    before assignment: strm->msg = (char *)"incorrect length check"
+../gun.c:500:17: Observer storage assigned to unqualified reference:
+                    strm->msg = (char *)"incorrect length check"
+   ../gun.c:500:37: Storage becomes observer
+../gun.c:510:12: Variable ret used before definition
+  An rvalue is used that may not be initialized to a value on some execution
+  path. (Use -usedef to inhibit warning)
+../gun.c:510:16: Only storage ind.inbuf (type unsigned char *) derived from
+    variable declared in this scope is not released (memory leak)
+  A storage leak due to incomplete deallocation of a structure or deep pointer
+  is suspected. Unshared storage that is reachable from a reference that is
+  being deallocated has not yet been deallocated. Splint assumes when an object
+  is passed as an out only void pointer that the outer object will be
+  deallocated, but the inner objects will not. (Use -compdestroy to inhibit
+  warning)
+../gun.c:510:16: Function returns with null storage derivable from parameter
+                    strm->next_in
+   ../gun.c:399:21: Storage strm->next_in becomes null
+../gun.c:510:16: Function returns with global inbuf referencing kept storage
+   ../gun.c:393:5: Storage inbuf becomes kept
+../gun.c: (in function copymeta)
+../gun.c:523:34: Operands of != have incompatible types (__mode_t, mode_t):
+                    (was.st_mode & S_IFMT) != S_IFREG
+  Types are incompatible. (Use -type to inhibit warning)
+../gun.c: (in function gunzip)
+../gun.c:554:27: Operands of == have incompatible types (char, int):
+                    *inname == 0
+../gun.c:559:41: Null storage passed as non-null param: open (..., 0)
+../gun.c:564:5: Clauses exit with inname referencing unqualified static storage
+                   in true branch, implicitly temp storage in false branch
+  The state of a variable is different depending on which branch is taken. This
+  means no annotation can sensibly be applied to the storage. (Use -branchstate
+  to inhibit warning)
+   ../gun.c:555:9: Storage inname becomes static
+../gun.c:565:9: Test expression for if not boolean, type int: test
+../gun.c:567:33: Operands of == have incompatible types (char, int):
+                    *outname == 0
+../gun.c:574:13: Return value (type int) ignored: close(infile)
+  Result returned by function call is not used. If this is intended, can cast
+  result to (void) to eliminate message. (Use -retvalint to inhibit warning)
+../gun.c:578:5: Clauses exit with outname referencing unqualified static
+    storage in true branch, implicitly temp storage in false branch
+   ../gun.c:568:9: Storage outname becomes static
+../gun.c:583:22: Return value (type int) ignored: close(outfile)
+../gun.c:584:21: Return value (type int) ignored: close(infile)
+../gun.c:592:13: Return value (type int) ignored: unlink(inname)
+../gun.c:599:26: Return value (type int) ignored: unlink(outname)
+../gun.c:603:26: Return value (type int) ignored: unlink(outname)
+../gun.c:607:26: Return value (type int) ignored: unlink(outname)
+../gun.c:612:18: Test expression for if not boolean, type int: errno
+../gun.c:622:26: Return value (type int) ignored: unlink(outname)
+../gun.c: (in function main)
+../gun.c:640:5: Assignment of int to alloc_func: strm.zalloc = 0
+../gun.c:641:5: Assignment of int to free_func: strm.zfree = 0
+../gun.c:643:28: Null storage strm.zalloc derivable from parameter
+                    inflateBackInit_ ((&strm), ...)
+   ../gun.c:640:19: Storage strm.zalloc becomes null
+../gun.c:643:28: Null storage strm.zfree derivable from parameter
+                    inflateBackInit_ ((&strm), ...)
+   ../gun.c:641:18: Storage strm.zfree becomes null
+../gun.c:643:28: Null storage strm.opaque derivable from parameter
+                    inflateBackInit_ ((&strm), ...)
+   ../gun.c:642:19: Storage strm.opaque becomes null
+../gun.c:643:28: Passed storage strm contains 11 undefined fields:
+                    next_in, avail_in, total_in, next_out, ...
+../gun.c:646:18: Only storage strm.next_in (type Bytef *) derived from variable
+                    declared in this scope is not released (memory leak)
+../gun.c:646:18: Only storage strm.next_out (type Bytef *) derived from
+    variable declared in this scope is not released (memory leak)
+../gun.c:646:18: Only storage strm.msg (type char *) derived from variable
+                    declared in this scope is not released (memory leak)
+../gun.c:646:18: Only storage strm.state (type struct internal_state *) derived
+    from variable declared in this scope is not released (memory leak)
+../gun.c:646:18: Only storage strm.zalloc (type alloc_func) derived from
+    variable declared in this scope is not released (memory leak)
+../gun.c:646:18: Only storage strm.zfree (type free_func) derived from variable
+                    declared in this scope is not released (memory leak)
+../gun.c:646:18: Only storage strm.opaque (type voidpf) derived from variable
+                    declared in this scope is not released (memory leak)
+../gun.c:653:9: Left operand of && is non-boolean (int):
+                   argc && strcmp(*argv, "-h") == 0
+../gun.c:657:18: Only storage strm.next_in (type Bytef *) derived from variable
+                    declared in this scope is not released (memory leak)
+../gun.c:657:18: Only storage strm.next_out (type Bytef *) derived from
+    variable declared in this scope is not released (memory leak)
+../gun.c:657:18: Only storage strm.msg (type char *) derived from variable
+                    declared in this scope is not released (memory leak)
+../gun.c:657:18: Only storage strm.state (type struct internal_state *) derived
+    from variable declared in this scope is not released (memory leak)
+../gun.c:657:18: Only storage strm.zalloc (type alloc_func) derived from
+    variable declared in this scope is not released (memory leak)
+../gun.c:657:18: Only storage strm.zfree (type free_func) derived from variable
+                    declared in this scope is not released (memory leak)
+../gun.c:657:18: Only storage strm.opaque (type voidpf) derived from variable
+                    declared in this scope is not released (memory leak)
+../gun.c:659:9: Left operand of && is non-boolean (int):
+                   argc && strcmp(*argv, "-t") == 0
+../gun.c:664:9: Test expression for if not boolean, type int: argc
+../gun.c:666:17: Test expression for if not boolean, type int: test
+../gun.c:683:34: Function malloc expects arg 1 to be size_t gets int: len + 1
+../gun.c:689:40: Function memcpy expects arg 3 to be size_t gets int: len
+../gun.c:690:17: Assignment of int to char: outname[len] = 0
+../gun.c:692:40: Possibly null storage outname passed as non-null param:
+                    gunzip (..., outname, ...)
+   ../gun.c:667:27: Storage outname may become null
+../gun.c:694:17: Test expression for if not boolean, type int: ret
+../gun.c:695:22: Test expression for while not boolean, type int:
+                    argv++, --argc
+../gun.c:697:29: Null storage passed as non-null param: gunzip (..., NULL, ...)
+../gun.c:697:35: Null storage passed as non-null param: gunzip (..., NULL, ...)
+../gun.c:700:5: Return value (type int) ignored: inflateBackEnd(&...
+../gun.c:701:16: Only storage strm.next_in (type Bytef *) derived from variable
+                    declared in this scope is not released (memory leak)
+../gun.c:701:16: Only storage strm.next_out (type Bytef *) derived from
+    variable declared in this scope is not released (memory leak)
+../gun.c:701:16: Only storage strm.msg (type char *) derived from variable
+                    declared in this scope is not released (memory leak)
+../gun.c:701:16: Only storage strm.state (type struct internal_state *) derived
+    from variable declared in this scope is not released (memory leak)
+../gun.c:701:16: Only storage strm.zalloc (type alloc_func) derived from
+    variable declared in this scope is not released (memory leak)
+../gun.c:701:16: Only storage strm.zfree (type free_func) derived from variable
+                    declared in this scope is not released (memory leak)
+../gun.c:701:16: Only storage strm.opaque (type voidpf) derived from variable
+                    declared in this scope is not released (memory leak)
+../gun.c:161:15: Variable exported but not used outside gun: inbuf
+  A declaration is exported, but not used outside this module. Declaration can
+  use static qualifier. (Use -exportlocal to inhibit warning)
+../gun.c:162:15: Variable exported but not used outside gun: outbuf
+../gun.c:163:16: Variable exported but not used outside gun: prefix
+../gun.c:164:15: Variable exported but not used outside gun: suffix
+../gun.c:165:15: Variable exported but not used outside gun: match
+

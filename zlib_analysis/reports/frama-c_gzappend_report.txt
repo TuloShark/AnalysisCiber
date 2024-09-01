@@ -1,0 +1,476 @@
+[kernel] Parsing gzappend.c (with preprocessing)
+[eva] Analyzing a complete application starting at main
+[eva:initial-state] Values of globals at initialization
+  
+[eva:alarm] gzappend.c:472: Warning: 
+  signed overflow. assert -2147483648 ≤ argc - 1;
+[eva:alarm] gzappend.c:475: Warning: 
+  out of bounds read. assert \valid_read(argv);
+[eva] using specification for function printf_va_1
+[eva] using specification for function printf_va_2
+[eva:alarm] gzappend.c:486: Warning: 
+  out of bounds read. assert \valid_read(argv + 0);
+[eva:alarm] gzappend.c:487: Warning: 
+  out of bounds read. assert \valid_read(argv + 0);
+[eva:alarm] gzappend.c:487: Warning: 
+  out of bounds read. assert \valid_read(*(argv + 0) + 1);
+[eva] using specification for function fprintf_va_1
+[eva] using specification for function exit
+[eva:alarm] gzappend.c:487: Warning: 
+  out of bounds read. assert \valid_read(argv + 0);
+[eva:alarm] gzappend.c:487: Warning: 
+  out of bounds read. assert \valid_read(*(argv + 0) + 1);
+[eva:alarm] gzappend.c:487: Warning: 
+  out of bounds read. assert \valid_read(argv + 0);
+[eva:alarm] gzappend.c:487: Warning: 
+  out of bounds read. assert \valid_read(*(argv + 0) + 2);
+[eva:alarm] gzappend.c:494: Warning: 
+  out of bounds read. assert \valid_read(tmp);
+                      (tmp from argv++)
+[eva] using specification for function __va_open_mode_t
+[eva:alarm] gzappend.c:270: Warning: 
+  function __va_open_mode_t: precondition 'valid_filename' got status unknown.
+[eva:alarm] gzappend.c:95: Warning: 
+  function fprintf_va_1: precondition valid_read_string(param1) got status unknown.
+[eva] gzappend.c:272: allocating variable __malloc_gzscan_l272
+[eva] using specification for function read
+[eva:alarm] gzappend.c:240: Warning: 
+  unsigned overflow. assert 0 ≤ in->left - 1;
+[eva:alarm] gzappend.c:240: Warning: 
+  accessing uninitialized left-value.
+  assert \initialized(tmp);
+  (tmp from in->next++)
+[eva:alarm] gzappend.c:95: Warning: 
+  function fprintf_va_1: precondition valid_read_string(param0) got status unknown.
+[eva:alarm] gzappend.c:240: Warning: 
+  unsigned overflow. assert 0 ≤ in->left - 1;
+[eva:alarm] gzappend.c:240: Warning: 
+  accessing uninitialized left-value.
+  assert \initialized(tmp_0);
+  (tmp_0 from in->next++)
+[eva:alarm] gzappend.c:241: Warning: 
+  unsigned overflow. assert 0 ≤ in->left - 1;
+[eva:alarm] gzappend.c:241: Warning: 
+  accessing uninitialized left-value.
+  assert \initialized(tmp_1);
+  (tmp_1 from in->next++)
+[eva:alarm] gzappend.c:242: Warning: 
+  unsigned overflow. assert 0 ≤ in->left - 1;
+[eva:alarm] gzappend.c:242: Warning: 
+  accessing uninitialized left-value.
+  assert \initialized(tmp_2);
+  (tmp_2 from in->next++)
+[eva:alarm] gzappend.c:218: Warning: 
+  unsigned overflow. assert 0 ≤ in->left - n;
+[eva:alarm] gzappend.c:246: Warning: 
+  unsigned overflow. assert 0 ≤ in->left - 1;
+[eva:alarm] gzappend.c:246: Warning: 
+  accessing uninitialized left-value.
+  assert \initialized(tmp_3);
+  (tmp_3 from in->next++)
+[eva:alarm] gzappend.c:247: Warning: 
+  unsigned overflow. assert 0 ≤ in->left - 1;
+[eva:alarm] gzappend.c:247: Warning: 
+  accessing uninitialized left-value.
+  assert \initialized(tmp_4);
+  (tmp_4 from in->next++)
+[eva:alarm] gzappend.c:207: Warning: 
+  unsigned overflow. assert 0 ≤ n - in->left;
+[eva] using specification for function lseek
+[eva:alarm] gzappend.c:212: Warning: unsigned overflow. assert 0 ≤ n - bypass;
+[eva:alarm] gzappend.c:250: Warning: 
+  unsigned overflow. assert 0 ≤ in->left - 1;
+[eva:alarm] gzappend.c:250: Warning: 
+  accessing uninitialized left-value.
+  assert \initialized(tmp_5);
+  (tmp_5 from in->next++)
+[eva:alarm] gzappend.c:250: Warning: 
+  out of bounds read. assert \valid_read(tmp_5);
+                      (tmp_5 from in->next++)
+[eva] gzappend.c:250: starting to merge loop iterations
+[eva:alarm] gzappend.c:251: Warning: 
+  unsigned overflow. assert 0 ≤ in->left - 1;
+[eva:alarm] gzappend.c:251: Warning: 
+  accessing uninitialized left-value.
+  assert \initialized(tmp_6);
+  (tmp_6 from in->next++)
+[eva:alarm] gzappend.c:251: Warning: 
+  out of bounds read. assert \valid_read(tmp_6);
+                      (tmp_6 from in->next++)
+[eva] gzappend.c:281: allocating variable __malloc_gzscan_l281
+[kernel:annot:missing-spec] gzappend.c:286: Warning: 
+  Neither code nor specification for function inflateInit2_,
+   generating default assigns. See -generated-spec-* options for more info
+[eva] using specification for function inflateInit2_
+[kernel:annot:missing-spec] gzappend.c:295: Warning: 
+  Neither code nor specification for function crc32,
+   generating default assigns. See -generated-spec-* options for more info
+[eva] using specification for function crc32
+[kernel:annot:missing-spec] gzappend.c:310: Warning: 
+  Neither code nor specification for function inflate,
+   generating default assigns. See -generated-spec-* options for more info
+[eva] using specification for function inflate
+[eva:garbled-mix:assigns] gzappend.c:310: 
+  The specification of function inflate
+  has generated a garbled mix of addresses for assigns clause \result.
+[eva:alarm] gzappend.c:317: Warning: 
+  unsigned overflow.
+  assert 0 ≤ (unsigned int)(32768U - have) - strm->avail_out;
+[eva:alarm] gzappend.c:317: Warning: 
+  unsigned overflow.
+  assert (unsigned int)(32768U - have) - strm->avail_out ≤ 4294967295;
+[eva:alarm] gzappend.c:319: Warning: 
+  unsigned overflow. assert 0 ≤ 32768U - strm->avail_out;
+[eva:alarm] gzappend.c:319: Warning: 
+  unsigned overflow. assert 32768U - strm->avail_out ≤ 4294967295;
+[eva:alarm] gzappend.c:326: Warning: 
+  accessing uninitialized left-value. assert \initialized(&strm->data_type);
+[eva:alarm] gzappend.c:331: Warning: 
+  signed overflow.
+  assert -9223372036854775808 ≤ tmp_0 - (off_t)strm->avail_in;
+  (tmp_0 from lseek(gz.fd, 0L, 1))
+[eva:alarm] gzappend.c:331: Warning: 
+  signed overflow.
+  assert tmp_0 - (off_t)strm->avail_in ≤ 9223372036854775807;
+  (tmp_0 from lseek(gz.fd, 0L, 1))
+[eva] gzappend.c:297: starting to merge loop iterations
+[eva:alarm] gzappend.c:306: Warning: 
+  unsigned overflow. assert 0 ≤ 32768U - have;
+[eva:alarm] gzappend.c:306: Warning: 
+  unsigned overflow. assert 32768U - have ≤ 4294967295;
+[eva:alarm] gzappend.c:317: Warning: 
+  unsigned overflow. assert 0 ≤ 32768U - have;
+[eva:alarm] gzappend.c:317: Warning: 
+  unsigned overflow. assert 32768U - have ≤ 4294967295;
+[kernel:annot:missing-spec] gzappend.c:335: Warning: 
+  Neither code nor specification for function inflateEnd,
+   generating default assigns. See -generated-spec-* options for more info
+[eva] using specification for function inflateEnd
+[eva:alarm] gzappend.c:340: Warning: 
+  signed overflow.
+  assert -9223372036854775808 ≤ tmp_1 - (off_t)gz.left;
+  (tmp_1 from lseek(gz.fd, 0L, 1))
+[eva:alarm] gzappend.c:340: Warning: 
+  signed overflow.
+  assert tmp_1 - (off_t)gz.left ≤ 9223372036854775807;
+  (tmp_1 from lseek(gz.fd, 0L, 1))
+[eva:alarm] gzappend.c:227: Warning: 
+  unsigned overflow. assert 0 ≤ in->left - 1;
+[eva:alarm] gzappend.c:227: Warning: 
+  unsigned overflow. assert in->left - 1 ≤ 4294967295;
+[eva:alarm] gzappend.c:227: Warning: 
+  accessing uninitialized left-value.
+  assert \initialized(tmp);
+  (tmp from in->next++)
+[eva:alarm] gzappend.c:227: Warning: 
+  out of bounds read. assert \valid_read(tmp);
+                      (tmp from in->next++)
+[eva:alarm] gzappend.c:228: Warning: 
+  unsigned overflow. assert 0 ≤ in->left - 1;
+[eva:alarm] gzappend.c:228: Warning: 
+  unsigned overflow. assert in->left - 1 ≤ 4294967295;
+[eva:alarm] gzappend.c:228: Warning: 
+  accessing uninitialized left-value.
+  assert \initialized(tmp_0);
+  (tmp_0 from in->next++)
+[eva:alarm] gzappend.c:228: Warning: 
+  out of bounds read. assert \valid_read(tmp_0);
+                      (tmp_0 from in->next++)
+[eva:alarm] gzappend.c:229: Warning: 
+  unsigned overflow. assert 0 ≤ in->left - 1;
+[eva:alarm] gzappend.c:229: Warning: 
+  unsigned overflow. assert in->left - 1 ≤ 4294967295;
+[eva:alarm] gzappend.c:229: Warning: 
+  accessing uninitialized left-value.
+  assert \initialized(tmp_1);
+  (tmp_1 from in->next++)
+[eva:alarm] gzappend.c:229: Warning: 
+  out of bounds read. assert \valid_read(tmp_1);
+                      (tmp_1 from in->next++)
+[eva:alarm] gzappend.c:230: Warning: 
+  unsigned overflow. assert 0 ≤ in->left - 1;
+[eva:alarm] gzappend.c:230: Warning: 
+  unsigned overflow. assert in->left - 1 ≤ 4294967295;
+[eva:alarm] gzappend.c:230: Warning: 
+  accessing uninitialized left-value.
+  assert \initialized(tmp_2);
+  (tmp_2 from in->next++)
+[eva:alarm] gzappend.c:230: Warning: 
+  out of bounds read. assert \valid_read(tmp_2);
+                      (tmp_2 from in->next++)
+[eva:alarm] gzappend.c:345: Warning: 
+  accessing uninitialized left-value. assert \initialized(&strm->total_out);
+[eva] using specification for function fprintf_va_2
+[eva] using specification for function fprintf_va_3
+[eva:alarm] gzappend.c:355: Warning: 
+  signed overflow.
+  assert
+  -9223372036854775808 ≤ lastoff - (off_t)((int)(lastbit ≢ 0? 1: 0));
+[eva:alarm] gzappend.c:355: Warning: 
+  signed overflow.
+  assert lastoff - (off_t)((int)(lastbit ≢ 0? 1: 0)) ≤ 9223372036854775807;
+[eva:alarm] gzappend.c:357: Warning: 
+  signed overflow. assert -2147483648 ≤ 8 - lastbit;
+[eva:alarm] gzappend.c:357: Warning: 
+  signed overflow. assert 8 - lastbit ≤ 2147483647;
+[eva:alarm] gzappend.c:357: Warning: 
+  invalid RHS operand for shift.
+  assert 0 ≤ (int)((int)(8 - lastbit) & 7) < 32;
+[eva:alarm] gzappend.c:357: Warning: 
+  signed overflow. assert -2147483648 ≤ 1 << (int)((int)(8 - lastbit) & 7);
+[eva:alarm] gzappend.c:357: Warning: 
+  signed overflow. assert 1 << (int)((int)(8 - lastbit) & 7) ≤ 2147483647;
+[eva] using specification for function write
+[eva:alarm] gzappend.c:131: Warning: unsigned overflow. assert 0 ≤ rot % len;
+[eva:alarm] gzappend.c:131: Warning: 
+  unsigned overflow. assert rot % len ≤ 4294967295;
+[eva:alarm] gzappend.c:139: Warning: 
+  accessing uninitialized left-value. assert \initialized(list);
+[eva:alarm] gzappend.c:147: Warning: 
+  accessing uninitialized left-value. assert \initialized(last);
+[eva:alarm] gzappend.c:109: Warning: unsigned overflow. assert 0 ≤ a - c;
+[eva:alarm] gzappend.c:109: Warning: 
+  unsigned overflow. assert a - c ≤ 4294967295;
+[eva:alarm] gzappend.c:110: Warning: unsigned overflow. assert 0 ≤ c << 1;
+[eva:alarm] gzappend.c:110: Warning: 
+  unsigned overflow. assert c << 1 ≤ 4294967295;
+[eva:alarm] gzappend.c:111: Warning: unsigned overflow. assert 0 ≤ a - c;
+[eva:alarm] gzappend.c:111: Warning: 
+  unsigned overflow. assert a - c ≤ 4294967295;
+[eva:alarm] gzappend.c:115: Warning: unsigned overflow. assert 0 ≤ b - c;
+[eva:alarm] gzappend.c:115: Warning: 
+  unsigned overflow. assert b - c ≤ 4294967295;
+[eva] gzappend.c:115: starting to merge loop iterations
+[eva:alarm] gzappend.c:116: Warning: 
+  unsigned overflow. assert c << 1 ≤ 4294967295;
+[eva:alarm] gzappend.c:117: Warning: unsigned overflow. assert 0 ≤ b - c;
+[eva:alarm] gzappend.c:117: Warning: 
+  unsigned overflow. assert b - c ≤ 4294967295;
+[eva] gzappend.c:106: starting to merge loop iterations
+[eva] gzappend.c:109: starting to merge loop iterations
+[eva:alarm] gzappend.c:116: Warning: unsigned overflow. assert 0 ≤ c << 1;
+[eva:alarm] gzappend.c:119: Warning: unsigned overflow. assert 0 ≤ a + b;
+[eva:alarm] gzappend.c:119: Warning: 
+  unsigned overflow. assert a + b ≤ 4294967295;
+[eva:alarm] gzappend.c:157: Warning: 
+  accessing uninitialized left-value. assert \initialized(from);
+[eva:alarm] gzappend.c:157: Warning: 
+  out of bounds read. assert \valid_read(from);
+[eva:alarm] gzappend.c:161: Warning: 
+  pointer comparison. assert \pointer_comparable((void *)from, (void *)last);
+[eva:alarm] gzappend.c:162: Warning: 
+  pointer comparison. assert \pointer_comparable((void *)from, (void *)start);
+[eva:alarm] gzappend.c:163: Warning: 
+  accessing uninitialized left-value. assert \initialized(from);
+[eva:alarm] gzappend.c:163: Warning: 
+  out of bounds read. assert \valid_read(from);
+[eva] gzappend.c:158: starting to merge loop iterations
+[eva:alarm] gzappend.c:166: Warning: unsigned overflow. assert 0 ≤ cycles - 1;
+[eva:alarm] gzappend.c:166: Warning: 
+  unsigned overflow. assert cycles - 1 ≤ 4294967295;
+[eva] gzappend.c:155: starting to merge loop iterations
+[kernel:annot:missing-spec] gzappend.c:368: Warning: 
+  Neither code nor specification for function deflateInit2_,
+   generating default assigns. See -generated-spec-* options for more info
+[eva] using specification for function deflateInit2_
+[kernel:annot:missing-spec] gzappend.c:370: Warning: 
+  Neither code nor specification for function deflateSetDictionary,
+   generating default assigns. See -generated-spec-* options for more info
+[eva] using specification for function deflateSetDictionary
+[eva:alarm] gzappend.c:374: Warning: 
+  signed overflow. assert -9223372036854775808 ≤ end - 1;
+[eva:alarm] gzappend.c:374: Warning: 
+  signed overflow. assert end - 1 ≤ 9223372036854775807;
+[eva:alarm] gzappend.c:376: Warning: 
+  signed overflow. assert -2147483648 ≤ 8 - left;
+[eva:alarm] gzappend.c:376: Warning: 
+  signed overflow. assert 8 - left ≤ 2147483647;
+[kernel:annot:missing-spec] gzappend.c:376: Warning: 
+  Neither code nor specification for function deflatePrime,
+   generating default assigns. See -generated-spec-* options for more info
+[eva] using specification for function deflatePrime
+[eva:alarm] gzappend.c:497: Warning: 
+  out of bounds read. assert \valid_read(argv);
+[eva:garbled-mix:summary] 
+  Origins of garbled mix generated during analysis:
+    gzappend.c:310: misaligned read of addresses
+      (read in 80 statements, propagated through 50 statements)
+      garbled mix of &{__malloc_gzscan_l272; __malloc_gzscan_l281}
+[eva] gzappend.c:139: assertion 'Eva,initialization' got final status invalid.
+[eva] gzappend.c:147: assertion 'Eva,initialization' got final status invalid.
+[eva] gzappend.c:497: assertion 'Eva,mem_access' got final status invalid.
+[scope:rm_asserts] removing 10 assertion(s)
+[eva] ====== VALUES COMPUTED ======
+[eva:final-states] Values at end of function bye:
+  NON TERMINATING FUNCTION
+[eva:final-states] Values at end of function gcd:
+  a ∈
+   {{ garbled mix of &{__malloc_gzscan_l272; __malloc_gzscan_l281}
+    (origin: Misaligned read {gzappend.c:310}) }}
+  b ∈
+   {{ garbled mix of &{__malloc_gzscan_l272; __malloc_gzscan_l281}
+    (origin: Misaligned read {gzappend.c:310}) }}
+  c ∈
+   {{ garbled mix of &{__malloc_gzscan_l272; __malloc_gzscan_l281}
+    (origin: Misaligned read {gzappend.c:310}) }} or UNINITIALIZED
+  __retres ∈
+          {{ garbled mix of &{__malloc_gzscan_l272; __malloc_gzscan_l281}
+           (origin: Misaligned read {gzappend.c:310}) }}
+[eva:final-states] Values at end of function readin:
+  __fc_fds[0..1023] ∈ [--..--]
+  len ∈ [0..16384]
+  gz.fd ∈ [0..1023]
+    .size ∈ {14}
+    .left ∈ [0..16384]
+    .[bits 96 to 127] ∈ UNINITIALIZED
+    {.buf; .next} ∈ {{ &__malloc_gzscan_l272[0] }}
+    .name ∈ {{ &S_1_S_argv[0] }}
+  S___fc_stderr[0..1] ∈ [--..--]
+  __malloc_gzscan_l272[0..16383] ∈ [--..--] or UNINITIALIZED
+[eva:final-states] Values at end of function readmore:
+  __fc_fds[0..1023] ∈ [--..--]
+  gz.fd ∈ [0..1023]
+    .size ∈ {14}
+    .left ∈ [0..16384]
+    .[bits 96 to 127] ∈ UNINITIALIZED
+    {.buf; .next} ∈ {{ &__malloc_gzscan_l272[0] }}
+    .name ∈ {{ &S_1_S_argv[0] }}
+  __retres ∈ {0}
+  S___fc_stderr[0..1] ∈ [--..--]
+  __malloc_gzscan_l272[0..16383] ∈ [--..--] or UNINITIALIZED
+[eva:final-states] Values at end of function read4:
+  __fc_fds[0..1023] ∈ [--..--]
+  val ∈ [0..4294967295]
+  gz.fd ∈ [0..1023]
+    .size ∈ {14}
+    .left ∈
+    {{ garbled mix of &{__malloc_gzscan_l272; __malloc_gzscan_l281}
+     (origin: Misaligned read {gzappend.c:310}) }}
+    .[bits 96 to 127] ∈ UNINITIALIZED
+    .buf ∈ {{ &__malloc_gzscan_l272[0] }}
+    .next ∈
+    {{ garbled mix of &{__malloc_gzscan_l272; __malloc_gzscan_l281}
+     (origin: Misaligned read {gzappend.c:310}) }}
+    .name ∈ {{ &S_1_S_argv[0] }}
+  S___fc_stderr[0..1] ∈ [--..--]
+  __malloc_gzscan_l272[0] ∈ [--..--]
+                      [1..16383] ∈ [--..--] or UNINITIALIZED
+[eva:final-states] Values at end of function rotate:
+  rot ∈
+     {{ garbled mix of &{__malloc_gzscan_l272; __malloc_gzscan_l281}
+      (origin: Misaligned read {gzappend.c:310}) }}
+  tmp ∈
+     {{ garbled mix of &{__malloc_gzscan_l272; __malloc_gzscan_l281}
+      (origin: Misaligned read {gzappend.c:310}) }} or UNINITIALIZED
+  cycles ∈
+        {{ garbled mix of &{__malloc_gzscan_l272; __malloc_gzscan_l281}
+         (origin: Misaligned read {gzappend.c:310}) }} or UNINITIALIZED
+  start ∈
+       {{ garbled mix of &{__malloc_gzscan_l272; __malloc_gzscan_l281}
+        (origin: Misaligned read {gzappend.c:310}) }} or UNINITIALIZED
+  last ∈ {{ &__malloc_gzscan_l281[32767] }} or UNINITIALIZED
+  to ∈ {{ &__malloc_gzscan_l272 + [0..16383] }} or UNINITIALIZED
+  from ∈
+      {{ garbled mix of &{__malloc_gzscan_l272; __malloc_gzscan_l281}
+       (origin: Misaligned read {gzappend.c:310}) }} or UNINITIALIZED
+  __malloc_gzscan_l272[0] ∈
+                      {{ garbled mix of &{__malloc_gzscan_l272;
+                                          __malloc_gzscan_l281}
+                       (origin: Misaligned read {gzappend.c:310}) }}
+                      [1..16383] ∈
+                      {{ garbled mix of &{__malloc_gzscan_l272;
+                                          __malloc_gzscan_l281}
+                       (origin: Misaligned read {gzappend.c:310}) }} or UNINITIALIZED
+[eva:final-states] Values at end of function skip:
+  __fc_fds[0..1023] ∈ [--..--]
+  n ∈ [0..16384]
+  bypass ∈ {0; 16384; 32768; 49152} or UNINITIALIZED
+  gz.fd ∈ [0..1023]
+    .size ∈ {14}
+    .left ∈ [0..16384]
+    .[bits 96 to 127] ∈ UNINITIALIZED
+    .buf ∈ {{ &__malloc_gzscan_l272[0] }}
+    .next ∈ {{ &__malloc_gzscan_l272 + [0..--] }}
+    .name ∈ {{ &S_1_S_argv[0] }}
+  S___fc_stderr[0..1] ∈ [--..--]
+  __malloc_gzscan_l272[0] ∈ [--..--]
+                      [1..16383] ∈ [--..--] or UNINITIALIZED
+[eva:final-states] Values at end of function gzheader:
+  __fc_fds[0..1023] ∈ [--..--]
+  flags ∈ [0..31]
+  n ∈ [0..65535] or UNINITIALIZED
+  gz.fd ∈ [0..1023]
+    .size ∈ {14}
+    .left ∈ [0..16384]
+    .[bits 96 to 127] ∈ UNINITIALIZED
+    .buf ∈ {{ &__malloc_gzscan_l272[0] }}
+    .next ∈ {{ &__malloc_gzscan_l272 + [0..--] }}
+    .name ∈ {{ &S_1_S_argv[0] }}
+  S___fc_stderr[0..1] ∈ [--..--]
+  __malloc_gzscan_l272[0] ∈ [--..--]
+                      [1..16383] ∈ [--..--] or UNINITIALIZED
+[eva:final-states] Values at end of function gzscan:
+  __fc_heap_status ∈ [--..--]
+  __fc_fds[0..1023] ∈ [--..--]
+  ret ∈ [--..--] or ESCAPINGADDR
+  lastbit ∈ [--..--] or ESCAPINGADDR
+  left ∈ [--..--] or ESCAPINGADDR
+  full ∈ {0; 1}
+  have ∈ [--..--] or ESCAPINGADDR
+  crc ∈ [--..--] or ESCAPINGADDR
+  tot ∈ [--..--] or ESCAPINGADDR
+  window ∈ ESCAPINGADDR
+  lastoff ∈ [--..--] or ESCAPINGADDR
+  end ∈ [--..--] or ESCAPINGADDR
+  gz.fd ∈ [0..1023]
+    .size ∈ {14}
+    .left ∈ [--..--] or ESCAPINGADDR
+    .[bits 96 to 127] ∈ UNINITIALIZED
+    .buf ∈ ESCAPINGADDR
+    .next ∈ [--..--] or ESCAPINGADDR
+    .name ∈ {{ &S_1_S_argv[0] }}
+  strm{.next_in; .avail_in} ∈ [--..--] or ESCAPINGADDR
+      .[bits 96 to 127] ∈ [--..--] or UNINITIALIZED or ESCAPINGADDR
+      {.total_in; .next_out; .avail_out} ∈ [--..--] or ESCAPINGADDR
+      .[bits 288 to 319] ∈ [--..--] or UNINITIALIZED or ESCAPINGADDR
+      .total_out ∈ [--..--] or ESCAPINGADDR
+      {.msg; .state} ∈ [--..--] or UNINITIALIZED or ESCAPINGADDR
+      {.zalloc; .zfree; .opaque; .data_type} ∈ [--..--] or ESCAPINGADDR
+      .[bits 736 to 767] ∈ [--..--] or UNINITIALIZED or ESCAPINGADDR
+      .adler ∈ [--..--] or ESCAPINGADDR
+      .reserved ∈ [--..--] or UNINITIALIZED or ESCAPINGADDR
+  __retres ∈ [0..1023]
+  S___fc_stderr[0..1] ∈ [--..--]
+[eva:final-states] Values at end of function main:
+  __fc_heap_status ∈ [--..--]
+  __fc_fds[0..1023] ∈ [--..--]
+  argc ∈ [-2147483648..2147483646]
+  argv ∈ {{ &S_argv[1] }}
+  gd ∈ UNINITIALIZED
+  level ∈ UNINITIALIZED
+  strm ∈ UNINITIALIZED
+  __retres ∈ {0}
+  S___fc_stderr[0..1] ∈ [--..--]
+  S___fc_stdout[0..1] ∈ [--..--]
+[eva:summary] ====== ANALYSIS SUMMARY ======
+  ----------------------------------------------------------------------------
+  10 functions analyzed (out of 11): 90% coverage.
+  In these functions, 341 statements reached (out of 369): 92% coverage.
+  ----------------------------------------------------------------------------
+  Some errors and warnings have been raised during the analysis:
+    by the Eva analyzer:      0 errors    0 warnings
+    by the Frama-C kernel:    0 errors    7 warnings
+  ----------------------------------------------------------------------------
+  99 alarms generated by the analysis:
+      60 integer overflows
+      18 invalid memory accesses
+      18 accesses to uninitialized left-values
+       1 invalid shift
+       2 others
+  3 of them are sure alarms (invalid status).
+  ----------------------------------------------------------------------------
+  Evaluation of the logical properties reached by the analysis:
+    Assertions        0 valid     0 unknown     0 invalid      0 total
+    Preconditions    31 valid     3 unknown     0 invalid     34 total
+  91% of the logical properties reached have been proven.
+  ----------------------------------------------------------------------------

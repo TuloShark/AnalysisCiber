@@ -1,0 +1,315 @@
+gzappend.c: (in function bye)
+gzappend.c:96:10: Argument to exit has implementation defined behavior: 1
+  The argument to exit should be 0, EXIT_SUCCESS or EXIT_FAILURE (Use -exitarg
+  to inhibit warning)
+gzappend.c: (in function gcd)
+gzappend.c:106:12: Operands of && are non-boolean (unsigned int): a && b
+  The operand of a boolean operator is not a boolean. Use +ptrnegate to allow !
+  to be used on pointers. (Use -boolops to inhibit warning)
+gzappend.c: (in function rotate)
+gzappend.c:140:32: Function memcpy expects arg 3 to be size_t gets unsigned
+                      int: len - 1
+  To allow arbitrary integral types to match any integral type, use
+  +matchanyintegral.
+gzappend.c:140:16: Parameter 1 (list) to function memcpy is declared unique but
+                      is aliased by parameter 2 (list + 1)
+  A unique or only parameter is aliased by some other parameter or visible
+  global. (Use -aliasunique to inhibit warning)
+gzappend.c:148:33: Function memmove expects arg 3 to be size_t gets unsigned
+                      int: len - 1
+gzappend.c:165:10: Variable to used before definition
+  An rvalue is used that may not be initialized to a value on some execution
+  path. (Use -usedef to inhibit warning)
+gzappend.c:166:14: Test expression for while not boolean, type unsigned int:
+                      --cycles
+  Test expression type is not boolean or int. (Use -predboolint to inhibit
+  warning)
+gzappend.c: (in function readin)
+gzappend.c:184:38: Right operand of << may be negative (int): 1 << in->size
+  The right operand to a shift operator may be negative (behavior undefined).
+  (Use -shiftnegative to inhibit warning)
+gzappend.c:184:33: Function read expects arg 3 to be size_t gets int:
+                      1 << in->size
+gzappend.c:184:5: Assignment of ssize_t to int:
+                     len = read(in->fd, in->buf, 1 << in->size)
+gzappend.c:187:5: Implicitly only storage in->next (type unsigned char *) not
+                     released before assignment: in->next = in->buf
+  A memory leak has been detected. Only-qualified storage is not released
+  before the last reference to it is lost. (Use -mustfreeonly to inhibit
+  warning)
+gzappend.c:188:16: Storage in->buf reachable from parameter is kept (should be
+                      implicitly only)
+  Storage derivable from a parameter does not match the alias kind expected for
+  the formal parameter. (Use -compmempass to inhibit warning)
+   gzappend.c:187:5: Storage in->buf becomes kept
+gzappend.c: (in function skip)
+gzappend.c:208:31: Right operand of << may be negative (int): 1U << in->size
+gzappend.c:209:13: Test expression for if not boolean, type unsigned int:
+                      bypass
+gzappend.c:210:31: Function lseek expects arg 2 to be __off_t gets off_t:
+                      (off_t)bypass
+  To allow arbitrary integral types to match long unsigned, use +longintegral.
+gzappend.c:214:9: Return value (type int) ignored: readmore(in)
+  Result returned by function call is not used. If this is intended, can cast
+  result to (void) to eliminate message. (Use -retvalint to inhibit warning)
+gzappend.c: (in function read4)
+gzappend.c:227:5: Assignment of unsigned char to unsigned long int:
+    val = (in->left == 0 ? readmore(in) : 0, in->left--, *(in->next)++)
+  To make char and int types equivalent, use +charint.
+gzappend.c: (in function gzheader)
+gzappend.c:240:9: Operands of != have incompatible types (unsigned char, int):
+    (in->left == 0 ? readmore(in) : 0, in->left--, *(in->next)++) != 31
+gzappend.c:240:99: Operands of != have incompatible types (unsigned char, int):
+    (in->left == 0 ? readmore(in) : 0, in->left--, *(in->next)++) != 139
+gzappend.c:241:9: Operands of != have incompatible types (unsigned char, int):
+    (in->left == 0 ? readmore(in) : 0, in->left--, *(in->next)++) != 8
+gzappend.c:242:5: Assignment of unsigned char to int:
+    flags = (in->left == 0 ? readmore(in) : 0, in->left--, *(in->next)++)
+gzappend.c:243:9: Test expression for if not boolean, type int: flags & 0xe0
+gzappend.c:245:9: Test expression for if not boolean, type int: flags & 4
+gzappend.c:246:9: Assignment of unsigned char to unsigned int:
+    n = (in->left == 0 ? readmore(in) : 0, in->left--, *(in->next)++)
+gzappend.c:250:9: Test expression for if not boolean, type int: flags & 8
+gzappend.c:250:27: Operands of != have incompatible types (unsigned char, int):
+    (in->left == 0 ? readmore(in) : 0, in->left--, *(in->next)++) != 0
+  Types are incompatible. (Use -type to inhibit warning)
+gzappend.c:251:9: Test expression for if not boolean, type int: flags & 16
+gzappend.c:251:28: Operands of != have incompatible types (unsigned char, int):
+    (in->left == 0 ? readmore(in) : 0, in->left--, *(in->next)++) != 0
+gzappend.c:252:9: Test expression for if not boolean, type int: flags & 2
+gzappend.c: (in function gzscan)
+gzappend.c:270:32: Null storage passed as non-null param: open (..., 0)
+  A possibly null pointer is passed as a parameter corresponding to a formal
+  parameter with no /*@null@*/ annotation.  If NULL may be used for this
+  parameter, add a /*@null@*/ annotation to the function parameter declaration.
+  (Use -nullpass to inhibit warning)
+gzappend.c:272:21: Function malloc expects arg 1 to be size_t gets unsigned
+                      int: (1U << 14)
+gzappend.c:278:14: Possibly null storage gz.buf derivable from parameter
+                      gzheader (&gz)
+  A possibly null pointer is reachable from a parameter or global variable that
+  is not declared using a /*@null@*/ annotation. (Use -nullstate to inhibit
+  warning)
+   gzappend.c:272:14: Storage gz.buf may become null
+gzappend.c:278:14: Passed storage gz contains 2 undefined fields: buf, next
+  Storage derivable from a parameter, return value or global is not defined.
+  Use /*@out@*/ to denote passed or returned storage which need not be defined.
+  (Use -compdef to inhibit warning)
+gzappend.c:281:21: Function malloc expects arg 1 to be size_t gets unsigned
+                      int: 32768U
+gzappend.c:283:5: Assignment of int to alloc_func: strm->zalloc = 0
+gzappend.c:283:5: Implicitly only storage strm->zalloc (type alloc_func) not
+                     released before assignment: strm->zalloc = 0
+gzappend.c:284:5: Assignment of int to free_func: strm->zfree = 0
+gzappend.c:284:5: Implicitly only storage strm->zfree (type free_func) not
+                     released before assignment: strm->zfree = 0
+gzappend.c:285:5: Implicitly only storage strm->opaque (type voidpf) not
+                     released before assignment: strm->opaque = 0
+gzappend.c:286:25: Null storage strm->zalloc derivable from parameter
+                      inflateInit2_ ((strm), ...)
+   gzappend.c:283:20: Storage strm->zalloc becomes null
+gzappend.c:286:25: Null storage strm->zfree derivable from parameter
+                      inflateInit2_ ((strm), ...)
+   gzappend.c:284:19: Storage strm->zfree becomes null
+gzappend.c:286:25: Null storage strm->opaque derivable from parameter
+                      inflateInit2_ ((strm), ...)
+   gzappend.c:285:20: Storage strm->opaque becomes null
+gzappend.c:291:5: Assignment of long int to off_t:
+                     lastoff = lseek(gz.fd, 0L, SEEK_CUR) - gz.left
+gzappend.c:294:5: Implicitly only storage strm->next_in (type Bytef *) not
+                     released before assignment: strm->next_in = gz.next
+gzappend.c:295:21: Null storage passed as non-null param: crc32 (..., 0, ...)
+gzappend.c:296:5: Assignment of int to unsigned int: have = full = 0
+  To ignore signs in type comparisons use +ignoresigns
+gzappend.c:300:22: Storage gz.next reachable from passed parameter is kept
+                      (should be implicitly only): &gz
+   gzappend.c:294:5: Storage gz.next becomes kept
+gzappend.c:300:13: Return value (type int) ignored: readmore(&gz)
+gzappend.c:302:13: Implicitly only storage strm->next_in (type Bytef *) not
+                      released before assignment: strm->next_in = gz.next
+gzappend.c:302:13: Kept storage gz.next assigned to implicitly only:
+                      strm->next_in = gz.next
+  storage is transferred to a non-temporary reference after being passed as
+  keep parameter. The storage may be released or new aliases created. (Use
+  -kepttrans to inhibit warning)
+   gzappend.c:294:5: Storage gz.next becomes kept
+gzappend.c:303:9: Clauses exit with strm->next_in referencing kept storage in
+                     true branch, implicitly only storage in continuation
+  The state of a variable is different depending on which branch is taken. This
+  means no annotation can sensibly be applied to the storage. (Use -branchstate
+  to inhibit warning)
+   gzappend.c:302:13: Storage strm->next_in becomes kept
+gzappend.c:307:9: Implicitly only storage strm->next_out (type Bytef *) not
+                     released before assignment: strm->next_out = window + have
+gzappend.c:307:9: Dependent storage window assigned to implicitly only:
+                     strm->next_out = window + have
+  Dependent storage is transferred to a non-dependent reference. (Use
+  -dependenttrans to inhibit warning)
+   gzappend.c:307:26: Storage window becomes dependent
+gzappend.c:310:23: Storage strm->next_in reachable from passed parameter is
+                      unqualified (should be implicitly only): strm
+gzappend.c:310:23: Passed storage *strm contains 1 undefined field: next_out
+gzappend.c:317:26: Passed storage window not completely defined (*window is
+                      undefined): crc32 (..., window + have, ...)
+   gzappend.c:281:5: Storage *window allocated
+gzappend.c:318:13: Test expression for if not boolean, type uInt:
+                      strm->avail_out
+gzappend.c:326:13: Test expression for if not boolean, type int:
+                      strm->data_type & 128
+gzappend.c:327:17: Test expression for if not boolean, type int:
+                      strm->data_type & 64
+gzappend.c:331:17: Assignment of long int to off_t:
+                      lastoff = lseek(gz.fd, 0L, SEEK_CUR) - strm->avail_in
+gzappend.c:335:5: Return value (type int) ignored: inflateEnd(strm)
+gzappend.c:340:5: Assignment of long int to off_t:
+                     end = lseek(gz.fd, 0L, SEEK_CUR) - gz.left
+gzappend.c:350:9: Operands of || are non-booleans (unsigned int, int):
+                     gz.left || readin(&gz)
+gzappend.c:355:18: Incompatible types for - (off_t, boolean):
+                      lastoff - (lastbit != 0)
+  To make bool and int types equivalent, use +boolint.
+gzappend.c:355:5: Return value (type __off_t) ignored: lseek(gz.fd, las...
+  Result returned by function call is not used. If this is intended, can cast
+  result to (void) to eliminate message. (Use -retvalother to inhibit warning)
+gzappend.c:357:47: Right operand of << may be negative (int):
+                      1 << ((8 - lastbit) & 7)
+gzappend.c:358:5: Return value (type __off_t) ignored: lseek(gz.fd, -1L...
+gzappend.c:362:9: Test expression for if not boolean, type int: full
+gzappend.c:363:16: Possibly null storage window passed as non-null param:
+                      rotate (window, ...)
+   gzappend.c:281:14: Storage window may become null
+gzappend.c:363:16: Passed storage window not completely defined (*window is
+                      undefined): rotate (window, ...)
+   gzappend.c:281:5: Storage *window allocated
+gzappend.c:368:25: Storage strm->next_in reachable from passed parameter is
+                      kept (should be implicitly only): (strm)
+   gzappend.c:337:5: Storage strm->next_in becomes kept
+gzappend.c:370:26: Storage strm->next_in reachable from passed parameter is
+                      kept (should be implicitly only): strm
+   gzappend.c:337:5: Storage strm->next_in becomes kept
+gzappend.c:370:32: Possibly null storage window passed as non-null param:
+                      deflateSetDictionary (..., window, ...)
+   gzappend.c:281:14: Storage window may become null
+gzappend.c:370:32: Passed storage window not completely defined (*window is
+                      undefined): deflateSetDictionary (..., window, ...)
+   gzappend.c:281:5: Storage *window allocated
+gzappend.c:370:5: Return value (type int) ignored: deflateSetDictio...
+gzappend.c:373:9: Test expression for if not boolean, type int: left
+gzappend.c:374:22: Function lseek expects arg 2 to be __off_t gets off_t: --end
+gzappend.c:374:9: Return value (type __off_t) ignored: lseek(gz.fd, --e...
+gzappend.c:376:38: Function deflatePrime expects arg 3 to be int gets unsigned
+                      char: *gz.buf
+gzappend.c:376:22: Storage strm->next_in reachable from passed parameter is
+                      kept (should be implicitly only): strm
+   gzappend.c:337:5: Storage strm->next_in becomes kept
+gzappend.c:376:9: Return value (type int) ignored: deflatePrime(str...
+gzappend.c:378:18: Function lseek expects arg 2 to be __off_t gets off_t: end
+gzappend.c:378:5: Return value (type __off_t) ignored: lseek(gz.fd, end...
+gzappend.c:383:18: Only storage gz.next (type unsigned char *) derived from
+    variable declared in this scope is not released (memory leak)
+  A storage leak due to incomplete deallocation of a structure or deep pointer
+  is suspected. Unshared storage that is reachable from a reference that is
+  being deallocated has not yet been deallocated. Splint assumes when an object
+  is passed as an out only void pointer that the outer object will be
+  deallocated, but the inner objects will not. (Use -compdestroy to inhibit
+  warning)
+gzappend.c:383:18: Only storage gz.name (type char *) derived from variable
+                      declared in this scope is not released (memory leak)
+gzappend.c:383:18: Function returns with null storage derivable from parameter
+                      strm->zalloc
+   gzappend.c:283:20: Storage strm->zalloc becomes null
+gzappend.c:383:18: Function returns with null storage derivable from parameter
+                      strm->zfree
+   gzappend.c:284:19: Storage strm->zfree becomes null
+gzappend.c:383:18: Function returns with null storage derivable from parameter
+                      strm->opaque
+   gzappend.c:285:20: Storage strm->opaque becomes null
+gzappend.c:383:18: Storage strm->next_in reachable from parameter is kept
+                      (should be implicitly only)
+   gzappend.c:337:5: Storage strm->next_in becomes kept
+gzappend.c:383:18: Storage *strm reachable from parameter contains 1 undefined
+                      field: next_out
+gzappend.c: (in function gztack)
+gzappend.c:397:35: Null storage passed as non-null param: open (..., 0)
+gzappend.c:404:17: Function malloc expects arg 1 to be size_t gets unsigned
+                      int: (1U << 14)
+gzappend.c:405:18: Function malloc expects arg 1 to be size_t gets unsigned
+                      int: (1U << 14)
+gzappend.c:411:28: Function read expects arg 3 to be size_t gets unsigned int:
+                      (1U << 14)
+gzappend.c:411:24: Possibly null storage in passed as non-null param:
+                      read (..., in, ...)
+   gzappend.c:404:10: Storage in may become null
+gzappend.c:411:9: Assignment of ssize_t to int: len = read(fd, in, (1U << 14))
+gzappend.c:415:21: Possibly null storage name passed as non-null param:
+                      fprintf (..., name, ...)
+gzappend.c:419:9: Implicitly only storage strm->next_in (type Bytef *) not
+                     released before assignment: strm->next_in = in
+gzappend.c:420:13: Test expression for if not boolean, type int: len
+gzappend.c:425:13: Implicitly only storage strm->next_out (type Bytef *) not
+                      released before assignment: strm->next_out = out
+gzappend.c:426:33: Left operand of && is non-boolean (int): last && len == 0
+gzappend.c:426:27: Possibly null storage strm->next_out derivable from
+                      parameter deflate (strm, ...)
+   gzappend.c:425:30: Storage strm->next_out may become null
+gzappend.c:426:27: Passed storage *strm contains 1 undefined field: next_out
+gzappend.c:428:20: Test expression for while not boolean, type unsigned int:
+                      left
+gzappend.c:429:76: Function write expects arg 3 to be size_t gets unsigned int:
+                      left
+gzappend.c:429:33: Passed storage out not completely defined (*out is
+    undefined): write (..., out + (1U << 14) - strm->avail_out - left, ...)
+   gzappend.c:405:5: Storage *out allocated
+gzappend.c:429:17: Assignment of ssize_t to int:
+    len = write(gd, out + (1U << 14) - strm->avail_out - left, left)
+gzappend.c:437:9: Test expression for if not boolean, type int: last
+gzappend.c:438:9: Return value (type int) ignored: deflateEnd(strm)
+gzappend.c:439:9: Index of possibly null pointer out: out
+  A possibly null pointer is dereferenced.  Value is either the result of a
+  function which may return null (in which case, code should check it is not
+  null), or a global, parameter or structure field declared with the null
+  qualifier. (Use -nullderef to inhibit warning)
+   gzappend.c:405:11: Storage out may become null
+gzappend.c:449:44: Function write expects arg 3 to be size_t gets int: len
+gzappend.c:449:13: Assignment of ssize_t to int:
+                      ret = write(gd, out + 8 - len, len)
+gzappend.c:452:18: Test expression for while not boolean, type int: len
+gzappend.c:453:9: Return value (type int) ignored: close(gd)
+gzappend.c:457:10: Kept storage out passed as only param: free (out)
+   gzappend.c:425:13: Storage out becomes kept
+gzappend.c:458:10: Kept storage in passed as only param: free (in)
+   gzappend.c:419:9: Storage in becomes kept
+gzappend.c:459:17: Return value (type int) ignored: close(fd)
+gzappend.c:460:2: Function returns with possibly null storage derivable from
+                     parameter strm->next_out
+   gzappend.c:425:30: Storage strm->next_out may become null
+gzappend.c:460:2: Storage *strm reachable from parameter contains 1 undefined
+                     field: next_out
+gzappend.c: (in function main)
+gzappend.c:487:53: Operands of != have incompatible types (char, int):
+                      argv[0][2] != 0
+gzappend.c:489:9: Assignment of char to int: level = argv[0][1] - '0'
+gzappend.c:494:26: Passed storage strm contains 14 undefined fields:
+                      next_in, avail_in, total_in, next_out, ...
+gzappend.c:498:16: Null storage passed as non-null param: gztack (NULL, ...)
+gzappend.c:501:38: Function gztack expects arg 4 to be int gets boolean:
+                      argv[1] == NULL
+gzappend.c:503:14: Only storage strm.next_in (type Bytef *) derived from
+    variable declared in this scope is not released (memory leak)
+gzappend.c:503:14: Only storage strm.next_out (type Bytef *) derived from
+    variable declared in this scope is not released (memory leak)
+gzappend.c:503:14: Only storage strm.msg (type char *) derived from variable
+                      declared in this scope is not released (memory leak)
+gzappend.c:503:14: Only storage strm.state (type struct internal_state *)
+    derived from variable declared in this scope is not released (memory leak)
+gzappend.c:503:14: Only storage strm.zalloc (type alloc_func) derived from
+    variable declared in this scope is not released (memory leak)
+gzappend.c:503:14: Only storage strm.zfree (type free_func) derived from
+    variable declared in this scope is not released (memory leak)
+gzappend.c:503:14: Only storage strm.opaque (type voidpf) derived from variable
+                      declared in this scope is not released (memory leak)
+gzappend.c:223:15: Function exported but not used outside gzappend: read4
+  A declaration is exported, but not used outside this module. Declaration can
+  use static qualifier. (Use -exportlocal to inhibit warning)
+   gzappend.c:232:1: Definition of read4
+

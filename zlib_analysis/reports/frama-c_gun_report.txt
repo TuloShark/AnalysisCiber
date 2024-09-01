@@ -1,0 +1,794 @@
+[kernel] Parsing /home/wander/zlib_analysis/gun.c (with preprocessing)
+[eva] Analyzing a complete application starting at main
+[eva:initial-state] Values of globals at initialization
+  inbuf[0..32767] ∈ {0}
+  outbuf[0..32767] ∈ {0}
+  prefix[0..65535] ∈ {0}
+  suffix[0..65535] ∈ {0}
+  match[0..65281] ∈ {0}
+[kernel:annot:missing-spec] /home/wander/zlib_analysis/gun.c:643: Warning: 
+  Neither code nor specification for function inflateBackInit_,
+   generating default assigns. See -generated-spec-* options for more info
+[eva] using specification for function inflateBackInit_
+[eva] using specification for function fprintf_va_10
+[eva:alarm] /home/wander/zlib_analysis/gun.c:650: Warning: 
+  signed overflow. assert -2147483648 ≤ argc - 1;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:653: Warning: 
+  out of bounds read. assert \valid_read(argv);
+[eva] using specification for function strcmp
+[eva:alarm] /home/wander/zlib_analysis/gun.c:653: Warning: 
+  function strcmp: precondition 'valid_string_s1' got status unknown.
+[eva] FRAMAC_SHARE/libc/string.h:174: 
+  cannot evaluate ACSL term, unsupported ACSL construct: logic function strcmp
+[eva] using specification for function fprintf_va_11
+[eva] using specification for function fprintf_va_12
+[eva] using specification for function fprintf_va_13
+[eva:alarm] /home/wander/zlib_analysis/gun.c:659: Warning: 
+  out of bounds read. assert \valid_read(argv);
+[eva:alarm] /home/wander/zlib_analysis/gun.c:659: Warning: 
+  function strcmp: precondition 'valid_string_s1' got status unknown.
+[eva:alarm] /home/wander/zlib_analysis/gun.c:661: Warning: 
+  signed overflow. assert -2147483648 ≤ argc - 1;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:669: Warning: 
+  out of bounds read. assert \valid_read(argv);
+[eva:alarm] /home/wander/zlib_analysis/gun.c:669: Warning: 
+  function strlen: precondition 'valid_string_s' got status unknown.
+[eva:alarm] /home/wander/zlib_analysis/gun.c:670: Warning: 
+  out of bounds read. assert \valid_read(argv);
+[eva:alarm] /home/wander/zlib_analysis/gun.c:670: Warning: 
+  function strcmp: precondition 'valid_string_s1' got status invalid.
+[eva:alarm] /home/wander/zlib_analysis/gun.c:692: Warning: 
+  out of bounds read. assert \valid_read(argv);
+[eva] using specification for function __va_open_mode_t
+[eva:alarm] /home/wander/zlib_analysis/gun.c:559: Warning: 
+  function __va_open_mode_t: precondition 'valid_filename' got status unknown.
+[eva] using specification for function fprintf_va_1
+[eva:alarm] /home/wander/zlib_analysis/gun.c:561: Warning: 
+  function fprintf_va_1: precondition valid_read_string(param0) got status unknown.
+[eva] using specification for function read
+[eva] /home/wander/zlib_analysis/gun.c:99: starting to merge loop iterations
+[eva:alarm] /home/wander/zlib_analysis/gun.c:103: Warning: 
+  function read: precondition 'buf_has_room' got status unknown.
+[eva:alarm] /home/wander/zlib_analysis/gun.c:442: Warning: 
+  unsigned overflow. assert (unsigned int)last << 8 ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:442: Warning: 
+  unsigned overflow.
+  assert len + (unsigned int)((unsigned int)last << 8) ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:445: Warning: 
+  unsigned overflow. assert 0 ≤ len - have;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:448: Warning: 
+  unsigned overflow. assert 0 ≤ len - 1;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:451: Warning: 
+  unsigned overflow. assert 0 ≤ have - len;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:455: Warning: 
+  out of bounds read. assert \valid_read(tmp_12);
+                      (tmp_12 from next++)
+[eva] /home/wander/zlib_analysis/gun.c:455: starting to merge loop iterations
+[eva:alarm] /home/wander/zlib_analysis/gun.c:458: Warning: 
+  out of bounds read. assert \valid_read(tmp_13_0);
+                      (tmp_13_0 from next++)
+[eva:alarm] /home/wander/zlib_analysis/gun.c:461: Warning: 
+  out of bounds read. assert \valid_read(tmp_14);
+                      (tmp_14 from next++)
+[eva:alarm] /home/wander/zlib_analysis/gun.c:462: Warning: 
+  out of bounds read. assert \valid_read(tmp_15_0);
+                      (tmp_15_0 from next++)
+[kernel:annot:missing-spec] /home/wander/zlib_analysis/gun.c:469: Warning: 
+  Neither code nor specification for function crc32,
+   generating default assigns. See -generated-spec-* options for more info
+[eva] using specification for function crc32
+[kernel:annot:missing-spec] /home/wander/zlib_analysis/gun.c:475: Warning: 
+  Neither code nor specification for function inflateBack,
+   generating default assigns. See -generated-spec-* options for more info
+[eva] using specification for function inflateBack
+[eva:invalid-assigns] /home/wander/zlib_analysis/gun.c:475: 
+  Completely invalid destination for assigns clause *in. Ignoring.
+[eva:invalid-assigns] /home/wander/zlib_analysis/gun.c:475: 
+  Completely invalid destination for assigns clause *out. Ignoring.
+[eva:garbled-mix:assigns] /home/wander/zlib_analysis/gun.c:475: 
+  The specification of function inflateBack
+  has generated a garbled mix of addresses for assigns clause \result.
+[eva:alarm] /home/wander/zlib_analysis/gun.c:103: Warning: 
+  function read: precondition 'valid_fd' got status unknown.
+[eva:alarm] /home/wander/zlib_analysis/gun.c:483: Warning: 
+  unsigned overflow. assert 0 ≤ have - 1;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:483: Warning: 
+  unsigned overflow. assert have - 1 ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:483: Warning: 
+  out of bounds read. assert \valid_read(tmp_16);
+                      (tmp_16 from next++)
+[eva:alarm] /home/wander/zlib_analysis/gun.c:483: Warning: 
+  signed downcast. assert (unsigned long)(outd.crc & 0xff) ≤ 2147483647;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:484: Warning: 
+  unsigned overflow. assert 0 ≤ have - 1;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:484: Warning: 
+  unsigned overflow. assert have - 1 ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:484: Warning: 
+  out of bounds read. assert \valid_read(tmp_17_0);
+                      (tmp_17_0 from next++)
+[eva:alarm] /home/wander/zlib_analysis/gun.c:484: Warning: 
+  signed downcast.
+  assert (unsigned long)((unsigned long)(outd.crc >> 8) & 0xff) ≤ 2147483647;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:485: Warning: 
+  unsigned overflow. assert 0 ≤ have - 1;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:485: Warning: 
+  unsigned overflow. assert have - 1 ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:485: Warning: 
+  out of bounds read. assert \valid_read(tmp_18);
+                      (tmp_18 from next++)
+[eva:alarm] /home/wander/zlib_analysis/gun.c:485: Warning: 
+  signed downcast.
+  assert
+  (unsigned long)((unsigned long)(outd.crc >> 16) & 0xff) ≤ 2147483647;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:486: Warning: 
+  unsigned overflow. assert 0 ≤ have - 1;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:486: Warning: 
+  unsigned overflow. assert have - 1 ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:486: Warning: 
+  out of bounds read. assert \valid_read(tmp_19_0);
+                      (tmp_19_0 from next++)
+[eva:alarm] /home/wander/zlib_analysis/gun.c:486: Warning: 
+  signed downcast.
+  assert
+  (unsigned long)((unsigned long)(outd.crc >> 24) & 0xff) ≤ 2147483647;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:494: Warning: 
+  unsigned overflow. assert 0 ≤ have - 1;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:494: Warning: 
+  unsigned overflow. assert have - 1 ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:494: Warning: 
+  out of bounds read. assert \valid_read(tmp_20);
+                      (tmp_20 from next++)
+[eva:alarm] /home/wander/zlib_analysis/gun.c:494: Warning: 
+  signed downcast. assert (unsigned long)(outd.total & 0xff) ≤ 2147483647;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:495: Warning: 
+  unsigned overflow. assert 0 ≤ have - 1;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:495: Warning: 
+  unsigned overflow. assert have - 1 ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:495: Warning: 
+  out of bounds read. assert \valid_read(tmp_21_0);
+                      (tmp_21_0 from next++)
+[eva:alarm] /home/wander/zlib_analysis/gun.c:495: Warning: 
+  signed downcast.
+  assert
+  (unsigned long)((unsigned long)(outd.total >> 8) & 0xff) ≤ 2147483647;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:496: Warning: 
+  unsigned overflow. assert 0 ≤ have - 1;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:496: Warning: 
+  unsigned overflow. assert have - 1 ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:496: Warning: 
+  out of bounds read. assert \valid_read(tmp_22);
+                      (tmp_22 from next++)
+[eva:alarm] /home/wander/zlib_analysis/gun.c:496: Warning: 
+  signed downcast.
+  assert
+  (unsigned long)((unsigned long)(outd.total >> 16) & 0xff) ≤ 2147483647;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:497: Warning: 
+  unsigned overflow. assert 0 ≤ have - 1;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:497: Warning: 
+  unsigned overflow. assert have - 1 ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:497: Warning: 
+  out of bounds read. assert \valid_read(tmp_23_0);
+                      (tmp_23_0 from next++)
+[eva:alarm] /home/wander/zlib_analysis/gun.c:497: Warning: 
+  signed downcast.
+  assert
+  (unsigned long)((unsigned long)(outd.total >> 24) & 0xff) ≤ 2147483647;
+[eva] /home/wander/zlib_analysis/gun.c:400: starting to merge loop iterations
+[eva:alarm] /home/wander/zlib_analysis/gun.c:402: Warning: 
+  unsigned overflow. assert 0 ≤ have - 1;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:402: Warning: 
+  unsigned overflow. assert have - 1 ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:402: Warning: 
+  out of bounds read. assert \valid_read(tmp_0);
+                      (tmp_0 from next++)
+[eva:alarm] /home/wander/zlib_analysis/gun.c:406: Warning: 
+  unsigned overflow. assert 0 ≤ have - 1;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:406: Warning: 
+  unsigned overflow. assert have - 1 ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:406: Warning: 
+  out of bounds read. assert \valid_read(tmp_0_0);
+                      (tmp_0_0 from next++)
+[eva:alarm] /home/wander/zlib_analysis/gun.c:421: Warning: 
+  unsigned overflow. assert 0 ≤ have - 1;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:421: Warning: 
+  unsigned overflow. assert have - 1 ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:421: Warning: 
+  out of bounds read. assert \valid_read(tmp_1);
+                      (tmp_1 from next++)
+[eva:alarm] /home/wander/zlib_analysis/gun.c:427: Warning: 
+  unsigned overflow. assert 0 ≤ have - 1;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:427: Warning: 
+  unsigned overflow. assert have - 1 ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:427: Warning: 
+  out of bounds read. assert \valid_read(tmp_2);
+                      (tmp_2 from next++)
+[eva:alarm] /home/wander/zlib_analysis/gun.c:428: Warning: 
+  unsigned overflow. assert 0 ≤ have - 1;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:428: Warning: 
+  unsigned overflow. assert have - 1 ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:428: Warning: 
+  out of bounds read. assert \valid_read(tmp_3_0);
+                      (tmp_3_0 from next++)
+[eva:alarm] /home/wander/zlib_analysis/gun.c:429: Warning: 
+  unsigned overflow. assert 0 ≤ have - 1;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:429: Warning: 
+  unsigned overflow. assert have - 1 ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:429: Warning: 
+  out of bounds read. assert \valid_read(tmp_4);
+                      (tmp_4 from next++)
+[eva:alarm] /home/wander/zlib_analysis/gun.c:430: Warning: 
+  unsigned overflow. assert 0 ≤ have - 1;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:430: Warning: 
+  unsigned overflow. assert have - 1 ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:430: Warning: 
+  out of bounds read. assert \valid_read(tmp_5_0);
+                      (tmp_5_0 from next++)
+[eva:alarm] /home/wander/zlib_analysis/gun.c:431: Warning: 
+  unsigned overflow. assert 0 ≤ have - 1;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:431: Warning: 
+  unsigned overflow. assert have - 1 ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:431: Warning: 
+  out of bounds read. assert \valid_read(tmp_6);
+                      (tmp_6 from next++)
+[eva:alarm] /home/wander/zlib_analysis/gun.c:432: Warning: 
+  unsigned overflow. assert 0 ≤ have - 1;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:432: Warning: 
+  unsigned overflow. assert have - 1 ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:432: Warning: 
+  out of bounds read. assert \valid_read(tmp_7_0);
+                      (tmp_7_0 from next++)
+[eva:alarm] /home/wander/zlib_analysis/gun.c:433: Warning: 
+  unsigned overflow. assert 0 ≤ have - 1;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:433: Warning: 
+  unsigned overflow. assert have - 1 ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:433: Warning: 
+  out of bounds read. assert \valid_read(tmp_8);
+                      (tmp_8 from next++)
+[eva:alarm] /home/wander/zlib_analysis/gun.c:441: Warning: 
+  unsigned overflow. assert 0 ≤ have - 1;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:441: Warning: 
+  unsigned overflow. assert have - 1 ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:441: Warning: 
+  out of bounds read. assert \valid_read(tmp_9_0);
+                      (tmp_9_0 from next++)
+[eva:alarm] /home/wander/zlib_analysis/gun.c:442: Warning: 
+  unsigned overflow. assert 0 ≤ have - 1;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:442: Warning: 
+  unsigned overflow. assert have - 1 ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:442: Warning: 
+  out of bounds read. assert \valid_read(tmp_10);
+                      (tmp_10 from next++)
+[eva] /home/wander/zlib_analysis/gun.c:444: starting to merge loop iterations
+[eva:alarm] /home/wander/zlib_analysis/gun.c:445: Warning: 
+  unsigned overflow. assert len - have ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:447: Warning: 
+  out of bounds read. assert \valid_read(tmp_11_0);
+                      (tmp_11_0 from next++)
+[eva:alarm] /home/wander/zlib_analysis/gun.c:448: Warning: 
+  unsigned overflow. assert len - 1 ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:451: Warning: 
+  unsigned overflow. assert have - len ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:455: Warning: 
+  unsigned overflow. assert 0 ≤ have - 1;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:455: Warning: 
+  unsigned overflow. assert have - 1 ≤ 4294967295;
+[eva] /home/wander/zlib_analysis/gun.c:458: starting to merge loop iterations
+[eva:alarm] /home/wander/zlib_analysis/gun.c:458: Warning: 
+  unsigned overflow. assert 0 ≤ have - 1;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:458: Warning: 
+  unsigned overflow. assert have - 1 ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:461: Warning: 
+  unsigned overflow. assert 0 ≤ have - 1;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:461: Warning: 
+  unsigned overflow. assert have - 1 ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:462: Warning: 
+  unsigned overflow. assert 0 ≤ have - 1;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:462: Warning: 
+  unsigned overflow. assert have - 1 ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:226: Warning: 
+  unsigned overflow. assert 0 ≤ have - 1;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:226: Warning: 
+  unsigned overflow. assert have - 1 ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:226: Warning: 
+  out of bounds read. assert \valid_read(tmp);
+                      (tmp from next++)
+[eva:alarm] /home/wander/zlib_analysis/gun.c:249: Warning: 
+  unsigned overflow. assert 0 ≤ have - 1;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:249: Warning: 
+  unsigned overflow. assert have - 1 ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:249: Warning: 
+  out of bounds read. assert \valid_read(tmp_0);
+                      (tmp_0 from next++)
+[eva:alarm] /home/wander/zlib_analysis/gun.c:252: Warning: 
+  unsigned overflow. assert 0 ≤ have - 1;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:252: Warning: 
+  unsigned overflow. assert have - 1 ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:252: Warning: 
+  out of bounds read. assert \valid_read(tmp_1);
+                      (tmp_1 from next++)
+[eva:alarm] /home/wander/zlib_analysis/gun.c:279: Warning: 
+  unsigned overflow. assert 0 ≤ have - 1;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:279: Warning: 
+  unsigned overflow. assert have - 1 ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:279: Warning: 
+  out of bounds read. assert \valid_read(tmp_4);
+                      (tmp_4 from next++)
+[eva:alarm] /home/wander/zlib_analysis/gun.c:303: Warning: 
+  unsigned overflow. assert 0 ≤ chunk - have;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:303: Warning: 
+  unsigned overflow. assert chunk - have ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:303: Warning: 
+  out of bounds read. assert \valid_read(tmp_6);
+                      (tmp_6 from next++)
+[eva:alarm] /home/wander/zlib_analysis/gun.c:303: Warning: 
+  unsigned overflow. assert 0 ≤ chunk - 1;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:303: Warning: 
+  unsigned overflow. assert chunk - 1 ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:303: Warning: 
+  unsigned overflow. assert 0 ≤ have - chunk;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:303: Warning: 
+  unsigned overflow. assert have - chunk ≤ 4294967295;
+[eva] /home/wander/zlib_analysis/gun.c:331: starting to merge loop iterations
+[eva:alarm] /home/wander/zlib_analysis/gun.c:332: Warning: 
+  out of bounds write. assert \valid(tmp_8);
+                       (tmp_8 from p++)
+[eva:alarm] /home/wander/zlib_analysis/gun.c:335: Warning: 
+  signed overflow. assert p - (unsigned char *)match ≤ 9223372036854775807;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:336: Warning: 
+  unsigned overflow. assert stack + 1 ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:336: Warning: 
+  accessing out of bounds index.
+  assert tmp_9 < (int)(65280 + 2);
+  (tmp_9 from stack++)
+[eva:alarm] /home/wander/zlib_analysis/gun.c:352: Warning: 
+  accessing out of bounds index. assert stack < (int)(65280 + 2);
+[eva] /home/wander/zlib_analysis/gun.c:351: starting to merge loop iterations
+[eva:alarm] /home/wander/zlib_analysis/gun.c:352: Warning: 
+  unsigned overflow. assert 0 ≤ stack - 1;
+[eva] /home/wander/zlib_analysis/gun.c:350: starting to merge loop iterations
+[eva:alarm] /home/wander/zlib_analysis/gun.c:361: Warning: 
+  out of bounds read. assert \valid_read(p);
+[eva] /home/wander/zlib_analysis/gun.c:360: starting to merge loop iterations
+[eva:alarm] /home/wander/zlib_analysis/gun.c:361: Warning: 
+  accessing out of bounds index. assert tmp_12 < 32768U;
+                                 (tmp_12 from outcnt++)
+[eva:alarm] /home/wander/zlib_analysis/gun.c:361: Warning: 
+  unsigned overflow. assert outcnt + 1 ≤ 4294967295;
+[eva] /home/wander/zlib_analysis/gun.c:266: starting to merge loop iterations
+[eva:alarm] /home/wander/zlib_analysis/gun.c:289: Warning: 
+  unsigned overflow. assert 0 ≤ chunk - 1;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:289: Warning: 
+  unsigned overflow. assert chunk - 1 ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:291: Warning: 
+  unsigned overflow. assert 0 ≤ have - 1;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:291: Warning: 
+  unsigned overflow. assert have - 1 ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:291: Warning: 
+  out of bounds read. assert \valid_read(tmp_5);
+                      (tmp_5 from next++)
+[eva:alarm] /home/wander/zlib_analysis/gun.c:295: Warning: 
+  unsigned overflow. assert 0 ≤ chunk - 1;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:295: Warning: 
+  unsigned overflow. assert chunk - 1 ≤ 4294967295;
+[eva] /home/wander/zlib_analysis/gun.c:303: starting to merge loop iterations
+[eva:alarm] /home/wander/zlib_analysis/gun.c:350: Warning: 
+  unsigned overflow. assert 0 ≤ 32768U - outcnt;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:269: Warning: 
+  unsigned overflow. assert 0 ≤ chunk - have;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:269: Warning: 
+  unsigned overflow. assert chunk - have ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:269: Warning: 
+  out of bounds read. assert \valid_read(tmp_2);
+                      (tmp_2 from next++)
+[eva:alarm] /home/wander/zlib_analysis/gun.c:269: Warning: 
+  unsigned overflow. assert 0 ≤ chunk - 1;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:269: Warning: 
+  unsigned overflow. assert chunk - 1 ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:269: Warning: 
+  unsigned overflow. assert 0 ≤ have - chunk;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:269: Warning: 
+  unsigned overflow. assert have - chunk ≤ 4294967295;
+[eva] /home/wander/zlib_analysis/gun.c:269: starting to merge loop iterations
+[eva:alarm] /home/wander/zlib_analysis/gun.c:287: Warning: 
+  invalid RHS operand for shift. assert 0 ≤ left < 32;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:299: Warning: 
+  invalid RHS operand for shift. assert 0 ≤ (int)(8 - left) < 32;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:342: Warning: 
+  accessing out of bounds index. assert end < 65536;
+[eva] using specification for function close
+[eva] using specification for function fprintf_va_3
+[eva:alarm] /home/wander/zlib_analysis/gun.c:595: Warning: 
+  function fprintf_va_3: precondition valid_read_string(param0) got status unknown.
+[eva:alarm] /home/wander/zlib_analysis/gun.c:600: Warning: 
+  accessing uninitialized left-value. assert \initialized(&strm->msg);
+[eva] using specification for function fprintf_va_4
+[eva:alarm] /home/wander/zlib_analysis/gun.c:600: Warning: 
+  function fprintf_va_4: precondition valid_read_string(param0) got status unknown.
+[eva:alarm] /home/wander/zlib_analysis/gun.c:600: Warning: 
+  function fprintf_va_4: precondition valid_read_string(param1) got status unknown.
+[eva] using specification for function fprintf_va_5
+[eva:alarm] /home/wander/zlib_analysis/gun.c:608: Warning: 
+  pointer comparison.
+  assert \pointer_comparable((void *)strm->next_in, (void *)0);
+[eva] using specification for function strerror
+[eva:libc:unsupported-spec] /home/wander/zlib_analysis/gun.c:610: Warning: 
+  The specification of function 'strerror' is currently not supported by Eva.
+  Consider adding 'FRAMAC_SHARE/libc/string.c' to the analyzed source files.
+[eva] using specification for function fprintf_va_6
+[eva:alarm] /home/wander/zlib_analysis/gun.c:609: Warning: 
+  function fprintf_va_6: precondition valid_read_string(param0) got status invalid.
+[eva] using specification for function fprintf_va_8
+[eva:alarm] /home/wander/zlib_analysis/gun.c:617: Warning: 
+  function fprintf_va_8: precondition valid_read_string(param0) got status unknown.
+[eva] using specification for function fprintf_va_9
+[eva:alarm] /home/wander/zlib_analysis/gun.c:695: Warning: 
+  signed overflow. assert -2147483648 ≤ argc - 1;
+[eva] /home/wander/zlib_analysis/gun.c:665: starting to merge loop iterations
+[eva] using specification for function write
+[eva] /home/wander/zlib_analysis/gun.c:141: starting to merge loop iterations
+[eva:alarm] /home/wander/zlib_analysis/gun.c:145: Warning: 
+  function write: precondition 'buf_has_room' got status unknown.
+[eva:alarm] /home/wander/zlib_analysis/gun.c:149: Warning: 
+  unsigned overflow. assert 0 ≤ len - (unsigned int)ret;
+[eva:alarm] /home/wander/zlib_analysis/gun.c:609: Warning: 
+  function fprintf_va_6: precondition valid_read_string(param0) got status unknown.
+[kernel:annot:missing-spec] /home/wander/zlib_analysis/gun.c:700: Warning: 
+  Neither code nor specification for function inflateBackEnd,
+   generating default assigns. See -generated-spec-* options for more info
+[eva] using specification for function inflateBackEnd
+[eva:garbled-mix:summary] 
+  Origins of garbled mix generated during analysis:
+    /home/wander/zlib_analysis/gun.c:475: misaligned read of addresses
+      (read in 195 statements, propagated through 89 statements)
+      garbled mix of &{inbuf; outbuf; "incorrect header check";
+                       "unknown lzw flags set"; "lzw bits out of range";
+                       "invalid lzw code"; "invalid lzw code";
+                       "unknown compression method";
+                       "unknown header flags set"; "incorrect data check";
+                       "incorrect length check"}
+[scope:rm_asserts] removing 1 assertion(s)
+[eva] ====== VALUES COMPUTED ======
+[eva:final-states] Values at end of function in:
+  __fc_fds[0..1023] ∈ [--..--]
+  ret ∈ [-1..16384]
+  len ∈ [0..49151]
+  next ∈
+      {{ garbled mix of &{inbuf; "incorrect header check";
+                          "unknown lzw flags set"; "lzw bits out of range";
+                          "invalid lzw code"; "invalid lzw code";
+                          "unknown compression method";
+                          "unknown header flags set"; "incorrect data check";
+                          "incorrect length check"}
+       (origin: Misaligned read {/home/wander/zlib_analysis/gun.c:475}) }}
+  me ∈ {{ &ind }}
+  inbuf[0..32767] ∈ [--..--]
+  next ∈
+      {{ garbled mix of &{inbuf; "incorrect header check";
+                          "unknown lzw flags set"; "lzw bits out of range";
+                          "invalid lzw code"; "invalid lzw code";
+                          "unknown compression method";
+                          "unknown header flags set"; "incorrect data check";
+                          "incorrect length check"}
+       (origin: Misaligned read {/home/wander/zlib_analysis/gun.c:475}) }}
+  next ∈
+      {{ garbled mix of &{inbuf; "incorrect header check";
+                          "unknown lzw flags set"; "lzw bits out of range";
+                          "invalid lzw code"; "invalid lzw code";
+                          "unknown compression method";
+                          "unknown header flags set"; "incorrect data check";
+                          "incorrect length check"}
+       (origin: Misaligned read {/home/wander/zlib_analysis/gun.c:475}) }}
+[eva:final-states] Values at end of function out:
+  __fc_fds[0..1023] ∈ [--..--]
+  buf ∈ {{ &outbuf + [0..--] }}
+  len ∈ [--..--]
+  ret ∈ [-1..16384] or UNINITIALIZED
+  me ∈ {{ &outd }}
+  __retres ∈ {0; 1}
+[eva:final-states] Values at end of function lunpipe:
+  __fc_fds[0..1023] ∈ [--..--]
+  inbuf[0..32767] ∈ [--..--]
+  outbuf[0..32767] ∈ [--..--]
+  prefix[0..255] ∈ {0}
+        [256..65535] ∈ [--..--]
+  suffix[0..255] ∈ {0}
+        [256..65535] ∈ [--..--]
+  match[0..65281] ∈ [--..--]
+  have ∈
+      {{ garbled mix of &{inbuf; "incorrect header check";
+                          "unknown lzw flags set"; "lzw bits out of range";
+                          "invalid lzw code"; "invalid lzw code";
+                          "unknown compression method";
+                          "unknown header flags set"; "incorrect data check";
+                          "incorrect length check"}
+       (origin: Misaligned read {/home/wander/zlib_analysis/gun.c:475}) }}
+  next ∈
+      {{ garbled mix of &{inbuf; "incorrect header check";
+                          "unknown lzw flags set"; "lzw bits out of range";
+                          "invalid lzw code"; "invalid lzw code";
+                          "unknown compression method";
+                          "unknown header flags set"; "incorrect data check";
+                          "incorrect length check"}
+       (origin: Misaligned read {/home/wander/zlib_analysis/gun.c:475}) }}
+  last ∈ [-1..255]
+  chunk ∈
+       {{ garbled mix of &{inbuf; "incorrect header check";
+                           "unknown lzw flags set"; "lzw bits out of range";
+                           "invalid lzw code"; "invalid lzw code";
+                           "unknown compression method";
+                           "unknown header flags set";
+                           "incorrect data check"; "incorrect length check"}
+        (origin: Misaligned read {/home/wander/zlib_analysis/gun.c:475}) }} or UNINITIALIZED
+  left ∈ [-2147483648..16] or UNINITIALIZED
+  rem ∈ [0..255] or UNINITIALIZED
+  bits ∈ [9..2147483647] or UNINITIALIZED
+  code ∈ [0..16777215] or UNINITIALIZED
+  mask ∈ [511..2147483647],511%512 or UNINITIALIZED
+  max ∈ [0..31] or UNINITIALIZED
+  flags ∈ [--..--]
+  end ∈ [255..65535] or UNINITIALIZED
+  temp ∈ [0..2147483647] or UNINITIALIZED
+  prev ∈ [0..2147483647] or UNINITIALIZED
+  final ∈ [0..255] or UNINITIALIZED
+  stack ∈ [--..--] or UNINITIALIZED
+  outcnt ∈ [1..4294967295] or UNINITIALIZED
+  outd.outfile ∈ {-1; 1}
+      .check ∈ {0}
+      {.crc; .total} ∈ UNINITIALIZED
+  p ∈ {{ &match + [0..9223372036854775807] }} or UNINITIALIZED
+  strm.next_in ∈ {{ NULL ; &outbuf[0] }}
+      {.avail_in; .total_in; .next_out; .avail_out; .total_out; .msg; .state; .[bits 96 to 127]; .[bits 288 to 319]} ∈
+      {{ garbled mix of &{inbuf; "incorrect header check";
+                          "unknown lzw flags set"; "lzw bits out of range";
+                          "invalid lzw code"; "invalid lzw code";
+                          "unknown compression method";
+                          "unknown header flags set"; "incorrect data check";
+                          "incorrect length check"}
+       (origin: Misaligned read {/home/wander/zlib_analysis/gun.c:475}) }} or UNINITIALIZED
+      {.zalloc; .zfree; .opaque} ∈
+      {{ garbled mix of &{inbuf; "incorrect header check";
+                          "unknown lzw flags set"; "lzw bits out of range";
+                          "invalid lzw code"; "invalid lzw code";
+                          "unknown compression method";
+                          "unknown header flags set"; "incorrect data check";
+                          "incorrect length check"}
+       (origin: Misaligned read {/home/wander/zlib_analysis/gun.c:475}) }}
+      {.data_type; .adler; .reserved; .[bits 736 to 767]} ∈
+      {{ garbled mix of &{inbuf; "incorrect header check";
+                          "unknown lzw flags set"; "lzw bits out of range";
+                          "invalid lzw code"; "invalid lzw code";
+                          "unknown compression method";
+                          "unknown header flags set"; "incorrect data check";
+                          "incorrect length check"}
+       (origin: Misaligned read {/home/wander/zlib_analysis/gun.c:475}) }} or UNINITIALIZED
+  __retres ∈ {-5; -3; 0}
+[eva:final-states] Values at end of function gunpipe:
+  __fc_fds[0..1023] ∈ [--..--]
+  inbuf[0..32767] ∈ [--..--]
+  outbuf[0..32767] ∈ [--..--]
+  prefix[0..255] ∈ {0}
+        [256..65535] ∈ [--..--]
+  suffix[0..255] ∈ {0}
+        [256..65535] ∈ [--..--]
+  match[0..65281] ∈ [--..--]
+  ret ∈
+     {{ garbled mix of &{inbuf; "incorrect header check";
+                         "unknown lzw flags set"; "lzw bits out of range";
+                         "invalid lzw code"; "invalid lzw code";
+                         "unknown compression method";
+                         "unknown header flags set"; "incorrect data check";
+                         "incorrect length check"}
+      (origin: Misaligned read {/home/wander/zlib_analysis/gun.c:475}) }}
+  first ∈ {0; 1}
+  last ∈ [-1..255]
+  have ∈
+      {{ garbled mix of &{inbuf; "incorrect header check";
+                          "unknown lzw flags set"; "lzw bits out of range";
+                          "invalid lzw code"; "invalid lzw code";
+                          "unknown compression method";
+                          "unknown header flags set"; "incorrect data check";
+                          "incorrect length check"}
+       (origin: Misaligned read {/home/wander/zlib_analysis/gun.c:475}) }}
+  flags ∈ [--..--] or UNINITIALIZED
+  len ∈
+     {{ garbled mix of &{inbuf; "incorrect header check";
+                         "unknown lzw flags set"; "lzw bits out of range";
+                         "invalid lzw code"; "invalid lzw code";
+                         "unknown compression method";
+                         "unknown header flags set"; "incorrect data check";
+                         "incorrect length check"}
+      (origin: Misaligned read {/home/wander/zlib_analysis/gun.c:475}) }} or UNINITIALIZED
+  next ∈
+      {{ garbled mix of &{inbuf; "incorrect header check";
+                          "unknown lzw flags set"; "lzw bits out of range";
+                          "invalid lzw code"; "invalid lzw code";
+                          "unknown compression method";
+                          "unknown header flags set"; "incorrect data check";
+                          "incorrect length check"}
+       (origin: Misaligned read {/home/wander/zlib_analysis/gun.c:475}) }}
+  ind.infile ∈
+     {{ garbled mix of &{inbuf; "incorrect header check";
+                         "unknown lzw flags set"; "lzw bits out of range";
+                         "invalid lzw code"; "invalid lzw code";
+                         "unknown compression method";
+                         "unknown header flags set"; "incorrect data check";
+                         "incorrect length check"}
+      (origin: Misaligned read {/home/wander/zlib_analysis/gun.c:475}) }}
+     .[bits 32 to 63] ∈
+     {{ garbled mix of &{inbuf; "incorrect header check";
+                         "unknown lzw flags set"; "lzw bits out of range";
+                         "invalid lzw code"; "invalid lzw code";
+                         "unknown compression method";
+                         "unknown header flags set"; "incorrect data check";
+                         "incorrect length check"}
+      (origin: Misaligned read {/home/wander/zlib_analysis/gun.c:475}) }} or UNINITIALIZED
+     .inbuf ∈
+     {{ garbled mix of &{inbuf; "incorrect header check";
+                         "unknown lzw flags set"; "lzw bits out of range";
+                         "invalid lzw code"; "invalid lzw code";
+                         "unknown compression method";
+                         "unknown header flags set"; "incorrect data check";
+                         "incorrect length check"}
+      (origin: Misaligned read {/home/wander/zlib_analysis/gun.c:475}) }}
+  indp ∈ {{ &ind }}
+  outd ∈
+      {{ garbled mix of &{inbuf; "incorrect header check";
+                          "unknown lzw flags set"; "lzw bits out of range";
+                          "invalid lzw code"; "invalid lzw code";
+                          "unknown compression method";
+                          "unknown header flags set"; "incorrect data check";
+                          "incorrect length check"}
+       (origin: Misaligned read {/home/wander/zlib_analysis/gun.c:475}) }} or UNINITIALIZED
+  strm.next_in ∈
+      {{ garbled mix of &{inbuf; outbuf; "incorrect header check";
+                          "unknown lzw flags set"; "lzw bits out of range";
+                          "invalid lzw code"; "invalid lzw code";
+                          "unknown compression method";
+                          "unknown header flags set"; "incorrect data check";
+                          "incorrect length check"}
+       (origin: Misaligned read {/home/wander/zlib_analysis/gun.c:475}) }}
+      {.avail_in; .total_in; .next_out; .avail_out; .total_out; .msg; .state; .[bits 96 to 127]; .[bits 288 to 319]} ∈
+      {{ garbled mix of &{inbuf; "incorrect header check";
+                          "unknown lzw flags set"; "lzw bits out of range";
+                          "invalid lzw code"; "invalid lzw code";
+                          "unknown compression method";
+                          "unknown header flags set"; "incorrect data check";
+                          "incorrect length check"}
+       (origin: Misaligned read {/home/wander/zlib_analysis/gun.c:475}) }} or UNINITIALIZED
+      {.zalloc; .zfree; .opaque} ∈
+      {{ garbled mix of &{inbuf; "incorrect header check";
+                          "unknown lzw flags set"; "lzw bits out of range";
+                          "invalid lzw code"; "invalid lzw code";
+                          "unknown compression method";
+                          "unknown header flags set"; "incorrect data check";
+                          "incorrect length check"}
+       (origin: Misaligned read {/home/wander/zlib_analysis/gun.c:475}) }}
+      {.data_type; .adler; .reserved; .[bits 736 to 767]} ∈
+      {{ garbled mix of &{inbuf; "incorrect header check";
+                          "unknown lzw flags set"; "lzw bits out of range";
+                          "invalid lzw code"; "invalid lzw code";
+                          "unknown compression method";
+                          "unknown header flags set"; "incorrect data check";
+                          "incorrect length check"}
+       (origin: Misaligned read {/home/wander/zlib_analysis/gun.c:475}) }} or UNINITIALIZED
+[eva:final-states] Values at end of function gunzip:
+  __fc_errno ∈ [--..--]
+  __fc_fds[0..1023] ∈ [--..--]
+  inbuf[0..32767] ∈ [--..--]
+  outbuf[0..32767] ∈ [--..--]
+  prefix[0..255] ∈ {0}
+        [256..65535] ∈ [--..--]
+  suffix[0..255] ∈ {0}
+        [256..65535] ∈ [--..--]
+  match[0..65281] ∈ [--..--]
+  inname ∈ {{ &S_1_S_argv[0] ; "-" }}
+  outname ∈ {{ NULL ; "-" }}
+  ret ∈
+     {{ garbled mix of &{inbuf; "incorrect header check";
+                         "unknown lzw flags set"; "lzw bits out of range";
+                         "invalid lzw code"; "invalid lzw code";
+                         "unknown compression method";
+                         "unknown header flags set"; "incorrect data check";
+                         "incorrect length check"}
+      (origin: Misaligned read {/home/wander/zlib_analysis/gun.c:475}) }} or UNINITIALIZED
+  infile ∈ [-1..1023]
+  outfile ∈ {-1; 1} or UNINITIALIZED
+  strm.next_in ∈
+      {{ garbled mix of &{inbuf; outbuf; "incorrect header check";
+                          "unknown lzw flags set"; "lzw bits out of range";
+                          "invalid lzw code"; "invalid lzw code";
+                          "unknown compression method";
+                          "unknown header flags set"; "incorrect data check";
+                          "incorrect length check"}
+       (origin: Misaligned read {/home/wander/zlib_analysis/gun.c:475}) }} or UNINITIALIZED
+      {.avail_in; .total_in; .next_out; .avail_out; .total_out; .msg; .state; .[bits 96 to 127]; .[bits 288 to 319]} ∈
+      {{ garbled mix of &{inbuf; "incorrect header check";
+                          "unknown lzw flags set"; "lzw bits out of range";
+                          "invalid lzw code"; "invalid lzw code";
+                          "unknown compression method";
+                          "unknown header flags set"; "incorrect data check";
+                          "incorrect length check"}
+       (origin: Misaligned read {/home/wander/zlib_analysis/gun.c:475}) }} or UNINITIALIZED
+      {.zalloc; .zfree; .opaque} ∈
+      {{ garbled mix of &{inbuf; "incorrect header check";
+                          "unknown lzw flags set"; "lzw bits out of range";
+                          "invalid lzw code"; "invalid lzw code";
+                          "unknown compression method";
+                          "unknown header flags set"; "incorrect data check";
+                          "incorrect length check"}
+       (origin: Misaligned read {/home/wander/zlib_analysis/gun.c:475}) }}
+      {.data_type; .adler; .reserved; .[bits 736 to 767]} ∈
+      {{ garbled mix of &{inbuf; "incorrect header check";
+                          "unknown lzw flags set"; "lzw bits out of range";
+                          "invalid lzw code"; "invalid lzw code";
+                          "unknown compression method";
+                          "unknown header flags set"; "incorrect data check";
+                          "incorrect length check"}
+       (origin: Misaligned read {/home/wander/zlib_analysis/gun.c:475}) }} or UNINITIALIZED
+  __retres ∈ {0; 1}
+  S___fc_stderr[0..1] ∈ [--..--]
+[eva:final-states] Values at end of function main:
+  __fc_errno ∈ [--..--]
+  __fc_fds[0..1023] ∈ [--..--]
+  inbuf[0..32767] ∈ [--..--]
+  outbuf[0..32767] ∈ [--..--]
+  prefix[0..255] ∈ {0}
+        [256..65535] ∈ [--..--]
+  suffix[0..255] ∈ {0}
+        [256..65535] ∈ [--..--]
+  match[0..65281] ∈ [--..--]
+  argc ∈ [--..--]
+  argv ∈ {{ NULL + {0; 8} ; &S_argv{[0], [1], [2]} }}
+  ret ∈ [--..--]
+  len ∈ UNINITIALIZED
+  test ∈ {0; 1} or UNINITIALIZED
+  outname ∈ {0} or UNINITIALIZED
+  window ∈ {{ &match[0] }}
+  strm{.next_in; .avail_in; .total_in; .next_out; .avail_out; .total_out; .msg; .state; .[bits 96 to 127]; .[bits 288 to 319]} ∈
+      {{ garbled mix of &{inbuf; outbuf; "incorrect header check";
+                          "unknown lzw flags set"; "lzw bits out of range";
+                          "invalid lzw code"; "invalid lzw code";
+                          "unknown compression method";
+                          "unknown header flags set"; "incorrect data check";
+                          "incorrect length check"}
+       (origin: Misaligned read {/home/wander/zlib_analysis/gun.c:475}) }} or UNINITIALIZED
+      {.zalloc; .zfree; .opaque} ∈
+      {{ garbled mix of &{inbuf; outbuf; "incorrect header check";
+                          "unknown lzw flags set"; "lzw bits out of range";
+                          "invalid lzw code"; "invalid lzw code";
+                          "unknown compression method";
+                          "unknown header flags set"; "incorrect data check";
+                          "incorrect length check"}
+       (origin: Misaligned read {/home/wander/zlib_analysis/gun.c:475}) }}
+      {.data_type; .adler; .reserved; .[bits 736 to 767]} ∈
+      {{ garbled mix of &{inbuf; outbuf; "incorrect header check";
+                          "unknown lzw flags set"; "lzw bits out of range";
+                          "invalid lzw code"; "invalid lzw code";
+                          "unknown compression method";
+                          "unknown header flags set"; "incorrect data check";
+                          "incorrect length check"}
+       (origin: Misaligned read {/home/wander/zlib_analysis/gun.c:475}) }} or UNINITIALIZED
+  __retres ∈ {0; 1}
+  S___fc_stderr[0..1] ∈ [--..--]
+[eva:summary] ====== ANALYSIS SUMMARY ======
+  ----------------------------------------------------------------------------
+  6 functions analyzed (out of 7): 85% coverage.
+  In these functions, 881 statements reached (out of 930): 94% coverage.
+  ----------------------------------------------------------------------------
+  Some errors and warnings have been raised during the analysis:
+    by the Eva analyzer:      0 errors    1 warning
+    by the Frama-C kernel:    0 errors    4 warnings
+  ----------------------------------------------------------------------------
+  146 alarms generated by the analysis:
+      99 integer overflows
+      39 invalid memory accesses
+       4 accesses out of bounds index
+       2 invalid shifts
+       1 access to uninitialized left-values
+       1 other
+  ----------------------------------------------------------------------------
+  Evaluation of the logical properties reached by the analysis:
+    Assertions        0 valid     0 unknown     0 invalid      0 total
+    Preconditions    17 valid    13 unknown     1 invalid     31 total
+  54% of the logical properties reached have been proven.
+  ----------------------------------------------------------------------------

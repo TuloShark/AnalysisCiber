@@ -1,0 +1,1317 @@
+[kernel] Parsing /home/wander/zlib_analysis/gzjoin.c (with preprocessing)
+[eva] Analyzing a complete application starting at main
+[eva:initial-state] Values of globals at initialization
+  
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:432: Warning: 
+  signed overflow. assert -2147483648 ≤ argc - 1;
+[eva] using specification for function fputs
+[eva] using specification for function fwrite
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:267: Warning: 
+  function fwrite: precondition 'valid_stream' got status unknown.
+[kernel:annot:missing-spec] /home/wander/zlib_analysis/gzjoin.c:268: Warning: 
+  Neither code nor specification for function crc32,
+   generating default assigns. See -generated-spec-* options for more info
+[eva] using specification for function crc32
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:444: Warning: 
+  signed overflow. assert -2147483648 ≤ argc - 1;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:445: Warning: 
+  out of bounds read. assert \valid_read(tmp);
+                      (tmp from argv++)
+[eva] /home/wander/zlib_analysis/gzjoin.c:104: 
+  allocating variable __malloc_bopen_l104
+[eva] /home/wander/zlib_analysis/gzjoin.c:107: 
+  allocating variable __malloc_bopen_l107
+[eva] using specification for function __va_open_mode_t
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:108: Warning: 
+  function __va_open_mode_t: precondition 'valid_filename' got status unknown.
+[eva] using specification for function close
+[eva] using specification for function fprintf_va_1
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:68: Warning: 
+  function fprintf_va_1: precondition valid_read_string(param1) got status unknown.
+[eva] using specification for function exit
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:209: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:129: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->buf);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:131: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->fd);
+[eva] using specification for function read
+[eva] /home/wander/zlib_analysis/gzjoin.c:130: starting to merge loop iterations
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:131: Warning: 
+  function read: precondition 'buf_has_room' got status unknown.
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:209: Warning: 
+  accessing uninitialized left-value.
+  assert \initialized(tmp);
+  (tmp from in->next++)
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:209: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->name);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:210: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->name);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:68: Warning: 
+  function fprintf_va_1: precondition valid_read_string(param0) got status unknown.
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:209: Warning: 
+  accessing uninitialized left-value.
+  assert \initialized(tmp_2);
+  (tmp_2 from in->next++)
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:209: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->name);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:210: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->name);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:209: Warning: 
+  accessing uninitialized left-value.
+  assert \initialized(tmp_5);
+  (tmp_5 from in->next++)
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:209: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->name);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:210: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->name);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:213: Warning: 
+  accessing uninitialized left-value.
+  assert \initialized(tmp_8);
+  (tmp_8 from in->next++)
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:213: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->name);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:215: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->name);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:196: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->name);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:197: Warning: 
+  unsigned overflow. assert 0 ≤ in->left - skip;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:224: Warning: 
+  accessing uninitialized left-value.
+  assert \initialized(tmp_10);
+  (tmp_10 from in->next++)
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:224: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->name);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:225: Warning: 
+  accessing uninitialized left-value.
+  assert \initialized(tmp_12);
+  (tmp_12 from in->next++)
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:225: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->name);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:165: Warning: 
+  unsigned overflow. assert 0 ≤ in->left - skip;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:171: Warning: 
+  unsigned overflow. assert 0 ≤ skip - in->left;
+[eva] using specification for function lseek
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:231: Warning: 
+  accessing uninitialized left-value.
+  assert \initialized(tmp_15);
+  (tmp_15 from in->next++)
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:231: Warning: 
+  out of bounds read. assert \valid_read(tmp_15);
+                      (tmp_15 from in->next++)
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:231: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->name);
+[eva] /home/wander/zlib_analysis/gzjoin.c:231: starting to merge loop iterations
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:236: Warning: 
+  accessing uninitialized left-value.
+  assert \initialized(tmp_18);
+  (tmp_18 from in->next++)
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:236: Warning: 
+  out of bounds read. assert \valid_read(tmp_18);
+                      (tmp_18 from in->next++)
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:236: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->name);
+[eva] /home/wander/zlib_analysis/gzjoin.c:299: 
+  allocating variable __malloc_gzcopy_l299
+[kernel:annot:missing-spec] /home/wander/zlib_analysis/gzjoin.c:305: Warning: 
+  Neither code nor specification for function inflateInit2_,
+   generating default assigns. See -generated-spec-* options for more info
+[eva] using specification for function inflateInit2_
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:259: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->name);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:313: Warning: 
+  accessing uninitialized left-value. assert \initialized(start + 0);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:313: Warning: 
+  out of bounds read. assert \valid_read(start + 0);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:315: Warning: 
+  accessing uninitialized left-value. assert \initialized(start + 0);
+[kernel:annot:missing-spec] /home/wander/zlib_analysis/gzjoin.c:329: Warning: 
+  Neither code nor specification for function inflate,
+   generating default assigns. See -generated-spec-* options for more info
+[eva] using specification for function inflate
+[eva:garbled-mix:assigns] /home/wander/zlib_analysis/gzjoin.c:329: 
+  The specification of function inflate
+  has generated a garbled mix of addresses for assigns clause \result.
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:334: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->name);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:338: Warning: 
+  unsigned overflow. assert 0 ≤ 32768 - strm.avail_out;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:338: Warning: 
+  unsigned overflow. assert 32768 - strm.avail_out ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:338: Warning: 
+  signed overflow.
+  assert
+  -9223372036854775808 ≤ len + (off_t)((uInt)(32768 - strm.avail_out));
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:338: Warning: 
+  signed overflow.
+  assert len + (off_t)((uInt)(32768 - strm.avail_out)) ≤ 9223372036854775807;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:341: Warning: 
+  accessing uninitialized left-value. assert \initialized(&strm.data_type);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:352: Warning: 
+  invalid RHS operand for shift. assert 0 ≤ pos < 32;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:353: Warning: 
+  accessing uninitialized left-value.
+  assert \initialized(strm.next_in + (int)(-1));
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:353: Warning: 
+  out of bounds read. assert \valid_read(strm.next_in + (int)(-1));
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:355: Warning: 
+  accessing uninitialized left-value.
+  assert \initialized(in->buf + (long)((long)(strm.next_in - in->buf) - 1));
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:361: Warning: 
+  pointer subtraction. assert \base_addr(strm.next_in) ≡ \base_addr(start);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:361: Warning: 
+  signed overflow. assert -9223372036854775808 ≤ strm.next_in - start;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:361: Warning: 
+  signed overflow. assert strm.next_in - start ≤ 9223372036854775807;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:361: Warning: 
+  function fwrite: precondition 'valid_ptr_block' got status unknown.
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:366: Warning: 
+  accessing uninitialized left-value. assert \initialized(strm.next_in + 0);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:366: Warning: 
+  out of bounds read. assert \valid_read(strm.next_in + 0);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:368: Warning: 
+  accessing uninitialized left-value.
+  assert \initialized(in->buf + (long)(strm.next_in - in->buf));
+[eva] /home/wander/zlib_analysis/gzjoin.c:317: starting to merge loop iterations
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:320: Warning: 
+  pointer subtraction. assert \base_addr(strm.next_in) ≡ \base_addr(start);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:320: Warning: 
+  signed overflow. assert -9223372036854775808 ≤ strm.next_in - start;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:320: Warning: 
+  signed overflow. assert strm.next_in - start ≤ 9223372036854775807;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:320: Warning: 
+  function fwrite: precondition 'valid_ptr_block' got status unknown.
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:375: Warning: 
+  pointer subtraction. assert \base_addr(strm.next_in) ≡ \base_addr(in->buf);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:375: Warning: 
+  signed overflow. assert -9223372036854775808 ≤ strm.next_in - in->buf;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:375: Warning: 
+  signed overflow. assert strm.next_in - in->buf ≤ 9223372036854775807;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:379: Warning: 
+  pointer subtraction. assert \base_addr(in->next) ≡ \base_addr(start);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:379: Warning: 
+  signed overflow. assert -9223372036854775808 ≤ in->next - start;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:379: Warning: 
+  signed overflow. assert in->next - start ≤ 9223372036854775807;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:379: Warning: 
+  signed overflow.
+  assert -9223372036854775808 ≤ (long)(in->next - start) - 1;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:379: Warning: 
+  signed overflow. assert (long)(in->next - start) - 1 ≤ 9223372036854775807;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:379: Warning: 
+  function fwrite: precondition 'valid_ptr_block' got status unknown.
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:380: Warning: 
+  accessing uninitialized left-value.
+  assert \initialized(in->next + (int)(-1));
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:380: Warning: 
+  out of bounds read. assert \valid_read(in->next + (int)(-1));
+[eva] using specification for function putc
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:386: Warning: 
+  invalid RHS operand for shift. assert 0 ≤ pos < 32;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:386: Warning: 
+  signed overflow. assert -2147483648 ≤ (int)(0x100 >> pos) - 1;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:386: Warning: 
+  signed overflow. assert (int)(0x100 >> pos) - 1 ≤ 2147483647;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:131: Warning: 
+  unsigned overflow. assert 0 ≤ 32768 - in->left;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:131: Warning: 
+  unsigned overflow. assert 32768 - in->left ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:134: Warning: 
+  unsigned overflow. assert 0 ≤ in->left + (unsigned int)len;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:134: Warning: 
+  unsigned overflow. assert in->left + (unsigned int)len ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:149: Warning: 
+  unsigned overflow. assert 0 ≤ in->left - 1;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:149: Warning: 
+  unsigned overflow. assert in->left - 1 ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:149: Warning: 
+  accessing uninitialized left-value.
+  assert \initialized(tmp);
+  (tmp from in->next++)
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:149: Warning: 
+  out of bounds read. assert \valid_read(tmp);
+                      (tmp from in->next++)
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:149: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->name);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:150: Warning: 
+  unsigned overflow. assert 0 ≤ in->left - 1;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:150: Warning: 
+  unsigned overflow. assert in->left - 1 ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:150: Warning: 
+  accessing uninitialized left-value.
+  assert \initialized(tmp_1);
+  (tmp_1 from in->next++)
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:150: Warning: 
+  out of bounds read. assert \valid_read(tmp_1);
+                      (tmp_1 from in->next++)
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:150: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->name);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:150: Warning: 
+  unsigned overflow.
+  assert 0 ≤ (unsigned long)tmp_3 << 8;
+  (tmp_3 from
+  in->left?*in->next++:bail((char *)"unexpected end of file on ", in->name))
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:150: Warning: 
+  unsigned overflow.
+  assert (unsigned long)tmp_3 << 8 ≤ 18446744073709551615;
+  (tmp_3 from
+  in->left?*in->next++:bail((char *)"unexpected end of file on ", in->name))
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:150: Warning: 
+  unsigned overflow.
+  assert 0 ≤ val + (unsigned long)((unsigned long)tmp_3 << 8);
+  (tmp_3 from
+  in->left?*in->next++:bail((char *)"unexpected end of file on ", in->name))
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:150: Warning: 
+  unsigned overflow.
+  assert
+  val + (unsigned long)((unsigned long)tmp_3 << 8) ≤ 18446744073709551615;
+  (tmp_3 from
+  in->left?*in->next++:bail((char *)"unexpected end of file on ", in->name))
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:151: Warning: 
+  unsigned overflow. assert 0 ≤ in->left - 1;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:151: Warning: 
+  unsigned overflow. assert in->left - 1 ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:151: Warning: 
+  accessing uninitialized left-value.
+  assert \initialized(tmp_4);
+  (tmp_4 from in->next++)
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:151: Warning: 
+  out of bounds read. assert \valid_read(tmp_4);
+                      (tmp_4 from in->next++)
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:151: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->name);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:151: Warning: 
+  unsigned overflow.
+  assert 0 ≤ (unsigned long)tmp_6 << 16;
+  (tmp_6 from
+  in->left?*in->next++:bail((char *)"unexpected end of file on ", in->name))
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:151: Warning: 
+  unsigned overflow.
+  assert (unsigned long)tmp_6 << 16 ≤ 18446744073709551615;
+  (tmp_6 from
+  in->left?*in->next++:bail((char *)"unexpected end of file on ", in->name))
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:151: Warning: 
+  unsigned overflow.
+  assert 0 ≤ val + (unsigned long)((unsigned long)tmp_6 << 16);
+  (tmp_6 from
+  in->left?*in->next++:bail((char *)"unexpected end of file on ", in->name))
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:151: Warning: 
+  unsigned overflow.
+  assert
+  val + (unsigned long)((unsigned long)tmp_6 << 16) ≤ 18446744073709551615;
+  (tmp_6 from
+  in->left?*in->next++:bail((char *)"unexpected end of file on ", in->name))
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:152: Warning: 
+  unsigned overflow. assert 0 ≤ in->left - 1;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:152: Warning: 
+  unsigned overflow. assert in->left - 1 ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:152: Warning: 
+  accessing uninitialized left-value.
+  assert \initialized(tmp_7);
+  (tmp_7 from in->next++)
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:152: Warning: 
+  out of bounds read. assert \valid_read(tmp_7);
+                      (tmp_7 from in->next++)
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:152: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->name);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:152: Warning: 
+  unsigned overflow.
+  assert 0 ≤ (unsigned long)tmp_9 << 24;
+  (tmp_9 from
+  in->left?*in->next++:bail((char *)"unexpected end of file on ", in->name))
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:152: Warning: 
+  unsigned overflow.
+  assert (unsigned long)tmp_9 << 24 ≤ 18446744073709551615;
+  (tmp_9 from
+  in->left?*in->next++:bail((char *)"unexpected end of file on ", in->name))
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:152: Warning: 
+  unsigned overflow.
+  assert 0 ≤ val + (unsigned long)((unsigned long)tmp_9 << 24);
+  (tmp_9 from
+  in->left?*in->next++:bail((char *)"unexpected end of file on ", in->name))
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:152: Warning: 
+  unsigned overflow.
+  assert
+  val + (unsigned long)((unsigned long)tmp_9 << 24) ≤ 18446744073709551615;
+  (tmp_9 from
+  in->left?*in->next++:bail((char *)"unexpected end of file on ", in->name))
+[kernel:annot:missing-spec] /home/wander/zlib_analysis/gzjoin.c:411: Warning: 
+  Neither code nor specification for function crc32_combine,
+   generating default assigns. See -generated-spec-* options for more info
+[eva] using specification for function crc32_combine
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:412: Warning: 
+  unsigned overflow. assert 0 ≤ *tot + (unsigned long)len;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:412: Warning: 
+  unsigned overflow. assert *tot + (unsigned long)len ≤ 18446744073709551615;
+[kernel:annot:missing-spec] /home/wander/zlib_analysis/gzjoin.c:415: Warning: 
+  Neither code nor specification for function inflateEnd,
+   generating default assigns. See -generated-spec-* options for more info
+[eva] using specification for function inflateEnd
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:421: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(crc);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:422: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(tot);
+[eva] /home/wander/zlib_analysis/gzjoin.c:444: starting to merge loop iterations
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:131: Warning: 
+  function read: precondition 'valid_fd' got status unknown.
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:209: Warning: 
+  out of bounds read. assert \valid_read(tmp);
+                      (tmp from in->next++)
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:209: Warning: 
+  out of bounds read. assert \valid_read(tmp_2);
+                      (tmp_2 from in->next++)
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:209: Warning: 
+  out of bounds read. assert \valid_read(tmp_5);
+                      (tmp_5 from in->next++)
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:213: Warning: 
+  out of bounds read. assert \valid_read(tmp_8);
+                      (tmp_8 from in->next++)
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:224: Warning: 
+  out of bounds read. assert \valid_read(tmp_10);
+                      (tmp_10 from in->next++)
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:225: Warning: 
+  out of bounds read. assert \valid_read(tmp_12);
+                      (tmp_12 from in->next++)
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:355: Warning: 
+  pointer subtraction. assert \base_addr(strm.next_in) ≡ \base_addr(in->buf);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:355: Warning: 
+  out of bounds write.
+  assert \valid(in->buf + (long)((long)(strm.next_in - in->buf) - 1));
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:368: Warning: 
+  pointer subtraction. assert \base_addr(strm.next_in) ≡ \base_addr(in->buf);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:368: Warning: 
+  out of bounds write. assert \valid(in->buf + (long)(strm.next_in - in->buf));
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:411: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(crc);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:412: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(tot);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:247: Warning: 
+  signed downcast. assert (unsigned long)(val & 0xff) ≤ 2147483647;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:248: Warning: 
+  signed downcast.
+  assert (unsigned long)((unsigned long)(val >> 8) & 0xff) ≤ 2147483647;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:249: Warning: 
+  signed downcast.
+  assert (unsigned long)((unsigned long)(val >> 16) & 0xff) ≤ 2147483647;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:250: Warning: 
+  signed downcast.
+  assert (unsigned long)((unsigned long)(val >> 24) & 0xff) ≤ 2147483647;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:209: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(tmp);
+  (tmp from in->next++)
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:209: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(tmp_2);
+  (tmp_2 from in->next++)
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:209: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(tmp_5);
+  (tmp_5 from in->next++)
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:213: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(tmp_8);
+  (tmp_8 from in->next++)
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:224: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(tmp_10);
+  (tmp_10 from in->next++)
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:225: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(tmp_12);
+  (tmp_12 from in->next++)
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:225: Warning: 
+  unsigned overflow.
+  assert 0 ≤ (unsigned int)tmp_14 << 8;
+  (tmp_14 from
+  in->left?*in->next++:bail((char *)"unexpected end of file on ", in->name))
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:225: Warning: 
+  unsigned overflow.
+  assert (unsigned int)tmp_14 << 8 ≤ 4294967295;
+  (tmp_14 from
+  in->left?*in->next++:bail((char *)"unexpected end of file on ", in->name))
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:225: Warning: 
+  unsigned overflow.
+  assert 0 ≤ len + (unsigned int)((unsigned int)tmp_14 << 8);
+  (tmp_14 from
+  in->left?*in->next++:bail((char *)"unexpected end of file on ", in->name))
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:225: Warning: 
+  unsigned overflow.
+  assert len + (unsigned int)((unsigned int)tmp_14 << 8) ≤ 4294967295;
+  (tmp_14 from
+  in->left?*in->next++:bail((char *)"unexpected end of file on ", in->name))
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:165: Warning: 
+  unsigned overflow. assert in->left - skip ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:171: Warning: 
+  unsigned overflow. assert skip - in->left ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:182: Warning: 
+  unsigned overflow. assert 0 ≤ skip - 1;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:182: Warning: 
+  unsigned overflow. assert skip - 1 ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:183: Warning: 
+  function read: precondition 'buf_has_room' got status unknown.
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:184: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->name);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:189: Warning: 
+  unsigned overflow. assert 0 ≤ skip - left;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:189: Warning: 
+  unsigned overflow. assert skip - left ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:197: Warning: 
+  unsigned overflow. assert in->left - skip ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:231: Warning: 
+  unsigned overflow. assert 0 ≤ in->left - 1;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:231: Warning: 
+  unsigned overflow. assert in->left - 1 ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:231: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(tmp_15);
+  (tmp_15 from in->next++)
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:236: Warning: 
+  unsigned overflow. assert 0 ≤ in->left - 1;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:236: Warning: 
+  unsigned overflow. assert in->left - 1 ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:236: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(tmp_18);
+  (tmp_18 from in->next++)
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:313: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(start + 0);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:315: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(start + 0);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:353: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(strm.next_in + (int)(-1));
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:355: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(in->buf + (long)((long)(strm.next_in - in->buf) - 1));
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:366: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(strm.next_in + 0);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:368: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(in->buf + (long)(strm.next_in - in->buf));
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:380: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(in->next + (int)(-1));
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:149: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(tmp);
+  (tmp from in->next++)
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:150: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(tmp_1);
+  (tmp_1 from in->next++)
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:151: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(tmp_4);
+  (tmp_4 from in->next++)
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:152: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(tmp_7);
+  (tmp_7 from in->next++)
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:109: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->buf);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:109: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->fd);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:90: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->fd);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:91: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->fd);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:91: Warning: 
+  function close: precondition 'valid_fd' got status unknown.
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:92: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->buf);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:93: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->buf);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:114: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->buf);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:209: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:127: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:127: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:129: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->buf);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:131: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:131: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->buf);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:131: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:131: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->buf);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:134: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:134: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:135: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:135: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:209: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:209: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:209: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:209: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:209: Warning: 
+  unsigned overflow. assert 0 ≤ in->left - 1;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:209: Warning: 
+  unsigned overflow. assert in->left - 1 ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:209: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:209: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:209: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:209: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:209: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:209: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:209: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:209: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:209: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:209: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:209: Warning: 
+  unsigned overflow. assert 0 ≤ in->left - 1;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:209: Warning: 
+  unsigned overflow. assert in->left - 1 ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:209: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:209: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:209: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:209: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:209: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:209: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:209: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:209: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:209: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:209: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:209: Warning: 
+  unsigned overflow. assert 0 ≤ in->left - 1;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:209: Warning: 
+  unsigned overflow. assert in->left - 1 ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:209: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:209: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:209: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:209: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:213: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:213: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:213: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:213: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:213: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:213: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:213: Warning: 
+  unsigned overflow. assert 0 ≤ in->left - 1;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:213: Warning: 
+  unsigned overflow. assert in->left - 1 ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:213: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:213: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:213: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:213: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:164: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:164: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:165: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:165: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:166: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:166: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:171: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:171: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:182: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->fd);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:182: Warning: 
+  function lseek: precondition 'valid_fd' got status unknown.
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:183: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->buf);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:183: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->fd);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:183: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->buf);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:183: Warning: 
+  function read: precondition 'valid_fd' got status unknown.
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:189: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->fd);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:189: Warning: 
+  function lseek: precondition 'valid_fd' got status unknown.
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:195: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:195: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:197: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:197: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:198: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:198: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:224: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:224: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:224: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:224: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:224: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:224: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:224: Warning: 
+  unsigned overflow. assert 0 ≤ in->left - 1;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:224: Warning: 
+  unsigned overflow. assert in->left - 1 ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:224: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:224: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:224: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:224: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:225: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:225: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:225: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:225: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:225: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:225: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:225: Warning: 
+  unsigned overflow. assert 0 ≤ in->left - 1;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:225: Warning: 
+  unsigned overflow. assert in->left - 1 ≤ 4294967295;
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:225: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:225: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:225: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:225: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:231: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:231: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:231: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:231: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:231: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:231: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:231: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:231: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:231: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:231: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:236: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:236: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:236: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:236: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:236: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:236: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:236: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:236: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:236: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:236: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:256: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:256: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:258: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:258: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:260: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:260: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:261: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:261: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:312: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:312: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:355: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->buf);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:355: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->buf);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:362: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->buf);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:362: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->buf);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:368: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->buf);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:368: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->buf);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:321: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->buf);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:321: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->buf);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:375: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->buf);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:375: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->buf);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:379: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:379: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:380: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:380: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:149: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:149: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:149: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:149: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:149: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:149: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:149: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:149: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:149: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:149: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:150: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:150: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:150: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:150: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:150: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:150: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:150: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:150: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:150: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:150: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:151: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:151: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:151: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:151: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:151: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:151: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:151: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:151: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:151: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:151: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:152: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:152: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:152: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:152: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:152: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:152: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->left);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:152: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:152: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:152: Warning: 
+  accessing uninitialized left-value. assert \initialized(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:152: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->next);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:92: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->buf);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:93: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->buf);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:109: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->buf);
+[eva:alarm] /home/wander/zlib_analysis/gzjoin.c:114: Warning: 
+  accessing left-value that contains escaping addresses.
+  assert ¬\dangling(&in->buf);
+[eva:garbled-mix:summary] 
+  Origins of garbled mix generated during analysis:
+    /home/wander/zlib_analysis/gzjoin.c:329: misaligned read of addresses
+      (read in 143 statements, propagated through 93 statements)
+      garbled mix of &{__malloc_w_bopen_l107; __malloc_gzcopy_l299}
+[scope:rm_asserts] removing 70 assertion(s)
+[eva] ====== VALUES COMPUTED ======
+[eva:final-states] Values at end of function bail:
+  NON TERMINATING FUNCTION
+[eva:final-states] Values at end of function bclose:
+  __fc_fds[0..1023] ∈ [--..--]
+  in ∈ {{ &__malloc_w_bopen_l104 }} or ESCAPINGADDR
+  in ∈ {{ &__malloc_w_bopen_l104 }} or ESCAPINGADDR
+  ret ∈
+     {{ garbled mix of &{__malloc_w_bopen_l107}
+      (origin: Misaligned read {/home/wander/zlib_analysis/gzjoin.c:329}) }} or UNINITIALIZED or ESCAPINGADDR
+  pos ∈
+     {{ garbled mix of &{__malloc_w_bopen_l107}
+      (origin: Misaligned read {/home/wander/zlib_analysis/gzjoin.c:329}) }} or UNINITIALIZED or ESCAPINGADDR
+  last ∈
+      {{ garbled mix of &{__malloc_w_bopen_l107}
+       (origin: Misaligned read {/home/wander/zlib_analysis/gzjoin.c:329}) }} or UNINITIALIZED or ESCAPINGADDR
+  in ∈ {{ &__malloc_w_bopen_l104 }} or UNINITIALIZED or ESCAPINGADDR
+  start ∈
+       {{ NULL ; &__malloc_w_bopen_l107 + [0..32767] }} or UNINITIALIZED or ESCAPINGADDR
+  len ∈
+     {{ garbled mix of &{__malloc_w_bopen_l107}
+      (origin: Misaligned read {/home/wander/zlib_analysis/gzjoin.c:329}) }} or UNINITIALIZED or ESCAPINGADDR
+  strm ∈
+      {{ garbled mix of &{__malloc_w_bopen_l107}
+       (origin: Misaligned read {/home/wander/zlib_analysis/gzjoin.c:329}) }} or UNINITIALIZED or ESCAPINGADDR
+  crc ∈
+     {{ garbled mix of &{__malloc_w_bopen_l107}
+      (origin: Misaligned read {/home/wander/zlib_analysis/gzjoin.c:329}) }} or ESCAPINGADDR
+  tot ∈
+     {{ garbled mix of &{__malloc_w_bopen_l107}
+      (origin: Misaligned read {/home/wander/zlib_analysis/gzjoin.c:329}) }} or ESCAPINGADDR
+  S___fc_stdout[0] ∈
+               {{ garbled mix of &{__malloc_w_bopen_l107}
+                (origin: Misaligned read
+                {/home/wander/zlib_analysis/gzjoin.c:329}) }} or ESCAPINGADDR
+               [1] ∈ [--..--]
+  __malloc_w_bopen_l104.name ∈ {{ &S_1_S_argv[0] }} or UNINITIALIZED
+                       .fd ∈ [-1..1023] or UNINITIALIZED
+                       {.left; .next} ∈
+                       {{ garbled mix of &{__malloc_w_bopen_l107}
+                        (origin: Misaligned read
+                        {/home/wander/zlib_analysis/gzjoin.c:329}) }} or UNINITIALIZED or ESCAPINGADDR
+                       .buf ∈
+                       {{ NULL ; &__malloc_w_bopen_l107[0] }} or UNINITIALIZED or ESCAPINGADDR
+  __malloc_w_bopen_l107[0..32767] ∈
+                       {{ garbled mix of &{__malloc_w_bopen_l107}
+                        (origin: Misaligned read
+                        {/home/wander/zlib_analysis/gzjoin.c:329}) }} or UNINITIALIZED or ESCAPINGADDR
+[eva:final-states] Values at end of function gzinit:
+  crc ∈ [--..--]
+  tot ∈ {0}
+  S___fc_stdout[0..1] ∈ [--..--]
+[eva:final-states] Values at end of function bopen:
+  __fc_heap_status ∈ [--..--]
+  __fc_fds[0..1023] ∈ [--..--]
+  in ∈ {{ NULL ; &__malloc_w_bopen_l104 }} or ESCAPINGADDR
+  crc ∈
+     {{ garbled mix of &{__malloc_w_bopen_l107}
+      (origin: Misaligned read {/home/wander/zlib_analysis/gzjoin.c:329}) }} or ESCAPINGADDR
+  tot ∈
+     {{ garbled mix of &{__malloc_w_bopen_l107}
+      (origin: Misaligned read {/home/wander/zlib_analysis/gzjoin.c:329}) }} or ESCAPINGADDR
+  __retres ∈ {{ NULL ; &__malloc_w_bopen_l104 }}
+  S___fc_stdout[0] ∈
+               {{ garbled mix of &{__malloc_w_bopen_l107}
+                (origin: Misaligned read
+                {/home/wander/zlib_analysis/gzjoin.c:329}) }} or ESCAPINGADDR
+               [1] ∈ [--..--]
+  __malloc_w_bopen_l104.name ∈ {{ &S_1_S_argv[0] }} or UNINITIALIZED
+                       .fd ∈ [-1..1023] or UNINITIALIZED
+                       {.left; .next} ∈
+                       {{ garbled mix of &{__malloc_w_bopen_l107}
+                        (origin: Misaligned read
+                        {/home/wander/zlib_analysis/gzjoin.c:329}) }} or UNINITIALIZED or ESCAPINGADDR
+                       .buf ∈
+                       {{ NULL ; &__malloc_w_bopen_l107[0] }} or UNINITIALIZED or ESCAPINGADDR
+  __malloc_w_bopen_l107[0..32767] ∈
+                       {{ garbled mix of &{__malloc_w_bopen_l107}
+                        (origin: Misaligned read
+                        {/home/wander/zlib_analysis/gzjoin.c:329}) }} or UNINITIALIZED or ESCAPINGADDR
+[eva:final-states] Values at end of function put4:
+  S___fc_stdout[0] ∈
+               {{ garbled mix of &{__malloc_w_bopen_l107}
+                (origin: Misaligned read
+                {/home/wander/zlib_analysis/gzjoin.c:329}) }} or ESCAPINGADDR
+               [1] ∈ [--..--]
+[eva:final-states] Values at end of function bload:
+  __fc_fds[0..1023] ∈ [--..--]
+  len ∈ [--..--] or UNINITIALIZED
+  __retres ∈ {-1; 0; 1}
+  __malloc_w_bopen_l104.name ∈ {{ &S_1_S_argv[0] }} or UNINITIALIZED
+                       .fd ∈ [-1..1023] or UNINITIALIZED
+                       {.left; .next} ∈
+                       {{ garbled mix of &{__malloc_w_bopen_l107;
+                                           __malloc_gzcopy_l299}
+                        (origin: Misaligned read
+                        {/home/wander/zlib_analysis/gzjoin.c:329}) }} or UNINITIALIZED or ESCAPINGADDR
+                       .buf ∈
+                       {{ NULL ; &__malloc_w_bopen_l107[0] }} or UNINITIALIZED or ESCAPINGADDR
+  __malloc_w_bopen_l107[0..32767] ∈
+                       {{ garbled mix of &{__malloc_w_bopen_l107;
+                                           __malloc_gzcopy_l299}
+                        (origin: Misaligned read
+                        {/home/wander/zlib_analysis/gzjoin.c:329}) }} or UNINITIALIZED or ESCAPINGADDR
+  __malloc_gzcopy_l299[0..32767] ∈ [--..--] or UNINITIALIZED
+[eva:final-states] Values at end of function bget4:
+  __fc_fds[0..1023] ∈ [--..--]
+  val ∈
+     {{ garbled mix of &{__malloc_w_bopen_l107; __malloc_gzcopy_l299}
+      (origin: Misaligned read {/home/wander/zlib_analysis/gzjoin.c:329}) }}
+  S___fc_stderr[0..1] ∈ [--..--]
+  __malloc_w_bopen_l104.name ∈ {{ &S_1_S_argv[0] }} or UNINITIALIZED
+                       .fd ∈ [-1..1023] or UNINITIALIZED
+                       {.left; .next} ∈
+                       {{ garbled mix of &{__malloc_w_bopen_l107;
+                                           __malloc_gzcopy_l299}
+                        (origin: Misaligned read
+                        {/home/wander/zlib_analysis/gzjoin.c:329}) }} or UNINITIALIZED or ESCAPINGADDR
+                       .buf ∈
+                       {{ NULL ; &__malloc_w_bopen_l107[0] }} or UNINITIALIZED or ESCAPINGADDR
+  __malloc_w_bopen_l107[0..32767] ∈
+                       {{ garbled mix of &{__malloc_w_bopen_l107;
+                                           __malloc_gzcopy_l299}
+                        (origin: Misaligned read
+                        {/home/wander/zlib_analysis/gzjoin.c:329}) }} or UNINITIALIZED or ESCAPINGADDR
+  __malloc_gzcopy_l299[0..32767] ∈ [--..--] or UNINITIALIZED
+[eva:final-states] Values at end of function bskip:
+  __fc_fds[0..1023] ∈ [--..--]
+  skip ∈
+      {{ garbled mix of &{__malloc_w_bopen_l107}
+       (origin: Misaligned read {/home/wander/zlib_analysis/gzjoin.c:329}) }}
+  S___fc_stderr[0..1] ∈ [--..--]
+  __malloc_w_bopen_l104.name ∈ {{ &S_1_S_argv[0] }} or UNINITIALIZED
+                       .fd ∈ [-1..1023] or UNINITIALIZED
+                       {.left; .next} ∈
+                       {{ garbled mix of &{__malloc_w_bopen_l107}
+                        (origin: Misaligned read
+                        {/home/wander/zlib_analysis/gzjoin.c:329}) }} or UNINITIALIZED or ESCAPINGADDR
+                       .buf ∈
+                       {{ NULL ; &__malloc_w_bopen_l107[0] }} or UNINITIALIZED or ESCAPINGADDR
+  __malloc_w_bopen_l107[0..32767] ∈
+                       {{ garbled mix of &{__malloc_w_bopen_l107}
+                        (origin: Misaligned read
+                        {/home/wander/zlib_analysis/gzjoin.c:329}) }} or UNINITIALIZED or ESCAPINGADDR
+[eva:final-states] Values at end of function gzhead:
+  __fc_fds[0..1023] ∈ [--..--]
+  flags ∈
+       {{ garbled mix of &{__malloc_w_bopen_l107}
+        (origin: Misaligned read {/home/wander/zlib_analysis/gzjoin.c:329}) }}
+  S___fc_stderr[0..1] ∈ [--..--]
+  __malloc_w_bopen_l104.name ∈ {{ &S_1_S_argv[0] }} or UNINITIALIZED
+                       .fd ∈ [-1..1023] or UNINITIALIZED
+                       {.left; .next} ∈
+                       {{ garbled mix of &{__malloc_w_bopen_l107}
+                        (origin: Misaligned read
+                        {/home/wander/zlib_analysis/gzjoin.c:329}) }} or UNINITIALIZED or ESCAPINGADDR
+                       .buf ∈
+                       {{ NULL ; &__malloc_w_bopen_l107[0] }} or UNINITIALIZED or ESCAPINGADDR
+  __malloc_w_bopen_l107[0..32767] ∈
+                       {{ garbled mix of &{__malloc_w_bopen_l107}
+                        (origin: Misaligned read
+                        {/home/wander/zlib_analysis/gzjoin.c:329}) }} or UNINITIALIZED or ESCAPINGADDR
+[eva:final-states] Values at end of function zpull:
+  __fc_fds[0..1023] ∈ [--..--]
+  strm{.next_in; .avail_in} ∈
+      {{ garbled mix of &{__malloc_w_bopen_l107}
+       (origin: Misaligned read {/home/wander/zlib_analysis/gzjoin.c:329}) }}
+      {.total_in; .next_out; .avail_out; .total_out; .msg; .state; .[bits 96 to 127]; .[bits 288 to 319]} ∈
+      {{ garbled mix of &{__malloc_w_bopen_l107; __malloc_gzcopy_l299}
+       (origin: Misaligned read {/home/wander/zlib_analysis/gzjoin.c:329}) }} or UNINITIALIZED
+      {.zalloc; .zfree; .opaque} ∈
+      {{ garbled mix of &{__malloc_w_bopen_l107; __malloc_gzcopy_l299}
+       (origin: Misaligned read {/home/wander/zlib_analysis/gzjoin.c:329}) }}
+      {.data_type; .adler; .reserved; .[bits 736 to 767]} ∈
+      {{ garbled mix of &{__malloc_w_bopen_l107; __malloc_gzcopy_l299}
+       (origin: Misaligned read {/home/wander/zlib_analysis/gzjoin.c:329}) }} or UNINITIALIZED
+  S___fc_stderr[0..1] ∈ [--..--]
+  __malloc_w_bopen_l104.name ∈ {{ &S_1_S_argv[0] }} or UNINITIALIZED
+                       .fd ∈ [-1..1023] or UNINITIALIZED
+                       {.left; .next} ∈
+                       {{ garbled mix of &{__malloc_w_bopen_l107}
+                        (origin: Misaligned read
+                        {/home/wander/zlib_analysis/gzjoin.c:329}) }} or UNINITIALIZED or ESCAPINGADDR
+                       .buf ∈
+                       {{ NULL ; &__malloc_w_bopen_l107[0] }} or UNINITIALIZED or ESCAPINGADDR
+  __malloc_w_bopen_l107[0..32767] ∈
+                       {{ garbled mix of &{__malloc_w_bopen_l107;
+                                           __malloc_gzcopy_l299}
+                        (origin: Misaligned read
+                        {/home/wander/zlib_analysis/gzjoin.c:329}) }} or UNINITIALIZED or ESCAPINGADDR
+[eva:final-states] Values at end of function gzcopy:
+  __fc_heap_status ∈ [--..--]
+  __fc_fds[0..1023] ∈ [--..--]
+  ret ∈
+     {{ garbled mix of &{__malloc_w_bopen_l107}
+      (origin: Misaligned read {/home/wander/zlib_analysis/gzjoin.c:329}) }} or ESCAPINGADDR
+  pos ∈
+     {{ garbled mix of &{__malloc_w_bopen_l107}
+      (origin: Misaligned read {/home/wander/zlib_analysis/gzjoin.c:329}) }} or ESCAPINGADDR
+  last ∈
+      {{ garbled mix of &{__malloc_w_bopen_l107}
+       (origin: Misaligned read {/home/wander/zlib_analysis/gzjoin.c:329}) }} or ESCAPINGADDR
+  in ∈ {{ &__malloc_w_bopen_l104 }} or ESCAPINGADDR
+  start ∈ {{ NULL ; &__malloc_w_bopen_l107 + [0..32767] }} or ESCAPINGADDR
+  junk ∈ ESCAPINGADDR
+  len ∈
+     {{ garbled mix of &{__malloc_w_bopen_l107}
+      (origin: Misaligned read {/home/wander/zlib_analysis/gzjoin.c:329}) }} or ESCAPINGADDR
+  strm{.next_in; .avail_in} ∈
+      {{ garbled mix of &{__malloc_w_bopen_l107}
+       (origin: Misaligned read {/home/wander/zlib_analysis/gzjoin.c:329}) }} or ESCAPINGADDR
+      {.total_in; .[bits 96 to 127]} ∈
+      {{ garbled mix of &{__malloc_w_bopen_l107}
+       (origin: Misaligned read {/home/wander/zlib_analysis/gzjoin.c:329}) }} or UNINITIALIZED or ESCAPINGADDR
+      {.next_out; .avail_out} ∈
+      {{ garbled mix of &{__malloc_w_bopen_l107}
+       (origin: Misaligned read {/home/wander/zlib_analysis/gzjoin.c:329}) }} or ESCAPINGADDR
+      {.total_out; .msg; .state; .[bits 288 to 319]} ∈
+      {{ garbled mix of &{__malloc_w_bopen_l107}
+       (origin: Misaligned read {/home/wander/zlib_analysis/gzjoin.c:329}) }} or UNINITIALIZED or ESCAPINGADDR
+      {.zalloc; .zfree; .opaque; .data_type} ∈
+      {{ garbled mix of &{__malloc_w_bopen_l107}
+       (origin: Misaligned read {/home/wander/zlib_analysis/gzjoin.c:329}) }} or ESCAPINGADDR
+      {.adler; .reserved; .[bits 736 to 767]} ∈
+      {{ garbled mix of &{__malloc_w_bopen_l107}
+       (origin: Misaligned read {/home/wander/zlib_analysis/gzjoin.c:329}) }} or UNINITIALIZED or ESCAPINGADDR
+  crc ∈
+     {{ garbled mix of &{__malloc_w_bopen_l107}
+      (origin: Misaligned read {/home/wander/zlib_analysis/gzjoin.c:329}) }} or ESCAPINGADDR
+  tot ∈
+     {{ garbled mix of &{__malloc_w_bopen_l107}
+      (origin: Misaligned read {/home/wander/zlib_analysis/gzjoin.c:329}) }} or ESCAPINGADDR
+  S___fc_stderr[0..1] ∈ [--..--]
+  S___fc_stdout[0] ∈
+               {{ garbled mix of &{__malloc_w_bopen_l107}
+                (origin: Misaligned read
+                {/home/wander/zlib_analysis/gzjoin.c:329}) }} or ESCAPINGADDR
+               [1] ∈ [--..--]
+  __malloc_w_bopen_l104.name ∈ {{ &S_1_S_argv[0] }} or UNINITIALIZED
+                       .fd ∈ [-1..1023] or UNINITIALIZED
+                       {.left; .next} ∈
+                       {{ garbled mix of &{__malloc_w_bopen_l107}
+                        (origin: Misaligned read
+                        {/home/wander/zlib_analysis/gzjoin.c:329}) }} or UNINITIALIZED or ESCAPINGADDR
+                       .buf ∈
+                       {{ NULL ; &__malloc_w_bopen_l107[0] }} or UNINITIALIZED or ESCAPINGADDR
+  __malloc_w_bopen_l107[0..32767] ∈
+                       {{ garbled mix of &{__malloc_w_bopen_l107}
+                        (origin: Misaligned read
+                        {/home/wander/zlib_analysis/gzjoin.c:329}) }} or UNINITIALIZED or ESCAPINGADDR
+[eva:final-states] Values at end of function main:
+  __fc_heap_status ∈ [--..--]
+  __fc_fds[0..1023] ∈ [--..--]
+  argc ∈ [-2147483648..2147483645]
+  argv ∈ {{ NULL + [0..18446744073709551608],0%8 ; &S_argv + [8..--],0%8 }}
+  crc ∈
+     {{ garbled mix of &{__malloc_w_bopen_l107}
+      (origin: Misaligned read {/home/wander/zlib_analysis/gzjoin.c:329}) }} or UNINITIALIZED or ESCAPINGADDR
+  tot ∈
+     {{ garbled mix of &{__malloc_w_bopen_l107}
+      (origin: Misaligned read {/home/wander/zlib_analysis/gzjoin.c:329}) }} or UNINITIALIZED or ESCAPINGADDR
+  __retres ∈ {0}
+  S___fc_stderr[0..1] ∈ [--..--]
+  S___fc_stdout[0] ∈
+               {{ garbled mix of &{__malloc_w_bopen_l107}
+                (origin: Misaligned read
+                {/home/wander/zlib_analysis/gzjoin.c:329}) }} or ESCAPINGADDR
+               [1] ∈ [--..--]
+  __malloc_w_bopen_l104.name ∈ {{ &S_1_S_argv[0] }} or UNINITIALIZED
+                       .fd ∈ [-1..1023] or UNINITIALIZED
+                       {.left; .next} ∈
+                       {{ garbled mix of &{__malloc_w_bopen_l107}
+                        (origin: Misaligned read
+                        {/home/wander/zlib_analysis/gzjoin.c:329}) }} or UNINITIALIZED or ESCAPINGADDR
+                       .buf ∈
+                       {{ NULL ; &__malloc_w_bopen_l107[0] }} or UNINITIALIZED or ESCAPINGADDR
+  __malloc_w_bopen_l107[0..32767] ∈
+                       {{ garbled mix of &{__malloc_w_bopen_l107}
+                        (origin: Misaligned read
+                        {/home/wander/zlib_analysis/gzjoin.c:329}) }} or UNINITIALIZED or ESCAPINGADDR
+[eva:summary] ====== ANALYSIS SUMMARY ======
+  ----------------------------------------------------------------------------
+  12 functions analyzed (out of 12): 100% coverage.
+  In these functions, 377 statements reached (out of 386): 97% coverage.
+  ----------------------------------------------------------------------------
+  Some errors and warnings have been raised during the analysis:
+    by the Eva analyzer:      0 errors    0 warnings
+    by the Frama-C kernel:    0 errors    5 warnings
+  ----------------------------------------------------------------------------
+  355 alarms generated by the analysis:
+     137 accesses to uninitialized left-values
+     113 escaping addresses
+      78 integer overflows
+      19 invalid memory accesses
+       2 invalid shifts
+       6 others
+  ----------------------------------------------------------------------------
+  Evaluation of the logical properties reached by the analysis:
+    Assertions        0 valid     0 unknown     0 invalid      0 total
+    Preconditions    25 valid    14 unknown     0 invalid     39 total
+  64% of the logical properties reached have been proven.
+  ----------------------------------------------------------------------------

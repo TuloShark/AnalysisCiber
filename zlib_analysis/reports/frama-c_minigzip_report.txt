@@ -1,0 +1,262 @@
+[kernel] Parsing /home/wander/zlib_analysis/minigzip.c (with preprocessing)
+[eva] Analyzing a complete application starting at main
+[eva:initial-state] Values of globals at initialization
+  prog ∈ {0}
+[eva] using specification for function snprintf_va_4
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:575: Warning: 
+  out of bounds read. assert \valid_read(argv + 0);
+[eva] using specification for function strrchr
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:576: Warning: 
+  function strrchr: precondition 'valid_string_s' got status unknown.
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:581: Warning: 
+  signed overflow. assert -2147483648 ≤ argc - 1;
+[eva] using specification for function strcmp
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:583: Warning: 
+  function strcmp: precondition 'valid_string_s1' got status unknown.
+[eva] FRAMAC_SHARE/libc/string.h:174: 
+  cannot evaluate ACSL term, unsupported ACSL construct: logic function strcmp
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:585: Warning: 
+  function strcmp: precondition 'valid_string_s1' got status unknown.
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:589: Warning: 
+  out of bounds read. assert \valid_read(argv);
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:589: Warning: 
+  function strcmp: precondition 'valid_string_s1' got status unknown.
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:591: Warning: 
+  out of bounds read. assert \valid_read(argv);
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:591: Warning: 
+  function strcmp: precondition 'valid_string_s1' got status unknown.
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:593: Warning: 
+  out of bounds read. assert \valid_read(argv);
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:593: Warning: 
+  function strcmp: precondition 'valid_string_s1' got status unknown.
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:595: Warning: 
+  out of bounds read. assert \valid_read(argv);
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:595: Warning: 
+  function strcmp: precondition 'valid_string_s1' got status unknown.
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:597: Warning: 
+  out of bounds read. assert \valid_read(argv);
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:597: Warning: 
+  function strcmp: precondition 'valid_string_s1' got status unknown.
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:599: Warning: 
+  out of bounds read. assert \valid_read(argv);
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:599: Warning: 
+  out of bounds read. assert \valid_read(argv);
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:599: Warning: 
+  out of bounds read. assert \valid_read(*argv + 1);
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:599: Warning: 
+  out of bounds read. assert \valid_read(argv);
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:599: Warning: 
+  out of bounds read. assert \valid_read(*argv + 1);
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:600: Warning: 
+  out of bounds read. assert \valid_read(argv);
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:600: Warning: 
+  out of bounds read. assert \valid_read(*argv + 2);
+[eva] /home/wander/zlib_analysis/minigzip.c:588: 
+  starting to merge loop iterations
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:606: Warning: 
+  accessing uninitialized left-value. assert \initialized(&outmode[3]);
+[eva] using specification for function fileno
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:612: Warning: 
+  function fileno: precondition 'valid_stream' got status unknown.
+[kernel:annot:missing-spec] /home/wander/zlib_analysis/minigzip.c:612: Warning: 
+  Neither code nor specification for function gzdopen,
+   generating default assigns. See -generated-spec-* options for more info
+[eva] using specification for function gzdopen
+[eva] using specification for function fprintf_va_1
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:358: Warning: 
+  function fprintf_va_1: precondition valid_read_string(param0) got status unknown.
+[eva] using specification for function exit
+[kernel:annot:missing-spec] /home/wander/zlib_analysis/minigzip.c:443: Warning: 
+  Neither code nor specification for function gzread,
+   generating default assigns. See -generated-spec-* options for more info
+[eva] using specification for function gzread
+[eva:invalid-assigns] /home/wander/zlib_analysis/minigzip.c:443: 
+  Completely invalid destination for assigns clause *file. Ignoring.
+[kernel:annot:missing-spec] /home/wander/zlib_analysis/minigzip.c:444: Warning: 
+  Neither code nor specification for function gzerror,
+   generating default assigns. See -generated-spec-* options for more info
+[eva] using specification for function gzerror
+[eva:invalid-assigns] /home/wander/zlib_analysis/minigzip.c:444: 
+  Completely invalid destination for assigns clause *file. Ignoring.
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:358: Warning: 
+  function fprintf_va_1: precondition valid_read_string(param1) got status invalid.
+[eva] using specification for function fwrite
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:447: Warning: 
+  function fwrite: precondition 'valid_ptr_block' got status unknown.
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:447: Warning: 
+  function fwrite: precondition 'valid_stream' got status unknown.
+[eva] /home/wander/zlib_analysis/minigzip.c:442: 
+  starting to merge loop iterations
+[eva] using specification for function fclose
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:451: Warning: 
+  function fclose: precondition 'valid_stream' got status unknown.
+[kernel:annot:missing-spec] /home/wander/zlib_analysis/minigzip.c:453: Warning: 
+  Neither code nor specification for function gzclose,
+   generating default assigns. See -generated-spec-* options for more info
+[eva] using specification for function gzclose
+[eva:invalid-assigns] /home/wander/zlib_analysis/minigzip.c:453: 
+  Completely invalid destination for assigns clause *file. Ignoring.
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:616: Warning: 
+  function fileno: precondition 'valid_stream' got status unknown.
+[eva] using specification for function fread
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:381: Warning: 
+  function fread: precondition 'valid_stream' got status unknown.
+[eva] using specification for function ferror
+[eva] using specification for function perror
+[kernel:annot:missing-spec] /home/wander/zlib_analysis/minigzip.c:388: Warning: 
+  Neither code nor specification for function gzwrite,
+   generating default assigns. See -generated-spec-* options for more info
+[eva] using specification for function gzwrite
+[eva:invalid-assigns] /home/wander/zlib_analysis/minigzip.c:388: 
+  Completely invalid destination for assigns clause *file. Ignoring.
+[eva:invalid-assigns] /home/wander/zlib_analysis/minigzip.c:388: 
+  Completely invalid destination for assigns clause *file. Ignoring.
+[eva] /home/wander/zlib_analysis/minigzip.c:380: 
+  starting to merge loop iterations
+[eva:invalid-assigns] /home/wander/zlib_analysis/minigzip.c:391: 
+  Completely invalid destination for assigns clause *file. Ignoring.
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:627: Warning: 
+  out of bounds read. assert \valid_read(argv);
+[kernel:annot:missing-spec] /home/wander/zlib_analysis/minigzip.c:627: Warning: 
+  Neither code nor specification for function gzopen,
+   generating default assigns. See -generated-spec-* options for more info
+[eva] using specification for function gzopen
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:629: Warning: 
+  out of bounds read. assert \valid_read(argv);
+[eva] using specification for function fprintf_va_6
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:629: Warning: 
+  function fprintf_va_6: precondition valid_read_string(param0) got status unknown.
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:629: Warning: 
+  function fprintf_va_6: precondition valid_read_string(param1) got status unknown.
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:633: Warning: 
+  out of bounds read. assert \valid_read(argv);
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:507: Warning: 
+  function strlen: precondition 'valid_string_s' got status unknown.
+[eva] using specification for function snprintf_va_2
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:515: Warning: 
+  function snprintf_va_2: precondition valid_read_string(param0) got status unknown.
+[eva] using specification for function snprintf_va_3
+[eva] FRAMAC_SHARE/libc/stdio.h:213: 
+  Cannot evaluate range bound format_length(format) - 1
+  (unsupported ACSL construct: logic function format_length). Approximating
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:528: Warning: 
+  function snprintf_va_3: precondition \valid(s + (0 .. n - 1)) ∨
+                                       \valid(s +
+                                              (0 .. format_length(format) - 1)) got status unknown.
+[eva] using specification for function fprintf_va_5
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:535: Warning: 
+  function fprintf_va_5: precondition valid_read_string(param0) got status unknown.
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:535: Warning: 
+  function fprintf_va_5: precondition valid_read_string(param1) got status unknown.
+[eva] using specification for function fopen
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:538: Warning: 
+  function fopen: precondition 'valid_filename' got status unknown.
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:540: Warning: 
+  function perror: precondition 'valid_string_s' got status unknown.
+[eva] using specification for function unlink
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:546: Warning: 
+  function unlink: precondition 'valid_string_path' got status unknown.
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:637: Warning: 
+  out of bounds read. assert \valid_read(argv);
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:637: Warning: 
+  function fopen: precondition 'valid_filename' got status unknown.
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:640: Warning: 
+  out of bounds read. assert \valid_read(argv);
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:640: Warning: 
+  function perror: precondition 'valid_string_s' got status unknown.
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:642: Warning: 
+  function fileno: precondition 'valid_stream' got status unknown.
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:649: Warning: 
+  out of bounds read. assert \valid_read(argv);
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:469: Warning: 
+  function strlen: precondition 'valid_string_s' got status unknown.
+[eva] using specification for function snprintf_va_1
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:475: Warning: 
+  function snprintf_va_1: precondition valid_read_string(param0) got status unknown.
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:481: Warning: 
+  function fopen: precondition 'valid_filename' got status unknown.
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:483: Warning: 
+  function perror: precondition 'valid_string_s' got status unknown.
+[eva] using specification for function fprintf_va_3
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:488: Warning: 
+  function fprintf_va_3: precondition valid_read_string(param0) got status unknown.
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:488: Warning: 
+  function fprintf_va_3: precondition valid_read_string(param1) got status unknown.
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:493: Warning: 
+  function unlink: precondition 'valid_string_path' got status unknown.
+[eva:alarm] /home/wander/zlib_analysis/minigzip.c:652: Warning: 
+  signed overflow. assert -2147483648 ≤ argc - 1;
+[eva] /home/wander/zlib_analysis/minigzip.c:624: 
+  starting to merge loop iterations
+[scope:rm_asserts] removing 11 assertion(s)
+[eva] ====== VALUES COMPUTED ======
+[eva:final-states] Values at end of function error:
+  NON TERMINATING FUNCTION
+[eva:final-states] Values at end of function gz_uncompress:
+  __fc_fopen[0..15] ∈ [--..--]
+  buf[0..16383] ∈ [--..--] or UNINITIALIZED
+  len ∈ {0}
+  err ∈ UNINITIALIZED
+  S___fc_stderr[0..1] ∈ [--..--]
+  S___fc_stdout[0..1] ∈ [--..--]
+[eva:final-states] Values at end of function gz_compress:
+  __fc_stdout ∈ {{ &S___fc_stdout[0] }}
+  __fc_fopen[0..15] ∈ [--..--]
+  buf[0..16383] ∈ [--..--] or UNINITIALIZED
+  len ∈ {0}
+  err ∈ UNINITIALIZED
+  S___fc_stderr[0..1] ∈ [--..--]
+  S___fc_stdin[0..1] ∈ [--..--]
+[eva:final-states] Values at end of function file_compress:
+  __fc_stdout ∈ {{ NULL + [--..--] ; &S___fc_stdout[0] }}
+  __fc_fopen[0..15] ∈ [--..--]
+  outfile[0..1023] ∈ [--..--] or UNINITIALIZED
+  in ∈ {{ &__fc_fopen + [0..120],0%8 }}
+  out ∈ [1..18446744073709551615]
+  S___fc_stderr[0..1] ∈ [--..--]
+[eva:final-states] Values at end of function file_uncompress:
+  __fc_stdout ∈ {{ NULL + [--..--] ; &S___fc_stdout[0] }}
+  __fc_fopen[0..15] ∈ [--..--]
+  buf[0..1023] ∈ [--..--] or UNINITIALIZED
+  infile ∈ {{ &buf[0] }}
+  outfile ∈ {{ &S_1_S_argv[0] }}
+  out ∈ {{ &__fc_fopen + [0..120],0%8 }}
+  in ∈ [1..18446744073709551615]
+  len ∈ {0; 1}
+  S___fc_stderr[0..1] ∈ [--..--]
+[eva:final-states] Values at end of function main:
+  __fc_stdout ∈ {{ NULL + [--..--] ; &S___fc_stdout[0] }}
+  __fc_fopen[0..15] ∈ [--..--]
+  argc ∈ {0}
+  argv ∈ {{ &S_argv{[1], [2]} }}
+  copyout ∈ {0; 1}
+  uncompr ∈ {0; 1}
+  file ∈ [--..--] or UNINITIALIZED
+  bname ∈ {{ &S_0_S_argv{[0], [1]} }}
+  outmode[0..2] ∈ [--..--] or UNINITIALIZED
+         [3] ∈ [--..--]
+         [4..19] ∈ [--..--] or UNINITIALIZED
+  prog ∈ {{ NULL ; &S_0_S_argv[0] }}
+  __retres ∈ {0}
+  S___fc_stderr[0..1] ∈ [--..--]
+  S___fc_stdin[0..1] ∈ [--..--]
+  S___fc_stdout[0..1] ∈ [--..--]
+[eva:summary] ====== ANALYSIS SUMMARY ======
+  ----------------------------------------------------------------------------
+  6 functions analyzed (out of 6): 100% coverage.
+  In these functions, 167 statements reached (out of 180): 92% coverage.
+  ----------------------------------------------------------------------------
+  Some errors and warnings have been raised during the analysis:
+    by the Eva analyzer:      0 errors    0 warnings
+    by the Frama-C kernel:    0 errors    6 warnings
+  ----------------------------------------------------------------------------
+  22 alarms generated by the analysis:
+      19 invalid memory accesses
+       2 integer overflows
+       1 access to uninitialized left-values
+  ----------------------------------------------------------------------------
+  Evaluation of the logical properties reached by the analysis:
+    Assertions        0 valid     0 unknown     0 invalid      0 total
+    Preconditions    30 valid    36 unknown     0 invalid     66 total
+  45% of the logical properties reached have been proven.
+  ----------------------------------------------------------------------------

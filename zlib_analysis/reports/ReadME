@@ -1,0 +1,44 @@
+# Installation 3/4
+
+sudo apt-get install flawfinder splint cppcheck
+
+# Istallation 4/4
+
+sudo apt install opam
+opam init
+eval $(opam env)
+opam depext frama-c
+opam install frama-c
+
+frama-c -version #verified
+
+# Download library
+
+sudo apt-get update
+sudo apt-get install zlib1g-dev
+
+dpkg -L zlib1g-dev | grep "\.c$"
+
+mkdir zlib_analysis
+
+cd /usr/share/doc/zlib1g-dev/examples/ # See content 
+cp -r /usr/share/doc/zlib1g-dev/examples/* ~/zlib_analysis/
+
+cd /usr/include/ # See content
+cp -r /usr/include* ~/zlib_analysis/ 
+
+cp /usr/include/zconf.h ~/zlib_analysis/ # Necessary
+cp /usr/include/zlib.h ~/zlib_analysis/ 
+
+frama-c -eva -warn-unsigned-overflow -warn-signed-overflow -warn-signed-downcast gzappend.c > frama-c_gzappend_report.txt
+
+cd ~/zlib_analysis
+ls # THe files should be up there
+
+mkidr reports
+cd /reports/
+
+cppcheck --enable=all --inconclusive --xml --force ../[FILE] 2> cppcheck_[FILE_NAME]_report.xml
+frama-c -eva -warn-unsigned-overflow -warn-signed-overflow -warn-signed-downcast ..[FILE] > frama-c_[FILE_NAME]_report.txt
+flawfinder ../[FILE] > flawfinder_[FILE_NAME]_report.txt
+splint -preproc +posixlib ../[FILE] > splint_[FILE_NAME]_report.txt

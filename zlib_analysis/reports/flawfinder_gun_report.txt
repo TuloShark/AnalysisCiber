@@ -1,0 +1,71 @@
+Flawfinder version 2.0.19, (C) 2001-2019 David A. Wheeler.
+Number of rules (primarily dangerous function names) in C/C++ ruleset: 222
+Examining ../gun.c
+
+FINAL RESULTS:
+
+../gun.c:527:  [5] (race) chmod:
+  This accepts filename arguments; if an attacker can move those files, a
+  race condition results. (CWE-362). Use fchmod( ) instead.
+../gun.c:530:  [5] (race) chown:
+  This accepts filename arguments; if an attacker can move those files, a
+  race condition results. (CWE-362). Use fchown( ) instead.
+../gun.c:161:  [2] (buffer) char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (CWE-119!/CWE-120). Perform bounds checking, use
+  functions that limit length, or ensure that the size is larger than the
+  maximum possible length.
+../gun.c:162:  [2] (buffer) char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (CWE-119!/CWE-120). Perform bounds checking, use
+  functions that limit length, or ensure that the size is larger than the
+  maximum possible length.
+../gun.c:164:  [2] (buffer) char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (CWE-119!/CWE-120). Perform bounds checking, use
+  functions that limit length, or ensure that the size is larger than the
+  maximum possible length.
+../gun.c:165:  [2] (buffer) char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (CWE-119!/CWE-120). Perform bounds checking, use
+  functions that limit length, or ensure that the size is larger than the
+  maximum possible length.
+../gun.c:559:  [2] (misc) open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (CWE-362).
+../gun.c:572:  [2] (misc) open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (CWE-362).
+../gun.c:689:  [2] (buffer) memcpy:
+  Does not check for buffer overflows when copying to destination (CWE-120).
+  Make sure destination can always hold the source data.
+../gun.c:103:  [1] (buffer) read:
+  Check buffer boundaries if used in a loop including recursive loops
+  (CWE-120, CWE-20).
+../gun.c:669:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+
+ANALYSIS SUMMARY:
+
+Hits = 11
+Lines analyzed = 702 in approximately 0.02 seconds (31178 lines/second)
+Physical Source Lines of Code (SLOC) = 484
+Hits@level = [0]  15 [1]   2 [2]   7 [3]   0 [4]   0 [5]   2
+Hits@level+ = [0+]  26 [1+]  11 [2+]   9 [3+]   2 [4+]   2 [5+]   2
+Hits/KSLOC@level+ = [0+] 53.719 [1+] 22.7273 [2+] 18.595 [3+] 4.13223 [4+] 4.13223 [5+] 4.13223
+Minimum risk level = 1
+
+Not every hit is necessarily a security vulnerability.
+You can inhibit a report by adding a comment in this form:
+// flawfinder: ignore
+Make *sure* it's a false positive!
+You can use the option --neverignore to show these.
+
+There may be other security vulnerabilities; review your code!
+See 'Secure Programming HOWTO'
+(https://dwheeler.com/secure-programs) for more information.
